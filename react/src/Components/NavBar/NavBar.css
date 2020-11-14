@@ -1,0 +1,13 @@
+.search-bar {
+	width: 1500px;
+	display: flex;
+	justify-content: center;
+}
+
+.nad-bar {
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	left: 1875px;
+}

@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import NavBar from "./Components/NavBar/NavBar.js";
+import NewsBar from "./Components/NewsBar/NewsBar.js";
+import GainersBar from "./Components/GainersBar/GainersBar.js";
+import LosersBar from "./Components/LosersBar/LosersBar.js";
+import GraphBar from "./Components/GraphBar/GraphBar.js";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to re.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    return (
+        <div className = "app-content">
+            <NavBar/>
+            <NewsBar />
+            <GainersBar/>
+            <LosersBar />
+            <GraphBar />
+        </div>
   );
 }
 
