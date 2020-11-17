@@ -1,0 +1,34 @@
+
+
+To pull the most recent version of 'main'
+
+    git checkout main
+    git pull
+
+
+You may get a warning saying you have unsaved changes.
+Either commit your changes (see below) or stash them (git stash)
+
+
+
+== To Commit and Push =======
+
+check changes:
+
+    git status
+        -will give you info about your local git repo vs. the one on github
+    
+    
+    git add *
+        -adds all your changes to the staging area
+    
+    
+    git commit -a -m "message"
+        -commits your changes to your local repo
+        -now you can push
+
+    git push
+        - publishes it online
+
+
+
