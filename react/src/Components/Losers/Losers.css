@@ -1,0 +1,13 @@
+.losers-container {
+	background-color: #181818;
+	color: #ffffff;
+	margin: 0vh 2vw 1vh 0vw;
+	padding: .5vh .5vw .5vh .5vw;
+	width: 26.25vw;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border: .1vh solid #2a2a2a;
+}

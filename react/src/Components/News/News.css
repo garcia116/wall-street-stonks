@@ -1,0 +1,13 @@
+.news-container {
+	background-color: #181818;
+	color: #ffffff;
+	margin: 0vh 1vw 4vh 15vw;
+	padding: .5vh .5vw .5vh .5vw;
+	width: 53vw;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border: .1vh solid #2a2a2a;
+}

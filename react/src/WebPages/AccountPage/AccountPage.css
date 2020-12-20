@@ -1,8 +1,8 @@
-.learn-page {
+.account-page {
 	background-color: #181818;
 }
 
-.learn-page-column-container {
+.account-page-column-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

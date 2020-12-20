@@ -1,0 +1,17 @@
+.home-page {
+	background-color: #181818;
+}
+
+.home-page-row-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0px 0px 0px 0px;
+}
+
+.home-page-column-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

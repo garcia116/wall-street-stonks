@@ -1,0 +1,92 @@
+.research-upper-header-container {
+	background: #181818;
+	margin: 0% 0% 0% 0%;
+	height: 6vh;
+	font-size: 18px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.research-lower-header-container {
+	background: #181818;
+	margin: 0% 0% 0% 0%;
+	font-size: 14px;
+	height: 6vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border: .1vh solid #2a2a2a;
+}
+
+.research-header-ticker-name {
+	background: #181818;
+	margin: 0% 0% 0% 0%;
+	height: 0px;
+	width: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.research-header-price {
+	background: #181818;
+	margin: 0% 0% 0% 0%;
+	height: 0px;
+	width: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.research-header-market-cap {
+	background: #181818;
+	margin: 0% 0% 0% 0%;
+	height: 0px;
+	width: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.research-header-financials {
+	background-color: #181818;
+	flex-grow: 1;
+	color: white;
+	text-align: right;
+	width: 0px;
+	line-height: 5vh;
+	margin: 0px 0px 0px 30%;
+}
+
+.research-header-stock-chart {
+	background-color: #181818;
+	flex-grow: 1;
+	color: white;
+	text-align: center;
+	width: 0px;
+	line-height: 5vh;
+	margin: 0px 0px 0px 0px;
+}
+
+.research-header-company-overview {
+	background-color: #181818;
+	flex-grow: 1;
+	color: white;
+	text-align: left;
+	width: 0px;
+	line-height: 5vh;
+	margin: 0px 30% 0px 0px;
+}
+

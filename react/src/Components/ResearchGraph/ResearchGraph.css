@@ -1,0 +1,47 @@
+.research-graph-container {
+	background-color: #181818;
+	color: #ffffff;
+	margin: 5vh 15vw 2vh 15vw;
+	padding: .5vh .5vw .5vh .5vw;
+	width: 60vw;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: .1vh solid #2a2a2a;
+}
+
+.research-graph {
+	background-color: #000000;
+	color: #ffffff;
+	height: 65vh;
+	width: 58vw;
+	font-size: 25px;
+	text-align: center;
+	line-height: 50px;
+	margin: 10px;
+}
+
+.radio-buttons {
+	background-color: #181818;
+	color: white;
+	width: 15vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;	
+}
+
+input[type='radio'] {
+	box-sizing: border-box;
+	appearance: none;
+	background: white;
+	outline: 2px solid #333;
+	border: 3px solid white;
+	width: 16px;
+	height: 16px;
+}
+
+	input[type='radio']:checked {
+		background: #333;
+	}

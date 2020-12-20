@@ -3,8 +3,11 @@
     "",
     "\\react",
     "\\react\\public",
-    "\\react\\src"
+    "\\react\\src",
+    "\\react\\src\\Components",
+    "\\react\\src\\Components\\GainersBar",
+    "\\react\\src\\Components\\Home"
   ],
-  "SelectedNode": "\\react\\src\\index.css",
+  "SelectedNode": "\\react\\src\\Components\\Home\\Home.js",
   "PreviewInSolutionExplorer": false
 }
