@@ -1,0 +1,12 @@
+company-list {
+    display: inline-block;
+    width: 997px;
+    height: 850px;
+    background: #343a40;
+    color: #17a2b8;
+    font-size: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 170px;
+    left: 570px;
+}

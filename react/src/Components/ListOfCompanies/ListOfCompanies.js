@@ -1,38 +1,39 @@
-import React from "react";
+import React, { Component } from "react";
+import CompanyBar from './CompanyBar.js';
+import SearchBox from './SearchBox.js';
 import './ListOfCompanies.css';
 
-function ListOfCompanies() {
-    return (
-        <div className="list-of-companies-container">
-            <h3>Companies</h3>
-            <p>A</p>
-            <p>B</p>
-            <p>C</p>
-            <p>D</p>
-            <p>E</p>
-            <p>F</p>
-            <p>G</p>
-            <p>H</p>
-            <p>I</p>
-            <p>J</p>
-            <p>K</p>
-            <p>L</p>
-            <p>M</p>
-            <p>N</p>
-            <p>O</p>
-            <p>P</p>
-            <p>Q</p>
-            <p>R</p>
-            <p>S</p>
-            <p>T</p>
-            <p>U</p>
-            <p>V</p>
-            <p>W</p>
-            <p>X</p>
-            <p>Y</p>
-            <p>Z</p>
-        </div>
-    )
+
+class ListOfCompanies extends Component {
+    constructor() {
+        super()
+        this.state = {
+            companies: [],
+            searchField: ''
+        }
+    }
+
+    componentDidMount() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => this.setState({ companies: users }));
+    }
+
+    onSearchChange = (event) => {
+        this.setState({ searchField: event.target.value })
+    }
+    render() {
+        const filteredCompanies = this.state.companies.filter(companies => {
+            return companies.name.toLowerCase().includes(this.state.searchField.toLowerCase());
+        })
+        return (
+            <div className='list-of-companies-container'>
+                <SearchBox searchChange={this.onSearchChange} />
+                <CompanyBar companies={filteredCompanies} />
+
+            </div>
+        );
+    }
 }
 
 export default ListOfCompanies;

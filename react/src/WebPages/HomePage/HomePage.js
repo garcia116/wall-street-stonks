@@ -22,7 +22,7 @@ function HomePage() {
                         <Losers />
                     </div>
                     <News />
-                    <ListOfCompanies/>
+                    <ListOfCompanies />
                 </div>
                 <Watchlist />
             </div>
