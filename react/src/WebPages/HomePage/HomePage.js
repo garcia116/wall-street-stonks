@@ -1,11 +1,13 @@
 import React from 'react';
 import './HomePage.css';
-import Gainers from "../../Components/Gainers/Gainers.js";
-import HomeGraph from "../../Components/HomeGraph/HomeGraph.js";
-import Losers from "../../Components/Losers/Losers.js";
 import NavBar from "../../Components/NavBar/NavBar.js";
+import HomeGraph from "../../Components/HomeGraph/HomeGraph.js";
+import Gainers from "../../Components/Gainers/Gainers.js";
+import Losers from "../../Components/Losers/Losers.js";
 import News from "../../Components/News/News.js";
+import ListOfCompanies from "../../Components/ListOfCompanies/ListOfCompanies.js"
 import Watchlist from "../../Components/Watchlist/Watchlist.js";
+
 
 
 function HomePage() {
@@ -19,7 +21,8 @@ function HomePage() {
                         <Gainers />
                         <Losers />
                     </div>
-                    <News/>
+                    <News />
+                    <ListOfCompanies/>
                 </div>
                 <Watchlist />
             </div>

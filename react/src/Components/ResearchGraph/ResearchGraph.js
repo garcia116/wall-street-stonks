@@ -1,11 +1,14 @@
 import React from "react";
 import './ResearchGraph.css';
+import Chart from "../Chart/Chart.js";
+
 
 function ResearchGraph() {
     return (
         <div className="research-graph-container">
             <div className="research-graph">
                 <h2>Graph</h2>
+                <Chart />
             </div>
             <div class="radio-buttons">
                 <label for="y">

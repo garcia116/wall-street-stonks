@@ -3,7 +3,7 @@
 	color: #ffffff;
 	margin: 5vh 15vw 2vh 15vw;
 	padding: .5vh .5vw .5vh .5vw;
-	width: 60vw;
+	width: 62vw;
 	height: 70vh;
 	display: flex;
 	flex-direction: column;
@@ -15,8 +15,9 @@
 .research-graph {
 	background-color: #000000;
 	color: #ffffff;
+	padding: .5vh .5vw .5vh .5vw;
 	height: 65vh;
-	width: 58vw;
+	width: 60vw;
 	font-size: 25px;
 	text-align: center;
 	line-height: 50px;

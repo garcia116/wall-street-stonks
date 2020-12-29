@@ -10,7 +10,6 @@ import LearnPage from "./WebPages/LearnPage/LearnPage.js";
 import AccountPage from "./WebPages/AccountPage/AccountPage.js";
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 
-
 function App() {
     return (
         <div class="app">

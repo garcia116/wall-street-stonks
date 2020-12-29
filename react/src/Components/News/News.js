@@ -1,6 +1,7 @@
 import React from "react";
 import './News.css';
 
+
 function News() {
     return (
         <div className="news-container">
@@ -32,5 +33,6 @@ function News() {
         </div>
     )
 }
+
 
 export default News;

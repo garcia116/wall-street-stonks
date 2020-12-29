@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\react",
-    "\\react\\public",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\GainersBar",
-    "\\react\\src\\Components\\Home"
+    "\\react\\src\\Components\\ListOfCompanies",
+    "\\react\\src\\Components\\Login",
+    "\\react\\src\\Components\\ResearchGraph",
+    "\\react\\src\\Components\\ResearchHeader",
+    "\\react\\src\\WebPages",
+    "\\react\\src\\WebPages\\AccountPage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\Home\\Home.js",
+  "SelectedNode": "\\react\\src\\Components\\ListOfCompanies\\ListOfCompanies.js",
   "PreviewInSolutionExplorer": false
 }
