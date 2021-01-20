@@ -8,7 +8,7 @@ function NavBar2() {
         <div>
             <ReactBootStrap.Navbar bg="dark" variant="dark" expand="sm">
                 <ReactBootStrap.Navbar.Brand href="#home">
-                    <div class="nav-bar-home">
+                    <div className="nav-bar-home">
                         <img alt="" src={logo} width="8%" height="8%" className="d-inline-block align-center" />{' '} WallStreet Stonks
                     </div>
               </ReactBootStrap.Navbar.Brand>
@@ -20,11 +20,11 @@ function NavBar2() {
                             <ReactBootStrap.Button variant="outline-info">Search</ReactBootStrap.Button>
                         </ReactBootStrap.Form>
                     </div>
-                    <ReactBootStrap.Nav class="navbar-nav ml-auto">
+                    <ReactBootStrap.Nav className="navbar-nav ml-auto">
                         <ReactBootStrap.Nav.Link href="/ResearchPage">Research</ReactBootStrap.Nav.Link>
                         <ReactBootStrap.Nav.Link href="/LearnPage">Learn</ReactBootStrap.Nav.Link>
                         <ReactBootStrap.NavDropdown alignRight title="Account" id="basic-nav-dropdown">
-                            <ReactBootStrap.Nav class="navbar-right">
+                            <ReactBootStrap.Nav className="navbar-right">
                                 <ReactBootStrap.NavDropdown.Item href="#action/3.1">Action</ReactBootStrap.NavDropdown.Item>
                                 <ReactBootStrap.NavDropdown.Item href="#action/3.2">Another action</ReactBootStrap.NavDropdown.Item>
                                 <ReactBootStrap.NavDropdown.Item href="#action/3.3">Something</ReactBootStrap.NavDropdown.Item>

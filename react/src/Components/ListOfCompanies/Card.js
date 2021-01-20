@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Card = (props) => {
-    const { name, id, email } = props;
+    const { name, email } = props;
 
     return (
         <div>

@@ -8,11 +8,11 @@ function HomeGraph() {
             <div className="home-graph">
                 <h2>Graph</h2>
             </div>
-            <div class="radio-buttons">
-                <label for="y">
+            <div className="radio-buttons">
+                <label htmlFor="y">
                     <input type="radio" name="x" value="y" id="y" /> Bar Graph
                     </label>
-                <label for="z">
+                <label htmlFor="z">
                     <input type="radio" name="x" value="z" id="z" /> Line Graph
                     </label>
             </div>

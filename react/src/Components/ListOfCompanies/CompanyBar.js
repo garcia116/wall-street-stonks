@@ -17,7 +17,6 @@ const CompanyBar = ({ companies }) => {
             }
         </div>
     );
-
 }
 
 export default CompanyBar;

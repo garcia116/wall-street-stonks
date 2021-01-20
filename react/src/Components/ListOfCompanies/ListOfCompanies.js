@@ -30,9 +30,8 @@ class ListOfCompanies extends Component {
             <div className='list-of-companies-container'>
                 <SearchBox searchChange={this.onSearchChange} />
                 <CompanyBar companies={filteredCompanies} />
-
             </div>
-        );
+        )
     }
 }
 
