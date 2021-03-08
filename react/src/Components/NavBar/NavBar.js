@@ -12,11 +12,7 @@ function NavBar() {
                     </a>
                 </div>
             </div>
-            <div className="nav-bar-container-item">
-                <div className="nav-bar-search-bar">
-                    Search Bar
-                </div>
-            </div>
+            
             <div className="nav-bar-container-item">
                 <div className="nav-bar-options-container">
                     <div className="nav-bar-options-container-item">
@@ -28,12 +24,6 @@ function NavBar() {
                     <div className="nav-bar-options-container-item">
                     </div>
                     <div className="nav-bar-options-container-item">
-                    </div>
-                    <div className="nav-bar-options-container-item">
-                        <a className="nav-bar-link" href="/ResearchPageFinancials">Research</a>
-                    </div>
-                    <div className="nav-bar-options-container-item">
-                        <a className="nav-bar-link" href="/LearnPage">Learn</a>
                     </div>
                     <div className="nav-bar-options-container-item">
                         <a className="nav-bar-link" href="/AccountPage">Account</a>

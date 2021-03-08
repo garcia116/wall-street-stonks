@@ -7,6 +7,7 @@ import Losers from "../../Components/Losers/Losers.js";
 import News from "../../Components/News/News.js";
 import ListOfCompanies from "../../Components/ListOfCompanies/ListOfCompanies.js"
 import Watchlist from "../../Components/Watchlist/Watchlist.js";
+import SideNav from "../../Components/SideNav/SideNav.js";
 
 
 
@@ -14,6 +15,7 @@ function HomePage() {
     return (
         <div className="home-page">
             <NavBar />
+            <SideNav />
             <div className="home-page-row-container">
                 <div className="home-page-column-container">
                     <HomeGraph />
@@ -23,6 +25,7 @@ function HomePage() {
                     </div>
                     <News />
                     <ListOfCompanies />
+                    
                 </div>
                 <Watchlist />
             </div>
