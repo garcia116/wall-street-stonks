@@ -12,6 +12,8 @@ import Grid from '@material-ui/core/Grid';
 
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { red } from '@material-ui/core/colors';
+import { brown } from '@material-ui/core/colors';
 
 function Copyright() {
   return (
@@ -36,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    backgroundColor: brown,
   },
   avatar: {
     margin: theme.spacing(1),
@@ -57,7 +60,7 @@ export default function SignInSide() {
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <Grid item xs={16} sm={8} md={5} component={Paper} elevation={16} square>
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
             

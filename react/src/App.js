@@ -6,6 +6,7 @@ import ResearchPageFinancials from "./WebPages/ResearchPage/ResearchPageFinancia
 import ResearchPageStockChart from "./WebPages/ResearchPage/ResearchPageStockChart.js";
 import ResearchPageCompanyOverview from "./WebPages/ResearchPage/ResearchPageCompanyOverview.js";
 import LearnPage from "./WebPages/LearnPage/LearnPage.js";
+import Login from "./WebPages/LoginPage/Login.js";
 import AccountPage from "./WebPages/AccountPage/AccountPage.js";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/LearnPage" exact component={LearnPage} />
                     <Route path="/AccountPage" exact component={AccountPage} />
                     <Route path="/Login2" exact component={Login2} />
+                    <Route path="/Login" exact component={Login} />
                 </Switch>
             </Router>
         </div>
