@@ -11,6 +11,7 @@ body {
     color: white;
     padding-left: 10%;
     font-family: 'Roboto Slab', serif;
+    box-shadow:  0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .stonk-smarter {
@@ -45,6 +46,10 @@ body {
     padding-top: 2em;
     padding-bottom: 1.5em;
     border-radius: .3em;
+    border: #b4b4b4;
+    border-width: .1em;
+    border-style: solid;
+    box-shadow:  0 .2em .8em 0 rgba(0, 0, 0, 0.61);
     
 }
 
@@ -73,6 +78,9 @@ body {
     box-shadow:  0 .1em .4em 0 rgba(151, 151, 151, 0.432);
     font-family: 'Roboto Slab', serif;
     margin-top: 1.4em;
+    border: #7ad899;
+    border-width: .1em;
+    border-style: solid;
 
 
 }
@@ -85,13 +93,17 @@ body {
 input {
     background-color: rgb(236, 236, 236);
     border-radius: .3em;
-    border: none;
+    
     width: 100%;
     font-family: 'Roboto Slab', serif;
     
     margin: .5em 0 .5em 0 !important;
-    height: 3em;
+    height: 2.5em;
     font-style: normal;
+
+    border: #dddddd;
+    border-width: .1em;
+    border-style: solid;
 }
 
 .linkButton {

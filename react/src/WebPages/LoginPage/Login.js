@@ -15,8 +15,8 @@ export default function Login() {
             <div className="login-window">
                 <h2 className="login">Login</h2>
                 <form className="sign-in-form" noValidate>
-                    <input className="username"></input>
-                    <input className="password" ></input>
+                    <input className="username" placeholder="Username"></input>
+                    <input className="password" placeholder="Password"></input>
                     <div className="linkButton">
                       <NavLink className="linkTo" to="/">Create Account</NavLink>
                     </div>
