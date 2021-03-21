@@ -1,0 +1,26 @@
+.investing-term-card .toggle {
+	background: #0084ff;
+	color: #ffffff;
+	height: 10rem;
+	width: 25rem;
+	font-size: 1.5rem;
+	border: unset;
+	border-radius: 5px;
+	margin: 1.0rem 2.0rem 1.0rem 2.0rem;
+}
+
+.investing-term-card .content-parent {
+	height: 0px;
+	overflow: hidden;
+	transition: height ease 0.3s;
+	margin: -0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.investing-term-card .content {
+	background: #202020;
+	width: 25rem;
+	color: #ffffff;
+	border: 1px solid #0084ff;
+	border-radius: 5px;
+	margin: 0.5rem;
+}

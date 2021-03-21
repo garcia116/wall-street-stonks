@@ -8,21 +8,21 @@ import ResearchPageCompanyOverview from "./WebPages/ResearchPage/ResearchPageCom
 import LearnPage from "./WebPages/LearnPage/LearnPage.js";
 import Login from "./WebPages/LoginPage/Login.js";
 import AccountPage from "./WebPages/AccountPage/AccountPage.js";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import NavBar from "./Components/NavBar/NavBar.js";
+import SideNav from "./Components/SideNav/SideNav.js";
+
 
 function App() {
     return (
         <div className="app">
+            <NavBar />
+            <SideNav />
             <Router>
                 <Switch>
-                    <Route path="/HomePage" exact component={HomePage} />
-                    <Route path="/ResearchPageFinancials" exact component={ResearchPageFinancials} />
-                    <Route path="/ResearchPageStockChart" exact component={ResearchPageStockChart} />
-                    <Route path="/ResearchPageCompanyOverview" exact component={ResearchPageCompanyOverview} />
-                    <Route path="/LearnPage" exact component={LearnPage} />
-                    <Route path="/AccountPage" exact component={AccountPage} />
-                    <Route path="/Login2" exact component={Login2} />
-                    <Route path="/Login" exact component={Login} />
+                    <Route exact path="/">
+                        <Redirect to="/HomePage" />
+                    </Route>
                 </Switch>
             </Router>
         </div>

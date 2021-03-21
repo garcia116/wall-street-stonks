@@ -12,10 +12,9 @@ import SideNav from "../../Components/SideNav/SideNav.js";
 
 
 function HomePage() {
+    console.log(window.location.pathname);
     return (
         <div className="home-page">
-            <NavBar />
-            <SideNav />
             <div className="home-page-row-container">
                 <div className="home-page-column-container">
                     <HomeGraph />

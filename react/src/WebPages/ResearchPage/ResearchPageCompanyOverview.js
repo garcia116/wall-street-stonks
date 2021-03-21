@@ -15,6 +15,7 @@ class ResearchPageCompanyOverview extends Component {
     }
 
     componentDidMount() {
+        /*
         var sandboxMode = true
         var baseURL
         var token
@@ -29,8 +30,8 @@ class ResearchPageCompanyOverview extends Component {
             token = 'pk_2d87808402a3463ab504dac6eb52b540'
         }
 
-        const logoURL = baseURL + logo + token
-
+        const logoURL = baseURL + logo + token*/
+        
     }
 
     render() {

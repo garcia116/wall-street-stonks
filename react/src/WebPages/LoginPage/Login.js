@@ -4,8 +4,7 @@ import './Login.css';
 import Button from 'react-bootstrap/Button';
 import { NavLink } from 'react-router-dom';
 
-export default function Login() {
-    
+function Login() {
     return (
         <div>
             <div className="banner">
@@ -23,12 +22,11 @@ export default function Login() {
                     <div className="linkButton">
                       <NavLink className="linkTo" to="/">Forgot Password?</NavLink>
                     </div>                
-                    <button
-                               
-                        className="submit-button"
-                    >Sign In</button>{' '}
+                    <button className="submit-button"> Sign In </button>{' '}
                 </form>        
             </div>
         </div>
     )
 }
+
+export default Login;
