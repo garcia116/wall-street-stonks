@@ -4,13 +4,13 @@
     "\\react",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\News",
+    "\\react\\src\\Components\\Gainers",
+    "\\react\\src\\Components\\HomeGraph",
+    "\\react\\src\\Components\\Losers",
     "\\react\\src\\Components\\Watchlist",
     "\\react\\src\\WebPages",
-    "\\react\\src\\WebPages\\AccountPage",
-    "\\react\\src\\WebPages\\HomePage",
-    "\\react\\src\\WebPages\\LearnPage"
+    "\\react\\src\\WebPages\\HomePage"
   ],
-  "SelectedNode": "\\react\\src\\WebPages\\LearnPage\\LearnPage.js",
+  "SelectedNode": "\\react\\src\\WebPages\\HomePage\\HomePage.css",
   "PreviewInSolutionExplorer": false
 }

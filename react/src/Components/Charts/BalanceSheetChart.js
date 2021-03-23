@@ -131,6 +131,8 @@ const BalanceSheetChart = (props) => {
                     ]
                 }}
                 options={{
+                    responsive: true,
+                    maintainAspectRatio: true,
                     tooltips: {
                         callbacks: {
                             label: function (tooltipItem, data) {

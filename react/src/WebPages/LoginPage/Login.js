@@ -8,8 +8,8 @@ function Login() {
     return (
         <div>
             <div className="banner">
-                <h1 className="stonk-smarter">stonk smarter</h1>
-                <h3 className="welcome">   welcome to Wallstreet Stonks</h3>
+                <h1 className="stonk-smarter">Stonk smarter</h1>
+                <h3 className="welcome">Welcome to Wallstreet Stonks</h3>
             </div>
             <div className="login-window">
                 <h2 className="login">Login</h2>

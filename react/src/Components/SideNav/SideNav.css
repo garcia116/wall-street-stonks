@@ -1,9 +1,16 @@
 .menu-item {
     color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    margin-left: -1em;
 }
 
 .menu-item:hover {
-    color: black
+    color: black;
+    box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+    background-image: linear-gradient(180deg, #0d97db 10%, #0991e6 90%);
+    width: 13em;
 }
 
 .bm-burger-button {
@@ -28,11 +35,12 @@
 .bm-cross-button {
     height: 30px;
     width: 30px;
+    margin-right: 2em;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-    background: #bdc3c7;
+    background: #ffffff;
 }
 
 /*
@@ -46,9 +54,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-    background: #0084ff;
-    padding: 1.6em 1.6em 0;
+    background-image: linear-gradient(180deg, #0084ff 40%, #35d369 90%);
+    border: 1px solid #181818;
+    box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
     font-size: 1.3em;
+    width: 13em;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -69,14 +79,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-    background: #ff0000;
+    background: rgb(0 0 0 / 0.30) !important;
 }
-
-a {
-    color: white;
-    padding: 1em;
-}
-
-    a:hover {
-        color: whitesmoke;
-    }

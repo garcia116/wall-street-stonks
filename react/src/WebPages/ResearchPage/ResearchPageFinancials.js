@@ -55,12 +55,10 @@ class ResearchPageFinancials extends Component {
         return (
             this.state.isLoaded ?
                 <div className="research-page-financials">
-                    <div className="research-page-financials-column-container">
-                        <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol}ice={this.state.price} marketcap={this.state.keyStats.marketcap} />
-                        <ResearchGraph data={this.state.incomeStatement} chartFlag={0} />
-                        <ResearchGraph data={this.state.balanceSheet} chartFlag={1} />
-                        <ResearchGraph data={this.state.incomeStatement} data2={this.state.keyStats.sharesOutstanding} chartFlag={2} />
-                    </div>
+                    <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} ice={this.state.price} marketcap={this.state.keyStats.marketcap} />
+                    <ResearchGraph data={this.state.incomeStatement} chartFlag={0} />
+                    <ResearchGraph data={this.state.balanceSheet} chartFlag={1} />
+                    <ResearchGraph data={this.state.incomeStatement} data2={this.state.keyStats.sharesOutstanding} chartFlag={2} />
                 </div>
                 : <div></div>
         );

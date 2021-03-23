@@ -82,6 +82,8 @@ class PERatioChart extends Component {
                         ]
                     }}
                     options={{
+                        responsive: true,
+                        maintainAspectRatio: true,
                         tooltips: {
                             callbacks: {
                                 label: function (tooltipItem, data) {

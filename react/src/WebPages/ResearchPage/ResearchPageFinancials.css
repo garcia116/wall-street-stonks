@@ -1,5 +1,5 @@
 .research-page-financials {
-	background-color: #181818;
+	background-color: #282828;
 }
 
 .research-page-financials-column-container {
@@ -8,12 +8,10 @@
 	justify-content: center;
 }
 
-.nav-bar-link {
-	color: #ffffff;
-	text-decoration: none;
+.reseach-banner-title {
+	margin: 0px;
+	padding-top: 1.3em;
+	display: flex;
+	justify-content: center;
+	font-size: 3em;
 }
-
-	.nav-bar-link:hover {
-		color: #ffffff;
-		text-decoration: none;
-	}

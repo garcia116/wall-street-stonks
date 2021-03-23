@@ -20,7 +20,7 @@ function App() {
             <SideNav />
             <Router>
                 <Switch>
-                    <Route exact path="/">
+                    <Route path="/">
                         <Redirect to="/HomePage" />
                     </Route>
                 </Switch>

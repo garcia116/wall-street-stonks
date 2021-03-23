@@ -15,19 +15,7 @@ function NavBar() {
             
             <div className="nav-bar-container-item">
                 <div className="nav-bar-options-container">
-                    <div className="nav-bar-options-container-item">
-                    </div>
-                    <div className="nav-bar-options-container-item">
-                    </div>
-                    <div className="nav-bar-options-container-item">
-                    </div>
-                    <div className="nav-bar-options-container-item">
-                    </div>
-                    <div className="nav-bar-options-container-item">
-                    </div>
-                    <div className="nav-bar-options-container-item">
-                        <a className="nav-bar-link" href="/AccountPage">Account</a>
-                    </div>
+                    
                 </div>
             </div>
         </div>

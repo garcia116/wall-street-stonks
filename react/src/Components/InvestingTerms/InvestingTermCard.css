@@ -7,6 +7,7 @@
 	border: unset;
 	border-radius: 5px;
 	margin: 1.0rem 2.0rem 1.0rem 2.0rem;
+	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .investing-term-card .content-parent {
@@ -20,7 +21,8 @@
 	background: #202020;
 	width: 25rem;
 	color: #ffffff;
-	border: 1px solid #0084ff;
+	border: 10px ridge #0084ff;
 	border-radius: 5px;
 	margin: 0.5rem;
+	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }

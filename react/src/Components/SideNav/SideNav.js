@@ -16,29 +16,12 @@ class SideNav extends React.Component {
     render() {
         return (
             <BrowserRouter>
-
-                <Menu >
-                    <NavLink to="/HomePage" className="menu-item" activeStyle={{
-                        fontWeight: "bold",
-                        color: "red"
-                    }}>Home</NavLink>
-                    <NavLink to="/ResearchPageFinancials" className="menu-item" activeStyle={{
-                        fontWeight: "bold",
-                        color: "red"
-                    }}>Research</NavLink>
-                    <NavLink to="/LearnPage" className="menu-item" activeStyle={{
-                        fontWeight: "bold",
-                        color: "red"
-                    }}>Learn</NavLink>
-                    <NavLink to="/AccountPage" className="menu-item" activeStyle={{
-                        fontWeight: "bold",
-                        color: "red"
-                    }}>Account</NavLink>
-                    <NavLink to="/Login" className="menu-item" activeStyle={{
-                        fontWeight: "bold",
-                        color: "red"
-                    }}>Login</NavLink>
-                    
+                <Menu>
+                    <NavLink to="/HomePage" className="menu-item">Home</NavLink>
+                    <NavLink to="/ResearchPageFinancials" className="menu-item">Research</NavLink>
+                    <NavLink to="/LearnPage" className="menu-item">Learn</NavLink>
+                    <NavLink to="/AccountPage" className="menu-item">Account</NavLink>
+                    <NavLink to="/Login" className="menu-item">Login</NavLink>
                 </Menu>
                 <div className="content">
                     <Route path="/HomePage" component={HomePage}/>
@@ -47,9 +30,9 @@ class SideNav extends React.Component {
                     <Route path="/AccountPage" component={AccountPage} />
                     <Route path="/Login" component={Login} />
                 </div>
-                
             </BrowserRouter>
             )
     }
 }
+
 export default SideNav;
