@@ -4,13 +4,10 @@
     "\\react",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\Gainers",
-    "\\react\\src\\Components\\HomeGraph",
-    "\\react\\src\\Components\\Losers",
-    "\\react\\src\\Components\\Watchlist",
     "\\react\\src\\WebPages",
-    "\\react\\src\\WebPages\\HomePage"
+    "\\react\\src\\WebPages\\LoginPage",
+    "\\react\\src\\WebPages\\ResearchPage"
   ],
-  "SelectedNode": "\\react\\src\\WebPages\\HomePage\\HomePage.css",
+  "SelectedNode": "\\react\\src\\WebPages\\ResearchPage\\ResearchPageFinancials.js",
   "PreviewInSolutionExplorer": false
 }

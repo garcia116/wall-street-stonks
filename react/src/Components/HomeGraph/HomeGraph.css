@@ -4,7 +4,7 @@
 	margin: 5vh 2vw 1vh 15vw;
 	padding: .5vh .5vw .5vh .5vw;
 	width: 53vw;
-	height: 50vh;
+	height: 38vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -16,8 +16,8 @@
 .home-graph {
 	background-color: #000000;
 	color: #ffffff;
-	height: 50vh;
-	width: 51vw;
+	height: 37vh;
+	width: 52.25vw;
 	font-size: 25px;
 	text-align: center;
 	line-height: 50px;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ResearchPageFinancials.css';
-import NavBar from "../../Components/NavBar/NavBar.js";
 import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
 import ResearchGraph from "../../Components/ResearchGraph/ResearchGraph.js";
 
@@ -14,7 +13,10 @@ class ResearchPageFinancials extends Component {
             keyStats: [{}],
             incomeStatement: [{}],
             balanceSheet: [{}],
-            isLoaded: false
+            isLoaded1: false,
+            isLoaded2: false,
+            isLoaded3: false,
+
         }
     }
 
@@ -42,25 +44,25 @@ class ResearchPageFinancials extends Component {
 
         fetch(keyStatsURL)
             .then(response => response.json())
-            .then(data => this.setState({ keyStats: data })) 
+            .then(data => this.setState({ keyStats: data, isLoaded1: true })) 
         fetch(balanceSheetURL)
             .then(response => response.json())
-            .then(data => this.setState({ balanceSheet: data })) 
+            .then(data => this.setState({ balanceSheet: data, isLoaded2: true })) 
         fetch(incomeStatementURL)
             .then(response => response.json())
-            .then(data => this.setState({ incomeStatement: data, isLoaded: true }))
+            .then(data => this.setState({ incomeStatement: data, isLoaded3: true}))
     }
 
     render() {
         return (
-            this.state.isLoaded ?
+            this.state.isLoaded1 && this.state.isLoaded2 && this.state.isLoaded3?
                 <div className="research-page-financials">
                     <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} ice={this.state.price} marketcap={this.state.keyStats.marketcap} />
                     <ResearchGraph data={this.state.incomeStatement} chartFlag={0} />
                     <ResearchGraph data={this.state.balanceSheet} chartFlag={1} />
                     <ResearchGraph data={this.state.incomeStatement} data2={this.state.keyStats.sharesOutstanding} chartFlag={2} />
                 </div>
-                : <div></div>
+                : <p>q{this.state.isLoaded}</p>
         );
     }
 }

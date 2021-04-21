@@ -1,23 +1,55 @@
-import React from "react";
+import React, { Component } from 'react';
 import './HomeGraph.css';
+import HomepageChart from './../Charts/HomepageChart.js';
 
 
-function HomeGraph() {
-    return (
+class HomeGraph extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            tickerSymbol: 'SPY',
+            prices: [{}],
+            isLoaded: false
+        }
+    }
+
+    componentDidMount() {
+        var sandboxMode = true
+        var baseURL
+        var token
+        var range = '5y'
+        const prices = `/stock/${this.state.tickerSymbol}/chart/${range}/?token=`
+
+        if (sandboxMode) {
+            baseURL = 'https://sandbox.iexapis.com/v1'
+            token = 'Tpk_a909e54fc2ab44ac976155957da2a605'
+        }
+        else {
+            baseURL = 'https://cloud.iexapis.com/v1'
+            token = 'pk_2d87808402a3463ab504dac6eb52b540'
+        }
+
+        const pricesURL = baseURL + prices + token
+
+        fetch(pricesURL)
+            .then(response => response.json())
+            .then(data => this.setState({ prices: data, isLoaded: true }))
+    }
+    render() {
+        return (
+        this.state.isLoaded ?
         <div className="home-graph-container">
             <div className="home-graph">
-                <h2>Graph</h2>
-            </div>
-            <div className="radio-buttons">
-                <label htmlFor="y">
-                    <input type="radio" name="x" value="y" id="y" /> Bar Graph
-                    </label>
-                <label htmlFor="z">
-                    <input type="radio" name="x" value="z" id="z" /> Line Graph
-                    </label>
+                <HomepageChart data={this.state.prices}/>
             </div>
         </div>
-    )
+        :<div>
+            <div className="home-graph-container">
+                <h1>Loading...</h1>
+            </div>
+        </div>
+        );
+    }
 }
 
 

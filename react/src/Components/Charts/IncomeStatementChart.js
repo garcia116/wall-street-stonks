@@ -10,114 +10,33 @@ const IncomeStatementChart = (props) => {
     const quadrillion = 1000000000000000
 
     // Chart Data
-    const chartxLabels = [
-        `Y${props.data.income[11].fiscalYear} Q${props.data.income[11].fiscalQuarter}`,
-        `Y${props.data.income[10].fiscalYear} Q${props.data.income[10].fiscalQuarter}`,
-        `Y${props.data.income[9].fiscalYear} Q${props.data.income[9].fiscalQuarter}`,
-        `Y${props.data.income[8].fiscalYear} Q${props.data.income[8].fiscalQuarter}`,
-        `Y${props.data.income[7].fiscalYear} Q${props.data.income[7].fiscalQuarter}`,
-        `Y${props.data.income[6].fiscalYear} Q${props.data.income[6].fiscalQuarter}`,
-        `Y${props.data.income[5].fiscalYear} Q${props.data.income[5].fiscalQuarter}`,
-        `Y${props.data.income[4].fiscalYear} Q${props.data.income[4].fiscalQuarter}`,
-        `Y${props.data.income[3].fiscalYear} Q${props.data.income[3].fiscalQuarter}`,
-        `Y${props.data.income[2].fiscalYear} Q${props.data.income[2].fiscalQuarter}`,
-        `Y${props.data.income[1].fiscalYear} Q${props.data.income[1].fiscalQuarter}`,
-        `Y${props.data.income[0].fiscalYear} Q${props.data.income[0].fiscalQuarter}`]
+    var chartxLabels = [{}]
+    var revenueData = [{}]
+    var operatingExpenses = [{}]
+    var operatingIncomeData = [{}]
+    var grossProfitData = [{}]
+    var netIncomeData = [{}]
 
-    const revenueData = [
-        props.data.income[11].totalRevenue,
-        props.data.income[10].totalRevenue,
-        props.data.income[9].totalRevenue,
-        props.data.income[8].totalRevenue,
-        props.data.income[7].totalRevenue,
-        props.data.income[6].totalRevenue,
-        props.data.income[5].totalRevenue,
-        props.data.income[4].totalRevenue,
-        props.data.income[3].totalRevenue,
-        props.data.income[2].totalRevenue,
-        props.data.income[1].totalRevenue,
-        props.data.income[0].totalRevenue]
-    const revenueBackgroundColor = [
-        'rgba(33, 109, 208, 1)', 'rgba(33, 109, 208, 1)', 'rgba(33, 109, 208, 1)',
-        'rgba(33, 109, 208, 1)', 'rgba(33, 109, 208, 1)', 'rgba(33, 109, 208, 1)',
-        'rgba(33, 109, 208, 1)', 'rgba(33, 109, 208, 1)', 'rgba(33, 109, 208, 1)',
-        'rgba(33, 109, 208, 1)', 'rgba(33, 109, 208, 1)', 'rgba(33, 109, 208, 1)']
+    var revenueBackgroundColor = [{}]
+    var operatingExpensesBackgroundColor = [{}]
+    var grossProfitBackgroundColor = [{}]
+    var operatingIncomeBackgroundColor = [{}]
+    var netIncomeBackgroundColor = [{}]
 
-    const operatingExpenses = [
-        props.data.income[11].operatingExpense,
-        props.data.income[10].operatingExpense,
-        props.data.income[9].operatingExpense,
-        props.data.income[8].operatingExpense,
-        props.data.income[7].operatingExpense,
-        props.data.income[6].operatingExpense,
-        props.data.income[5].operatingExpense,
-        props.data.income[4].operatingExpense,
-        props.data.income[3].operatingExpense,
-        props.data.income[2].operatingExpense,
-        props.data.income[1].operatingExpense,
-        props.data.income[0].operatingExpense]
-    const operatingExpensesBackgroundColor = [
-        'rgba(208, 208, 33, 1)', 'rgba(208, 208, 33, 1)', 'rgba(208, 208, 33, 1)',
-        'rgba(208, 208, 33, 1)', 'rgba(208, 208, 33, 1)', 'rgba(208, 208, 33, 1)',
-        'rgba(208, 208, 33, 1)', 'rgba(208, 208, 33, 1)', 'rgba(208, 208, 33, 1)',
-        'rgba(208, 208, 33, 1)', 'rgba(208, 208, 33, 1)', 'rgba(208, 208, 33, 1)']
+    for (var i = 0; i < 12; i++) {
+        chartxLabels[i] = `Y${ props.data.income[11 - i].fiscalYear } Q${ props.data.income[11 - i].fiscalQuarter }`
+        revenueData[i] = props.data.income[11 - i].totalRevenue
+        operatingExpenses[i] = props.data.income[11 - i].operatingExpense
+        operatingIncomeData[i] = props.data.income[11 - i].operatingIncome
+        grossProfitData[i] = props.data.income[11 - i].grossProfit
+        netIncomeData[i] = props.data.income[11 - i].netIncome
 
-    const grossProfitData = [
-        props.data.income[11].grossProfit,
-        props.data.income[10].grossProfit,
-        props.data.income[9].grossProfit,
-        props.data.income[8].grossProfit,
-        props.data.income[7].grossProfit,
-        props.data.income[6].grossProfit,
-        props.data.income[5].grossProfit,
-        props.data.income[4].grossProfit,
-        props.data.income[3].grossProfit,
-        props.data.income[2].grossProfit,
-        props.data.income[1].grossProfit,
-        props.data.income[0].grossProfit]
-    const grossProfitBackgroundColor = [
-        'rgba(244, 84, 48, 1)', 'rgba(244, 84, 48, 1)', 'rgba(244, 84, 48, 1)',
-        'rgba(244, 84, 48, 1)', 'rgba(244, 84, 48, 1)', 'rgba(244, 84, 48, 1)',
-        'rgba(244, 84, 48, 1)', 'rgba(244, 84, 48, 1)', 'rgba(244, 84, 48, 1)',
-        'rgba(244, 84, 48, 1)', 'rgba(244, 84, 48, 1)', 'rgba(244, 84, 48, 1)']
-
-    const operatingIncomeData = [
-        props.data.income[11].operatingIncome,
-        props.data.income[10].operatingIncome,
-        props.data.income[9].operatingIncome,
-        props.data.income[8].operatingIncome,
-        props.data.income[7].operatingIncome,
-        props.data.income[6].operatingIncome,
-        props.data.income[5].operatingIncome,
-        props.data.income[4].operatingIncome,
-        props.data.income[3].operatingIncome,
-        props.data.income[2].operatingIncome,
-        props.data.income[1].operatingIncome,
-        props.data.income[0].operatingIncome]
-    const operatingIncomeBackgroundColor = [
-        'rgba(125, 30, 210, 1)', 'rgba(125, 30, 210, 1)', 'rgba(125, 30, 210, 1)',
-        'rgba(125, 30, 210, 1)', 'rgba(125, 30, 210, 1)', 'rgba(125, 30, 210, 1)',
-        'rgba(125, 30, 210, 1)', 'rgba(125, 30, 210, 1)', 'rgba(125, 30, 210, 1)',
-        'rgba(125, 30, 210, 1)', 'rgba(125, 30, 210, 1)', 'rgba(125, 30, 210, 1)']
-
-    const netIncomeData = [
-        props.data.income[11].netIncome,
-        props.data.income[10].netIncome,
-        props.data.income[9].netIncome,
-        props.data.income[8].netIncome,
-        props.data.income[7].netIncome,
-        props.data.income[6].netIncome,
-        props.data.income[5].netIncome,
-        props.data.income[4].netIncome,
-        props.data.income[3].netIncome,
-        props.data.income[2].netIncome,
-        props.data.income[1].netIncome,
-        props.data.income[0].netIncome]
-    const netIncomeBackgroundColor = [
-        'rgba(33, 206, 153, 1)', 'rgba(33, 206, 153, 1)', 'rgba(33, 206, 153, 1)',
-        'rgba(33, 206, 153, 1)', 'rgba(33, 206, 153, 1)', 'rgba(33, 206, 153, 1)',
-        'rgba(33, 206, 153, 1)', 'rgba(33, 206, 153, 1)', 'rgba(33, 206, 153, 1)',
-        'rgba(33, 206, 153, 1)', 'rgba(33, 206, 153, 1)', 'rgba(33, 206, 153, 1)']
+        revenueBackgroundColor[i] = 'rgba(33, 109, 208, 1)'
+        operatingExpensesBackgroundColor[i] = 'rgba(208, 208, 33, 1)'
+        grossProfitBackgroundColor[i] = 'rgba(244, 84, 48, 1)'
+        operatingIncomeBackgroundColor[i] = 'rgba(125, 30, 210, 1)'
+        netIncomeBackgroundColor[i] = 'rgba(33, 206, 153, 1)'
+    }
 
     return (
         <div className="chart">
