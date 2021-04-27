@@ -1,38 +1,34 @@
-import React, { Component } from "react";
-import CompanyBar from './CompanyBar.js';
-import SearchBox from './SearchBox.js';
+import React, { useState, useEffect, useMemo } from "react";
+import styled from 'styled-components';
+import axios from 'axios';
+import Table from './Table.js';
 import './ListOfCompanies.css';
+import iex from '../../config/iex.js'
 
+function ListOfCompanies(props) {
 
-class ListOfCompanies extends Component {
-    constructor() {
-        super()
-        this.state = {
-            companies: [],
-            searchField: ''
-        }
-    }
+    const [data, setData] = useState(props);
 
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(users => this.setState({ companies: users }));
-    }
+    useEffect(() => {
+        (async () => {
+            const url = `${iex.base_url}/stock/${props.ticker}/quote?token=${iex.api_token}`
+            const result = await axios.get(url);
+            setData(result.data);
+        })();
+    }, []);
 
-    onSearchChange = (event) => {
-        this.setState({ searchField: event.target.value })
-    }
-    render() {
-        const filteredCompanies = this.state.companies.filter(companies => {
-            return companies.name.toLowerCase().includes(this.state.searchField.toLowerCase());
-        })
-        return (
-            <div className='list-of-companies-container'>
-                <SearchBox searchChange={this.onSearchChange} />
-                <CompanyBar companies={filteredCompanies} />
-            </div>
-        )
-    }
-}
+    return (
+        <tr>
+            <td>{data.symbol}</td>
+            <td>{data.marketCap}</td>
+            <td>{data.iexRealtimePrice}</td>
+            <td>{data.change}</td>
+
+        </tr>
+
+    );
+
+};
+
 
 export default ListOfCompanies;

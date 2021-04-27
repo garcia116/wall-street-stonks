@@ -2,16 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\react",
-    "\\react\\public",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\Charts",
-    "\\react\\src\\Components\\Losers",
+    "\\react\\src\\Components\\Gainers",
+    "\\react\\src\\Components\\ListOfCompanies",
     "\\react\\src\\Components\\News",
     "\\react\\src\\Components\\Watchlist",
     "\\react\\src\\WebPages",
     "\\react\\src\\WebPages\\HomePage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\Charts\\IncomeStatementChart.js",
+  "SelectedNode": "\\react\\src\\Components\\ListOfCompanies\\ListOfCompanies.js",
   "PreviewInSolutionExplorer": false
 }
