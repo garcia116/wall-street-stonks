@@ -3,7 +3,7 @@ import Card from './Card.js';
 
 const CompanyBar = ({ companies }) => {
     return (
-        <div className="list-of-companies-container">
+        <div>
             {
                 companies.map((company, i) => {
                     return (

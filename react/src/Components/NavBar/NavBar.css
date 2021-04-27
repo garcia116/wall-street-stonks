@@ -6,7 +6,6 @@
 }
 
 .nav-bar-home {
-	margin: 0% 0% 0% 0%;
 	text-align: right;
 }
 
@@ -16,8 +15,7 @@
 }
 
 .nav-bar-options-container {
-	background: #202020;
-	margin: 0% 0% 0% 0%;
+	background: #282828;
 	height: 6vh;
 	display: flex;
 	flex-direction: row;
@@ -26,7 +24,6 @@
 }
 
 .nav-bar-options-container-item {
-	background-color: #202020;
 	color: #ffffff;
 	font-size: 14px;
 	font-weight: 600;
@@ -38,8 +35,6 @@
 }
 
 .nav-bar-container {
-	background: #202020;
-	margin: 0% 0% 0% 0%;
 	height: 6vh;
 	display: flex;
 	flex-direction: row;
@@ -48,7 +43,6 @@
 }
 
 .nav-bar-container-item {
-	background-color: #202020;
 	color: #ffffff;
 	font-size: 14px;
 	font-weight: 600;

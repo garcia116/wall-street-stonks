@@ -1,0 +1,111 @@
+body {
+    background-color: #282828 !important;
+}
+
+.banner {
+    /*background-image: linear-gradient(45deg, #66ee83 30%, #35d369 90%);*/
+    background-image: linear-gradient(90deg, #0084ff 10%, #35d369 90%);
+    height: 12em;
+    text-align: left;
+    color: white;
+    padding-left: 15%;
+    font-family: 'Roboto Slab', serif;
+    box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+}
+
+.stonk-smarter {
+    margin: 0px;
+    padding-top: 1em;
+    margin-bottom: .2em;
+    font-size: 3em;
+    font-weight: 300;
+    
+}
+
+.welcome {
+    margin: 0px;
+    padding-bottom: 2em;
+}
+
+
+.login-window {
+    width: 30%;
+    color: #000000;
+    height: fit-content;
+    min-width: 12em;
+    max-width: 22em;
+    background-color: white;
+    font-family: 'Roboto Slab', serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7em;
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    border-radius: .3em;
+    border: #b4b4b4;
+    border-width: .1em;
+    border-style: solid;
+    box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+}
+
+.login {
+    font-size: largest;
+    font-weight: 400;
+    
+    padding-bottom: .5em;
+    width: auto;
+    padding-top: 0em;
+    
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.submit-button {
+    width: 8em;
+    height: 2.4em;
+    color: white;
+    /*background-color: rgb(101, 230, 133);*/
+    background-image: linear-gradient(90deg, #16a5c1 10%, #20b4a5 90%);
+    border-radius: .3em;
+    font-size: 1.2em;
+    font-weight: 400;
+    box-shadow: 0 .1em .4em 0 rgba(151, 151, 151, 0.432);
+    font-family: 'Roboto Slab', serif;
+    margin-top: 1.4em;
+    /*border: #7ad899;*/
+    border: #383838;
+    border-width: .1em;
+    border-style: solid;
+}
+
+#sign-in-form {
+    width: auto;
+    
+}
+
+input {
+    background-color: rgb(236, 236, 236);
+    border-radius: .3em;
+    
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    
+    margin: .5em 0 .5em 0 !important;
+    height: 2.5em;
+    font-style: normal;
+
+    border: #dddddd;
+    border-width: .1em;
+    border-style: solid;
+}
+
+.linkButton {
+    width: auto;
+    margin: .5em 0 .5em 0;
+    font-style: normal;
+    color: pink;
+}
+

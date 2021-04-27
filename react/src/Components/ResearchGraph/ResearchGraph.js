@@ -8,7 +8,7 @@ import PERatioChart from "../Charts/PERatioChart.js";
 const ResearchGraph = (props) => {
     var display
     if (props.chartFlag === 0) {
-        display = <IncomeStatementChart data={props.data} />
+        display = <IncomeStatementChart style="position: relative; height:10vh; width:20vw" data={props.data} />
     } else if (props.chartFlag === 1) {
         display = <BalanceSheetChart data={props.data} />
     } else if (props.chartFlag === 2) {
@@ -27,7 +27,7 @@ const ResearchGraph = (props) => {
                     <input type="radio" name="x" value="z" id="z" /> Line Graph
                     </label>
             </div>
-        </div >
+        </div>
     );
 }
 
