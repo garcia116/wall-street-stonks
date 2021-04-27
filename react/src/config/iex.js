@@ -1,5 +1,5 @@
 const iex = {
-    api_token: 'Tpk_a909e54fc2ab44ac976155957da2a605',
-    base_url: 'https://sandbox.iexapis.com/stable'
+    api_token: 'pk_2d87808402a3463ab504dac6eb52b540',
+    base_url: 'https://cloud.iexapis.com/stable'
 };
 export default iex;

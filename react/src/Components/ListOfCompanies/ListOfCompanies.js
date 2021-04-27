@@ -1,34 +1,42 @@
-import React, { useState, useEffect, useMemo } from "react";
-import styled from 'styled-components';
-import axios from 'axios';
-import Table from './Table.js';
+import React from 'react';
+
+import FetchCompanies from './FetchCompanies.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './ListOfCompanies.css';
-import iex from '../../config/iex.js'
 
-function ListOfCompanies(props) {
 
-    const [data, setData] = useState(props);
-
-    useEffect(() => {
-        (async () => {
-            const url = `${iex.base_url}/stock/${props.ticker}/quote?token=${iex.api_token}`
-            const result = await axios.get(url);
-            setData(result.data);
-        })();
-    }, []);
-
+function ListOfCompanies() {
     return (
-        <tr>
-            <td>{data.symbol}</td>
-            <td>{data.marketCap}</td>
-            <td>{data.iexRealtimePrice}</td>
-            <td>{data.change}</td>
+        <div className="Example">
+            
+            <div className="list-of-companies-container">
+                <h3>List of Companies</h3>
+                <table className="table mt-5">
+                    <thead>
+                    <tr>
+                            <th>Ticker</th>
+                            <th>Market Cap</th>
+                            <th>Price</th>
+                            <th>Change +/-</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <FetchCompanies ticker="aapl" />
+                        <FetchCompanies ticker="msft" />
+                        <FetchCompanies ticker="amzn" />
+                        <FetchCompanies ticker="goog" />
+                        <FetchCompanies ticker="fb" />
+                        <FetchCompanies ticker="tcehy" />
+                        <FetchCompanies ticker="tsla" />
+                        <FetchCompanies ticker="tsm" />
+                        <FetchCompanies ticker="baba" />
+                        <FetchCompanies ticker="brk.b" />
 
-        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-    );
-
-};
-
-
+        )
+}
 export default ListOfCompanies;
