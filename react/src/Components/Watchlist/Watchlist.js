@@ -16,6 +16,23 @@ class WatchList extends Component {
     getStock = async (e) => {
          const stock = e.target.stockName.value;
         e.preventDefault();
+function Watchlist() {
+    return (
+        <div className="watchlist-container">
+            <h3>Watchlist</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Pulvinar elementum integer enim neque.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Pulvinar elementum integer enim neque.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Pulvinar elementum integer enim neque.</p>
+        </div>
+    )
+}
+>>>>>>> 4225d20b59a4264d40765875dc6b491fe4ddffcf
 
         const url = await fetch(`${iex.base_url}/stock/${stock}/quote?token=${iex.api_token}`)
         const result = await url.json();

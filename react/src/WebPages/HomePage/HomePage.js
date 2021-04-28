@@ -20,13 +20,14 @@ function HomePage() {
                 <h3 className="welcome">Wallstreet Stonks</h3>
             </div>
             <div className="home-page-row-container">
+                <News />
                 <div className="home-page-column-container">
+                    
                     <HomeGraph />
                     <div className="home-page-row-container">
                         <Gainers />
                         <Losers />
                     </div>
-                    <News />
                     <ListOfCompanies />
                 </div>
                 <Watchlist />
