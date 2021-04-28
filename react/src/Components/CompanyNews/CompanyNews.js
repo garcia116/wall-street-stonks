@@ -16,7 +16,6 @@ class CompanyNews extends Component {
         var sandboxMode = true
         var baseURL
         var token
-        const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=5&token=`
         const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=3&token=`
 
         if (sandboxMode) {
