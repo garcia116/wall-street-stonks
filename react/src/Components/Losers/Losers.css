@@ -1,7 +1,7 @@
 .losers-container {
 	background-image: linear-gradient(90deg, #16a5c0 10%, #25bc94 90%);
 	color: #ffffff;
-	margin: 0vh 2vw 1vh 0vw;
+	margin: 0vh 0vw 1vh 0.5vw;
 	padding: .5vh .5vw .5vh .5vw;
 	width: 26.25vw;
 	height: 65vh;
