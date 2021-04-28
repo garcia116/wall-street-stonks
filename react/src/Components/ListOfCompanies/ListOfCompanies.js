@@ -1,5 +1,4 @@
 import React from 'react';
-
 import FetchCompanies from './FetchCompanies.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ListOfCompanies.css';

@@ -4,21 +4,13 @@
     "\\react",
     "\\react\\src",
     "\\react\\src\\Components",
-<<<<<<< HEAD
     "\\react\\src\\Components\\Gainers",
-    "\\react\\src\\Components\\ListOfCompanies",
-    "\\react\\src\\Components\\News",
+    "\\react\\src\\Components\\Losers",
     "\\react\\src\\Components\\Watchlist",
-=======
->>>>>>> 7ce38212571962319e90a9457833f2d526c386b0
+    "\\react\\src\\config",
     "\\react\\src\\WebPages",
-    "\\react\\src\\WebPages\\LoginPage",
-    "\\react\\src\\WebPages\\ResearchPage"
+    "\\react\\src\\WebPages\\HomePage"
   ],
-<<<<<<< HEAD
-  "SelectedNode": "\\react\\src\\Components\\ListOfCompanies\\ListOfCompanies.js",
-=======
-  "SelectedNode": "\\react\\src\\WebPages\\ResearchPage\\ResearchPageFinancials.js",
->>>>>>> 7ce38212571962319e90a9457833f2d526c386b0
+  "SelectedNode": "\\react\\src\\Components\\Watchlist\\Search.js",
   "PreviewInSolutionExplorer": false
 }

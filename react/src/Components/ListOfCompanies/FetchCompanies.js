@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import styled from 'styled-components';
 import axios from 'axios';
-import Table from './Table.js';
 import iex from '../../config/iex.js'
 
 function FetchCompanies(props) {
