@@ -1,28 +1,34 @@
+.reseach-banner {
+	background-image: linear-gradient(90deg, #0084ff 10%, #35d369 90%);
+	height: 12em;
+	text-align: left;
+	color: white;
+	font-family: 'Roboto Slab', serif;
+	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+}
+
 .research-upper-header-container {
-	background: #181818;
-	margin: 0% 0% 0% 0%;
-	height: 6vh;
-	font-size: 18px;
+	height: 8rem;
+	font-size: 28px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	padding-left: 4em;
+	padding-right: 4em;
 }
 
 .research-lower-header-container {
-	background: #181818;
-	margin: 0% 0% 0% 0%;
-	font-size: 14px;
-	height: 6vh;
+	font-size: 20px;
+	height: 4rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	border: .1vh solid #2a2a2a;
+	border-top: .1vh solid #282828;
 }
 
 .research-header-ticker-name {
-	background: #181818;
 	margin: 0% 0% 0% 0%;
 	height: 0px;
 	width: 0px;
@@ -35,8 +41,6 @@
 }
 
 .research-header-price {
-	background: #181818;
-	margin: 0% 0% 0% 0%;
 	height: 0px;
 	width: 0px;
 	display: flex;
@@ -48,8 +52,6 @@
 }
 
 .research-header-market-cap {
-	background: #181818;
-	margin: 0% 0% 0% 0%;
 	height: 0px;
 	width: 0px;
 	display: flex;
@@ -61,7 +63,6 @@
 }
 
 .research-header-financials {
-	background-color: #181818;
 	flex-grow: 1;
 	color: white;
 	text-align: right;
@@ -71,7 +72,6 @@
 }
 
 .research-header-stock-chart {
-	background-color: #181818;
 	flex-grow: 1;
 	color: white;
 	text-align: center;
@@ -81,7 +81,6 @@
 }
 
 .research-header-company-overview {
-	background-color: #181818;
 	flex-grow: 1;
 	color: white;
 	text-align: left;
@@ -89,4 +88,3 @@
 	line-height: 5vh;
 	margin: 0px 30% 0px 0px;
 }
-

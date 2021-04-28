@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './ResearchPageCompanyOverview.css';
-import NavBar from "../../Components/NavBar/NavBar.js";
 import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
+import CompanyOverview from "../../Components/CompanyOverview/CompanyOverview.js";
+import CompanyNews from "../../Components/CompanyNews/CompanyNews.js";
 
 
 class ResearchPageCompanyOverview extends Component {

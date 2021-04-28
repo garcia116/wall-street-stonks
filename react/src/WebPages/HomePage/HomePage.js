@@ -7,13 +7,18 @@ import Losers from "../../Components/Losers/Losers.js";
 import News from "../../Components/News/News.js";
 import ListOfCompanies from "../../Components/ListOfCompanies/ListOfCompanies.js"
 import Watchlist from "../../Components/Watchlist/Watchlist.js";
+import SideNav from "../../Components/SideNav/SideNav.js";
 
 
 
 function HomePage() {
+    console.log(window.location.pathname);
     return (
         <div className="home-page">
-            <NavBar />
+            <div className="home-banner">
+                <h1 className="stonk-smarter">Home</h1>
+                <h3 className="welcome">Wallstreet Stonks</h3>
+            </div>
             <div className="home-page-row-container">
                 <div className="home-page-column-container">
                     <HomeGraph />
@@ -22,13 +27,12 @@ function HomePage() {
                         <Losers />
                     </div>
                     <News />
-                    <ListOfCompanies/>
+                    <ListOfCompanies />
                 </div>
                 <Watchlist />
             </div>
         </div>
     );
 }
-
 
 export default HomePage;

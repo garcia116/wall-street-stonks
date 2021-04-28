@@ -6,7 +6,7 @@ import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
 
 function ResearchPageStockChart() {
     return (
-        <div class="research-page-stock-chart">
+        <div className="research-page-stock-chart">
             <NavBar />
             <div className="research-page-stock-chart-column-container">
                 <ResearchHeader />

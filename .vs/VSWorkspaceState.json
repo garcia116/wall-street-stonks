@@ -4,13 +4,13 @@
     "\\react",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\ListOfCompanies",
-    "\\react\\src\\Components\\Login",
-    "\\react\\src\\Components\\ResearchGraph",
-    "\\react\\src\\Components\\ResearchHeader",
+    "\\react\\src\\Components\\Charts",
+    "\\react\\src\\Components\\CompanyNews",
+    "\\react\\src\\Components\\CompanyOverview",
     "\\react\\src\\WebPages",
-    "\\react\\src\\WebPages\\AccountPage"
+    "\\react\\src\\WebPages\\HomePage",
+    "\\react\\src\\WebPages\\ResearchPage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\ListOfCompanies\\ListOfCompanies.js",
+  "SelectedNode": "\\react\\src\\Components\\HomeGraph\\HomeGraph.js",
   "PreviewInSolutionExplorer": false
 }
