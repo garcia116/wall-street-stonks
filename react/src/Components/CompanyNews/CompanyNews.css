@@ -1,0 +1,17 @@
+.company-news {
+	background-color: #282828;
+	color: #ffffff;
+	width: 20vw;
+	height: auto;
+	font-size: 14px;
+}
+
+.company-news-link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+	.company-news-link:hover {
+		color: #ffffff;
+		text-decoration: none;
+	}
