@@ -32,7 +32,6 @@ function Watchlist() {
         </div>
     )
 }
->>>>>>> 4225d20b59a4264d40765875dc6b491fe4ddffcf
 
         const url = await fetch(`${iex.base_url}/stock/${stock}/quote?token=${iex.api_token}`)
         const result = await url.json();
