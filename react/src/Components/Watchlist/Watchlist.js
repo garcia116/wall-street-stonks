@@ -7,35 +7,25 @@ import axios from 'axios';
 import Stocks from './Stocks.js';
 
 class WatchList extends Component {
+    constructor(props) {
+        super(props);
 
-    state = {
-        searchStock:[],
-        stockList: []
+        this.state = {
+            searchStock: '',
+            stockList: []
+        };
     }
 
     getStock = async (e) => {
-         const stock = e.target.stockName.value;
+        
+        const stock = e.target.stockName.value;
         e.preventDefault();
-function Watchlist() {
-    return (
-        <div className="watchlist-container">
-            <h3>Watchlist</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Pulvinar elementum integer enim neque.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Pulvinar elementum integer enim neque.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Pulvinar elementum integer enim neque.</p>
-        </div>
-    )
-}
 
         const url = await fetch(`${iex.base_url}/stock/${stock}/quote?token=${iex.api_token}`)
-        const result = await url.json();
-        this.setState({ stockList: result })
+        const result = await url.json()
+        this.setState({
+            stockList: this.state.stockList.concat(result)
+        })
         console.log(this.state.stockList)
     }
 
@@ -43,7 +33,10 @@ function Watchlist() {
         return (
             <div className="watchlist-container">
                 <h3>Watch List</h3>
-                <Form getStock={this.getStock} />
+                <Form
+                    getStock={this.getStock}
+                   
+                />
                 <Stocks stockList={this.state.stockList} />
             </div>
         )
