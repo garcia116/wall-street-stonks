@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './ResearchPageCompanyOverview.css';
 import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
 import CompanyOverview from "../../Components/CompanyOverview/CompanyOverview.js";
@@ -44,10 +44,10 @@ class ResearchPageCompanyOverview extends Component {
                 <div className="research-page-company-overview-column-container">
                     <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
                     <div className="company-overview">
-                        <CompanyOverview name={this.state.keyStats.companyName}/>
+                        <CompanyOverview name={this.state.keyStats.companyName} />
                     </div>
                     <div className="company-news">
-                        <CompanyNews name={this.state.keyStats.companyName}/>
+                        <CompanyNews name={this.state.keyStats.companyName} />
                     </div>
                 </div>
                 : <div></div>

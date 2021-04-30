@@ -1,10 +1,10 @@
 .home-graph-container {
-	background-image: linear-gradient(90deg, #0389f7 10%, #24b99b 90%);
+	background-color: #000000;
 	color: #ffffff;
 	margin: 5vh 0vw 1vh 0vw;
 	padding: .5vh .5vw .5vh .5vw;
 	width: 53vw;
-	height: 38vh;
+	height: 62vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -15,34 +15,13 @@
 
 .home-graph {
 	background-color: #000000;
+	position: relative;
+	margin: auto;
 	color: #ffffff;
-	height: 37vh;
+	height: 63vh;
 	width: 52.25vw;
 	font-size: 25px;
 	text-align: center;
 	line-height: 50px;
 	margin: 10px;
 }
-
-.radio-buttons {
-	background-color: #0389f7;
-	color: white;
-	width: 15vw;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-}
-
-input[type='radio'] {
-	box-sizing: border-box;
-	appearance: none;
-	background: white;
-	outline: 2px solid #333;
-	border: 3px solid white;
-	width: 16px;
-	height: 16px;
-}
-
-	input[type='radio']:checked {
-		background: #333;
-	}

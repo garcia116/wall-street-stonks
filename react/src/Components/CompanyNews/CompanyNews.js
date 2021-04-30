@@ -16,7 +16,7 @@ class CompanyNews extends Component {
         var sandboxMode = true
         var baseURL
         var token
-        const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=5&token=`
+        const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=3&token=`
 
         if (sandboxMode) {
             baseURL = 'https://sandbox.iexapis.com/v1'
@@ -37,26 +37,18 @@ class CompanyNews extends Component {
     render() {
         return (
             this.state.isLoaded ?
-                <div className="">
+                <div>
                     <a className="company-news-link" alt="" href={this.state.companyNews[0].qmUrl}>
-                        <img className="company-news-img" src={this.state.companyNews[0].image}></img>
+                        <img className="company-news-img" alt="" src={this.state.companyNews[0].image}></img>
                         <p className="">{this.state.companyNews[0].headline}</p>
                     </a>
                     <a className="company-news-link" alt="" href={this.state.companyNews[1].qmUrl}>
-                        <img className="company-news-img" src={this.state.companyNews[1].image}></img>
+                        <img className="company-news-img" alt="" src={this.state.companyNews[1].image}></img>
                         <p className="">{this.state.companyNews[1].headline}</p>
                     </a>
                     <a className="company-news-link" alt="" href={this.state.companyNews[2].qmUrl}>
-                        <img className="company-news-img" src={this.state.companyNews[2].image}></img>
+                        <img className="company-news-img" alt="" src={this.state.companyNews[2].image}></img>
                         <p className="">{this.state.companyNews[2].headline}</p>
-                    </a>
-                    <a className="company-news-link" alt="" href={this.state.companyNews[3].qmUrl}>
-                        <img className="company-news-img" src={this.state.companyNews[3].image}></img>
-                        <p className="">{this.state.companyNews[3].headline}</p>
-                    </a>
-                    <a className="company-news-link" alt="" href={this.state.companyNews[4].qmUrl}>
-                        <img className="company-news-img" src={this.state.companyNews[4].image}></img>
-                        <p className="">{this.state.companyNews[4].headline}</p>
                     </a>
                 </div>
                 : <div></div>

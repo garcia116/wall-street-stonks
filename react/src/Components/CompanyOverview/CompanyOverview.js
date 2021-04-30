@@ -13,7 +13,7 @@ class CompanyOverview extends Component {
     }
 
     componentDidMount() {
-        var sandboxMode = true
+        var sandboxMode = false
         var baseURL
         var token
         const logo = `/stock/${this.state.tickerSymbol}/logo?&token=`
@@ -44,7 +44,7 @@ class CompanyOverview extends Component {
             this.state.isLoaded ?
                 <div className="company-overview">
                     <div className="company-logo">
-                        <img src={this.state.logo.url}></img>
+                        <img src={this.state.logo.url} alt=""></img>
                         <p className="company-description">{this.state.companyInfo.description}</p>
                     </div>
                 </div>

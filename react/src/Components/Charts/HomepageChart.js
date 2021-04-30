@@ -32,7 +32,7 @@ const HomepageChart = (props) => {
                 }}
                 options={{
                     responsive: true,
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: true,
                     elements: {
                         point: {
                             radius: 0

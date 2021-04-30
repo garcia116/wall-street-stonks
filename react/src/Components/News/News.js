@@ -39,8 +39,7 @@ class News extends Component {
                 <div className="news-container">
                     <h3>Todays News</h3>
                     <a className="news-link" alt="" href={this.state.newsArray[0].qmUrl}>
-                        <img className="news-img" src={this.state.newsArray[0].image}></img>
-
+                        <img className="news-img" alt="" src={this.state.newsArray[0].image}></img>
                    <p className="">{this.state.newsArray[0].headline}</p>
                     </a>
                     <a className="news-link" alt="" href={this.state.newsArray[1].qmUrl}>

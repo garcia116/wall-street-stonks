@@ -1,6 +1,5 @@
 import React from 'react';
 import './LearnPage.css';
-import NavBar from "../../Components/NavBar/NavBar.js";
 import InvestingTermCard from "../../Components/InvestingTerms/InvestingTermCard.js";
 
 
