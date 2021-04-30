@@ -4,13 +4,13 @@
     "\\react",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\Gainers",
     "\\react\\src\\Components\\Losers",
+    "\\react\\src\\Components\\News",
     "\\react\\src\\Components\\Watchlist",
     "\\react\\src\\config",
     "\\react\\src\\WebPages",
     "\\react\\src\\WebPages\\HomePage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\Watchlist\\Search.js",
+  "SelectedNode": "\\react\\src\\Components\\News\\News.css",
   "PreviewInSolutionExplorer": false
 }

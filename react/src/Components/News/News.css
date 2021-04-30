@@ -14,11 +14,7 @@
 	border: .1vh solid #2a2a2a;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
-news-img {
-
-
-
-
-
-
+.news-img {
+	width: 10vw;
+	height: auto;
 }
