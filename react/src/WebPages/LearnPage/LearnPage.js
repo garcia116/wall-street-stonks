@@ -3,7 +3,6 @@ import './LearnPage.css';
 import NavBar from "../../Components/NavBar/NavBar.js";
 import InvestingTermCard from "../../Components/InvestingTerms/InvestingTermCard.js";
 
-
 function LearnPage() {
     return (
         <div className="learn-page">
@@ -50,6 +49,24 @@ function LearnPage() {
                             <p>A cash investment is a short-term obligation, usually fewer than 90 days, that provides a return in the form of interest payments.
                                 Cash investments generally offer a low return compared to other investments.</p>
                         </InvestingTermCard>
+                        <InvestingTermCard label="Bear Market   ">
+                            <p>A bear market is a period where stock prices are falling. </p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Bull Market   ">
+                            <p>A bull market when the market is moving in a positive direction and is expected to continue.</p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Capital Gain (or Loss)   ">
+                            <p>This is the difference between what you bought an investment for and what you sell it for.</p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Balance sheet   ">
+                            <p>A statement showing what a company owns, as well as the liabilities the company has and stating the outstanding shareholder equity.</p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Recession">
+                            <p>A recession is defined as two consecutive quarters when a country sees negative economic activity. </p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Blue Chip">
+                            <p>A company that has a history of solid earnings, regular and increasing dividends, and an impeccable balance sheet.</p>
+                        </InvestingTermCard>
                     </div>
                     <div className="learn-page-column-container">
                         <InvestingTermCard label=" Where can I begin to invest? ">
@@ -88,6 +105,27 @@ function LearnPage() {
                         <InvestingTermCard label="What is the difference of preferred stock vs common stock?">
                             <p>The main difference between preferred and common stock is that preferred stock gives no voting rights to shareholders while common stock does.
                                 Preferred shareholders have priority over a company's income, meaning they are paid dividends before common shareholders.</p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Current Ratio">
+                            <p>Tells you whether a company has enough current assests to pay its bills for the years(current liabilities).
+                                Usually a good current ration is in line or slightly above the industry average.</p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Book Value">
+                            <p>Total value of a Company's assets that you, the owner, will receive if the company was liquidated.</p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label=" PEG Ratio  ">
+                            <p>Price to earnings growth ratio(PE ratio/Earnings growth rate). Usually if a company is doing well PE ratio will be high which typically scares away investors.
+                               The PEG ratio will let you know if a company is undervalued. The lower the PEG ratio the more likely it's undervalued. </p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Asset">
+                            <p>Anything of value that can be traded.</p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="The S&P 500   ">
+                            <p>The S&P 500 is an index compiled of the 500 best stocks currently in the market.
+                            In general, the S&P is a measure of how the stock market is doing.</p>
+                        </InvestingTermCard>
+                        <InvestingTermCard label="Earnings Per Share">
+                            <p>Earnings per share are the net earnings of the company divided by the number of shares in the company.</p>
                         </InvestingTermCard>
 
                     </div>
