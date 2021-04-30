@@ -8,6 +8,7 @@ class EachStock extends Component {
         };
     }
 
+
     render() {
         return (
             <div className='eachStock'>
@@ -17,6 +18,11 @@ class EachStock extends Component {
                             <h5 className='card-title'>{this.props.stock}</h5>
                             <h6 className='card-price'>{this.props.price}</h6>
                         </div>
+                        <button
+                            onClick={() => this.props.handleRemove(this.props.stock)}
+                            className='card-link remove btn-danger'
+                        > Remove
+                         </button>
                     </div>
                 )}
 

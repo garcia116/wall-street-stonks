@@ -29,15 +29,24 @@ class WatchList extends Component {
         console.log(this.state.stockList)
     }
 
+    onStockRemoveHandler = stockName => {
+        const currState = [...this.state.stockList];
+        var index = this.state.stockList.indexOf(stockName);
+        if (index !== -1) {
+            currState.splice(index, 1);
+            this.setState({ stockList: currState })
+        }
+    }
+
     render() {
         return (
             <div className="watchlist-container">
                 <h3>Watch List</h3>
-                <Form
-                    getStock={this.getStock}
-                   
+                <Form getStock={this.getStock} />
+                <Stocks
+                    stockList={this.state.stockList}
+                    onStockRemove={this.onStockRemoveHandler}
                 />
-                <Stocks stockList={this.state.stockList} />
             </div>
         )
     }
