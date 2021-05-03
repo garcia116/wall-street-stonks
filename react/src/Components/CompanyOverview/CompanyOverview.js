@@ -47,7 +47,7 @@ class CompanyOverview extends Component {
                         <div className="company-website">
                             <img className="company-logo" src={this.state.logo.url} alt=""></img>
                             <p className="company-info-title">Website</p>
-                            <a className="nav-bar-link" alt="" href={this.state.companyInfo.website}>
+                            <a className="company-link" alt="" href={this.state.companyInfo.website}>
                                 <p className="company-info-data">{this.state.companyInfo.website.slice(8, this.state.companyInfo.website.length -1)}</p>
                             </a>
                         </div>

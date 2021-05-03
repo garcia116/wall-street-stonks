@@ -39,12 +39,10 @@ class ResearchPagePriceChart extends Component {
     render() {
         return (
             this.state.isLoaded ?
-                <div>
-                    <div className="research-page-price-chart">
-                        <div className="research-page-price-chart-column-container">
-                            <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
-                            <PriceChartContainer name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol}/>
-                        </div>
+                <div className="research-page-price-chart">
+                    <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
+                    <div className="research-page-price-chart-column-container">
+                        <PriceChartContainer name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol}/>
                     </div>
                 </div>
                 : <div>Loading...</div>

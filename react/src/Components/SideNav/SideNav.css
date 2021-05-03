@@ -9,7 +9,6 @@
 .menu-item:hover {
     color: black;
     box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
-    background-image: linear-gradient(180deg, #0d97db 10%, #0991e6 90%);
     width: 13em;
 }
 
@@ -54,7 +53,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-    background-image: linear-gradient(180deg, #0084ff 40%, #35d369 90%);
+    background-color: #0084ff;
     border: 1px solid #181818;
     box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
     font-size: 1.3em;

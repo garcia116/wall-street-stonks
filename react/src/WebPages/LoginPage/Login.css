@@ -4,7 +4,7 @@ body {
 
 .banner {
     /*background-image: linear-gradient(45deg, #66ee83 30%, #35d369 90%);*/
-    background-image: linear-gradient(90deg, #0084ff 10%, #35d369 90%);
+    background-color: #0084ff;
     height: 12em;
     text-align: left;
     color: white;
@@ -68,7 +68,7 @@ body {
     height: 2.4em;
     color: white;
     /*background-color: rgb(101, 230, 133);*/
-    background-image: linear-gradient(90deg, #16a5c1 10%, #20b4a5 90%);
+    background-color: #0084ff;
     border-radius: .3em;
     font-size: 1.2em;
     font-weight: 400;

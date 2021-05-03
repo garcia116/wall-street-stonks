@@ -4,10 +4,14 @@
     "\\react",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\ResearchHeader",
+    "\\react\\src\\Components\\Charts",
+    "\\react\\src\\Components\\Charts\\PriceChart",
+    "\\react\\src\\Components\\CompanyNews",
+    "\\react\\src\\Components\\HomeGraph",
+    "\\react\\src\\Components\\ResearchGraph",
     "\\react\\src\\WebPages",
     "\\react\\src\\WebPages\\ResearchPage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\ResearchHeader\\ResearchHeader.js",
+  "SelectedNode": "\\react\\src\\Components\\CompanyNews\\CompanyNews.js",
   "PreviewInSolutionExplorer": false
 }
