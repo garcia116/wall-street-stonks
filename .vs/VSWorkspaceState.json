@@ -5,12 +5,12 @@
     "\\react\\src",
     "\\react\\src\\Components",
     "\\react\\src\\Components\\Gainers",
-    "\\react\\src\\Components\\Losers",
-    "\\react\\src\\Components\\Watchlist",
-    "\\react\\src\\config",
+    "\\react\\src\\Components\\NavBar",
+    "\\react\\src\\Components\\ResearchGraph",
+    "\\react\\src\\Components\\SideNav",
     "\\react\\src\\WebPages",
-    "\\react\\src\\WebPages\\HomePage"
+    "\\react\\src\\WebPages\\ResearchPage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\Watchlist\\Search.js",
+  "SelectedNode": "\\react\\src\\WebPages\\ResearchPage\\ResearchPageCompanyOverview.js",
   "PreviewInSolutionExplorer": false
 }
