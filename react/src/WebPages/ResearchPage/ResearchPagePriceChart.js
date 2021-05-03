@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ResearchPagePriceChart.css';
 import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
+import PriceChartContainer from '../../Components/Charts/PriceChart/PriceChartContainer.js';
 
 
 class ResearchPagePriceChart extends Component {
@@ -42,6 +43,7 @@ class ResearchPagePriceChart extends Component {
                     <div className="research-page-price-chart">
                         <div className="research-page-price-chart-column-container">
                             <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
+                            <PriceChartContainer name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol}/>
                         </div>
                     </div>
                 </div>

@@ -62,7 +62,7 @@ class ResearchPageFinancials extends Component {
                     <ResearchGraph data={this.state.balanceSheet} chartFlag={1} />
                     <ResearchGraph data={this.state.incomeStatement} data2={this.state.keyStats.sharesOutstanding} chartFlag={2} />
                 </div>
-                : <p>q{this.state.isLoaded}</p>
+                : <div>Loadeding...</div>
         );
     }
 }
