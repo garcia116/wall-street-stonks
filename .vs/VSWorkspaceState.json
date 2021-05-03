@@ -4,13 +4,12 @@
     "\\react",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\Losers",
-    "\\react\\src\\Components\\News",
-    "\\react\\src\\Components\\Watchlist",
-    "\\react\\src\\config",
+    "\\react\\src\\Components\\CompanyNews",
+    "\\react\\src\\Components\\CompanyOverview",
+    "\\react\\src\\Components\\ResearchGraph",
     "\\react\\src\\WebPages",
-    "\\react\\src\\WebPages\\HomePage"
+    "\\react\\src\\WebPages\\ResearchPage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\News\\News.css",
+  "SelectedNode": "\\react\\src\\Components\\ResearchGraph\\ResearchGraph.css",
   "PreviewInSolutionExplorer": false
 }

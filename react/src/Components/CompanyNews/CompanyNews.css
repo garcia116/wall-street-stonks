@@ -10,12 +10,15 @@
 	align-items: center;
 	margin: 2.0rem 2.0rem 2.0rem 7.0rem;
 	padding: 2.0rem 2.0rem 2.0rem 2.0rem;
+	border: 0.1vh solid #000000;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .company-news-img {
 	width: 20vw;
 	height: auto;
+	border: 0.1vh solid #2a2a2a;
+	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .company-news-link {
