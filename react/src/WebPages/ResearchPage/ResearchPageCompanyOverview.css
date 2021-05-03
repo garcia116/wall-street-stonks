@@ -1,6 +1,5 @@
 .research-page-company-overview {
 	background-color: #181818;
-
 }
 
 .research-page-company-overview-row-container {
@@ -8,13 +7,3 @@
 	flex-direction: row;
 	justify-content: center;
 }
-
-.nav-bar-link {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-	.nav-bar-link:hover {
-		color: #ffffff;
-		text-decoration: none;
-	}

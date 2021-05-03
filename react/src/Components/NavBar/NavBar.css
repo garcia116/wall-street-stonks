@@ -5,51 +5,16 @@
 	max-width: 5vh;
 }
 
-.nav-bar-home {
-	text-align: right;
-}
-
-.nav-bar-search-bar {
-	margin: 0% 0% 0% 0%;
-	text-align: center;
-}
-
-.nav-bar-options-container {
-	background: #282828;
-	height: 6vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.nav-bar-options-container-item {
-	color: #ffffff;
-	font-size: 14px;
-	font-weight: 600;
-	flex-grow: 1;
-	width: 7vw;
-	line-height: 5vh;
-	margin: 0px;
-	text-align: center;
-}
-
 .nav-bar-container {
 	height: 6vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.nav-bar-container-item {
 	color: #ffffff;
 	font-size: 14px;
 	font-weight: 600;
-	flex-grow: 1;
-	width: 7vw;
-	line-height: 5vh;
-	margin: 0vh 1vw 0vh 1vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .nav-bar-link {

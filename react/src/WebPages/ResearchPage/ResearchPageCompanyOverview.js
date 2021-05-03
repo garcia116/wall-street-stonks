@@ -35,19 +35,16 @@ class ResearchPageCompanyOverview extends Component {
         fetch(keyStatsURL)
             .then(response => response.json())
             .then(data => this.setState({ keyStats: data, isLoaded: true }))
-
     }
 
     render() {
         return (
             this.state.isLoaded ?
-                <div className="research-page-company-overview-column-container">
+                <div>
                     <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
-                    <div className="company-overview">
-                        <CompanyOverview name={this.state.keyStats.companyName} />
-                    </div>
-                    <div className="company-news">
+                    <div className="research-page-company-overview-row-container">
                         <CompanyNews name={this.state.keyStats.companyName} />
+                        <CompanyOverview name={this.state.keyStats.companyName} />
                     </div>
                 </div>
                 : <div></div>

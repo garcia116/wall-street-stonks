@@ -13,10 +13,9 @@ class CompanyNews extends Component {
     }
 
     componentDidMount() {
-        var sandboxMode = true
+        var sandboxMode = false
         var baseURL
         var token
-        const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=5&token=`
         const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=3&token=`
 
         if (sandboxMode) {
@@ -38,7 +37,7 @@ class CompanyNews extends Component {
     render() {
         return (
             this.state.isLoaded ?
-                <div>
+                <div className="company-news">
                     <a className="company-news-link" alt="" href={this.state.companyNews[0].qmUrl}>
                         <img className="company-news-img" alt="" src={this.state.companyNews[0].image}></img>
                         <p className="">{this.state.companyNews[0].headline}</p>
@@ -46,10 +45,6 @@ class CompanyNews extends Component {
                     <a className="company-news-link" alt="" href={this.state.companyNews[1].qmUrl}>
                         <img className="company-news-img" alt="" src={this.state.companyNews[1].image}></img>
                         <p className="">{this.state.companyNews[1].headline}</p>
-                    </a>
-                    <a className="company-news-link" alt="" href={this.state.companyNews[2].qmUrl}>
-                        <img className="company-news-img" alt="" src={this.state.companyNews[2].image}></img>
-                        <p className="">{this.state.companyNews[2].headline}</p>
                     </a>
                 </div>
                 : <div></div>

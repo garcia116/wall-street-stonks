@@ -1,20 +1,56 @@
 .company-logo {
 	background-color: #282828;
-	width: 6vw;
+	width: 5vw;
 	height: auto;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
-	margin: 0.0rem 0.0rem 1.0rem 14.0rem;
+	margin: 0.0rem 0.0rem 1.0rem 0.0rem;
 }
 
 .company-overview {
-	
-	width: 30vw ;
+	width: 30vw;
 	height: auto;
-	margin: 1.0rem 2.0rem 1.0rem 2.0rem;
+	margin: 2.0rem 2.0rem 2.0rem 2.0rem;
 	padding: 2.0rem 2.0rem 2.0rem 2.0rem;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
+.company-website {
+	color: #8c8f91;
+	font-size: 13px;
+	margin: 0.0rem 0.0rem 0.0rem 0.0rem;
+	padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.company-info-title {
+	color: #8c8f91;
+	font-size: 13px;
+	margin: 0.0rem 0.0rem 0.0rem 0.0rem;
+	padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+}
+
+.company-info-data {
+	margin: 0.0rem 0.0rem 1.0rem 0.0rem;
+	padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+}
+
+.company-info-data-plus {
+	margin: 0.0rem 0.0rem 0.0rem 0.0rem;
+	padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+}
+
+.nav-bar-link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+	.nav-bar-link:hover {
+		color: #ffffff;
+		text-decoration: none;
+	}
 
 
 
