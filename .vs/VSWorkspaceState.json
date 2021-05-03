@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
+    "",
+    "\\react",
+    "\\react\\src",
+    "\\react\\src\\Components",
+    "\\react\\src\\Components\\Losers",
+    "\\react\\src\\Components\\News",
+    "\\react\\src\\Components\\Watchlist",
+    "\\react\\src\\config",
     "\\react\\src\\WebPages",
-    "\\react\\src\\WebPages\\LearnPage",
-    "\\react\\src\\WebPages\\ResearchPage"
+    "\\react\\src\\WebPages\\HomePage"
   ],
+  "SelectedNode": "\\react\\src\\Components\\News\\News.css",
   "PreviewInSolutionExplorer": false
 }
