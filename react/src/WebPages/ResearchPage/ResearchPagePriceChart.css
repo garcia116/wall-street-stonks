@@ -1,0 +1,9 @@
+.research-page-price-chart {
+	background-color: #181818;
+}
+
+.research-page-price-chart-column-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

@@ -1,16 +1,20 @@
-.company-logo{
+.company-logo {
 	background-color: #282828;
-}
-
-.company-news-img {
-	background-color: #282828;
-	color: #ffffff;
-	width: 20vw;
+	width: 6vw;
 	height: auto;
-	font-size: 14px;
+	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+	margin: 0.0rem 0.0rem 1.0rem 14.0rem;
 }
 
-.company {
-	color: #ffffff;
+.company-overview {
+	
+	width: 30vw ;
+	height: auto;
+	margin: 1.0rem 2.0rem 1.0rem 2.0rem;
+	padding: 2.0rem 2.0rem 2.0rem 2.0rem;
+	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
+
+
+
 
