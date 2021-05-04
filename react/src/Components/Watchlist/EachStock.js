@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./EachStock.css"
 
 class EachStock extends Component {
     constructor(props) {
@@ -15,8 +16,9 @@ class EachStock extends Component {
                 {this.props.stock && (
                     <div className='card'>
                         <div className='card-body'>
-                            <h5 className='card-title'>{this.props.stock}</h5>
-                            <h6 className='card-price'>{this.props.price}</h6>
+                            <h5 className='card-title'>Symbol: {this.props.stock}</h5>
+                            <h6 className='card-price'>Price: {this.props.price}</h6>
+                            <h6 className='card-change'>Change: {this.props.change}</h6>
                         </div>
                         <button
                             onClick={() => this.props.handleRemove(this.props.stock)}

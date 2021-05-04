@@ -9,13 +9,13 @@ function ListOfCompanies() {
         <div className="Example">
             
             <div className="list-of-companies-container">
-                <h3>List of Companies</h3>
+                <h3>Top Market Cap Companies</h3>
                 <table className="table mt-5">
                     <thead>
                     <tr>
                             <th>Ticker</th>
                             <th>Market Cap</th>
-                            <th>Price</th>
+                            <th>Price </th>
                             <th>Change +/-</th>
                     </tr>
                     </thead>
@@ -25,7 +25,7 @@ function ListOfCompanies() {
                         <FetchCompanies ticker="amzn" />
                         <FetchCompanies ticker="goog" />
                         <FetchCompanies ticker="fb" />
-                        <FetchCompanies ticker="tcehy" />
+                        <FetchCompanies ticker="v" />
                         <FetchCompanies ticker="tsla" />
                         <FetchCompanies ticker="tsm" />
                         <FetchCompanies ticker="baba" />

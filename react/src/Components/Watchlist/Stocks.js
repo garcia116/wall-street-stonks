@@ -19,6 +19,7 @@ class Stocks extends Component {
     render() {
         return (
             <div className='mystocks_div'>
+                <br></br>
                 {this.props.stockList && <h4 className='yourList'>Your List:</h4>}
                 <div className='mystocks'>
                     {this.props.stockList &&
@@ -27,6 +28,7 @@ class Stocks extends Component {
                                 key={key}
                                 stock={stock['symbol']}
                                 price={stock['iexRealtimePrice']}
+                                change={stock['change']}
                                 handleRemove={this.handleRemove}
                             />
                         ))}
