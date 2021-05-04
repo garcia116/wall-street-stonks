@@ -19,7 +19,7 @@ function FetchCompanies(props) {
         <tr>
             <td>{data.symbol}</td>
             <td>{data.marketCap}</td>
-            <td>{data.iexRealtimePrice}</td>
+            <td>${data.iexRealtimePrice}</td>
             <td>{data.change}</td>
 
         </tr>
