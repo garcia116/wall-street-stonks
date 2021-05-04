@@ -6,6 +6,7 @@ import './Losers.css';
 
 const Styles = styled.div`
   table {
+
     width: 100%;
     border-spacing: 0;
     border: 1px solid black;
@@ -18,6 +19,7 @@ const Styles = styled.div`
     }
     th,
     td {
+      font-size: 1vw;
       margin: 0;
       padding: 1rem;
       border-bottom: 1px solid black;
@@ -65,7 +67,7 @@ function Losers() {
     }, []);
 
     return (
-        <div className="losers-container">
+        <div className="losers-container" >
             <h3>Today's Biggest Losers</h3>
             <Styles>
                 <Table

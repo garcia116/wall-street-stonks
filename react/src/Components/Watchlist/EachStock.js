@@ -16,7 +16,7 @@ class EachStock extends Component {
                 {this.props.stock && (
                     <div className='card'>
                         <div className='card-body'>
-                            <h5 className='card-title'>Symbol: {this.props.stock}</h5>
+                            <h5 className='card-title'>Ticker: {this.props.stock}</h5>
                             <h6 className='card-price'>Price: {this.props.price}</h6>
                             <h6 className='card-change'>Change: {this.props.change}</h6>
                         </div>
