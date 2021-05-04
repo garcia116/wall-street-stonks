@@ -32,10 +32,9 @@ class WatchList extends Component {
     onStockRemoveHandler = stockName => {
         const currState = [...this.state.stockList];
         var index = this.state.stockList.indexOf(stockName);
-        if (index !== -1) {
             currState.splice(index, 1);
             this.setState({ stockList: currState })
-        }
+        
     }
 
     render() {

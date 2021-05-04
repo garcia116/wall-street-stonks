@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import EachStock from './EachStock.js'
 
 
 
-const Stocks = ({ stockList, onStockRemove }) => (
+class Stocks extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            myStocks: []
+        };
+    }
 
-    
-    <div className="container">
-        <div className="row">
-            {stockList && < h4 className='yourList'>Your List:</h4>}
-            { stockList.map((stock, key) => {
-                return (
-                    <div className="col-md-4" style={{ marginBottom: "2rem" }}>
-                            
-                        <EachStock
-                            key={key}
-                            stock={stock['symbol']}
-                            price={stock['iexRealtimePrice']}
-                            handleRemove={stockName => {
-                                onStockRemove(stockName);
-                            }}
-                       />
-                      
-                    </div>
-                );
-            })}
-        </div>
-    </div>
-);
+    handleRemove = stockName => {
+        console.log(stockName)
+        this.props.onStockRemove(stockName);
+    };
+
+    render() {
+        return (
+            <div className='mystocks_div'>
+                {this.props.stockList && <h4 className='yourList'>Your List:</h4>}
+                <div className='mystocks'>
+                    {this.props.stockList &&
+                        this.props.stockList.map((stock, key) => (
+                            <EachStock
+                                key={key}
+                                stock={stock['symbol']}
+                                price={stock['iexRealtimePrice']}
+                                handleRemove={this.handleRemove}
+                            />
+                        ))}
+                </div>
+            </div>
+        );
+    }
+}
 export default Stocks;
