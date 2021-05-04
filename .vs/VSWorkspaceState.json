@@ -12,6 +12,10 @@
     "\\react\\src\\WebPages",
     "\\react\\src\\WebPages\\ResearchPage"
   ],
+<<<<<<< HEAD
+  "SelectedNode": "\\react\\src\\Components\\Watchlist\\Stocks.js",
+=======
   "SelectedNode": "\\react\\src\\Components\\CompanyNews\\CompanyNews.js",
+>>>>>>> 82fdd90849754dbe10724689a825914727a9e745
   "PreviewInSolutionExplorer": false
 }
