@@ -1,6 +1,10 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import './ResearchHeader.css';
-
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import Financials from '../../WebPages/ResearchPage/ResearchPageFinancials';
+import PriceChart from '../../WebPages/ResearchPage/ResearchPagePriceChart';
+import CompanyOverview from '../../WebPages/ResearchPage/ResearchPageCompanyOverview';
+import ResearchPage from '../../WebPages/ResearchPage/ResearchPage.js';
 
 class ResearchHeader extends Component {
     constructor(props) {
@@ -63,6 +67,7 @@ class ResearchHeader extends Component {
         }
 
         return (
+            <div className="research-header-container">
             <div className="reseach-banner">
                 <div className="research-upper-header-container">
                     <div className="research-header-ticker-name">
@@ -70,28 +75,15 @@ class ResearchHeader extends Component {
                     </div>
                     <div className="research-header-price">
                         Price: ${this.state.price}
-                        </div>
+                    </div>
                     <div className="research-header-market-cap">
                         {marketcapLabel}
                     </div>
                 </div>
-                <div className="research-lower-header-container">
-                    <div className="research-header-financials">
-                        <a className="nav-bar-link" href="/ResearchPageFinancials">
-                            Financials
-                            </a>
-                    </div>
-                    <div className="research-header-stock-chart">
-                        <a className="nav-bar-link" href="/ResearchPagePriceChart">
-                            Price Chart
-                            </a>
-                    </div>
-                    <div className="research-header-company-overview">
-                        <a className="nav-bar-link" href="/ResearchPageCompanyOverview">
-                            Company Overview
-                            </a>
-                    </div>
+                <div className="links">
+                        
                 </div>
+            </div>
             </div>
         )
     }

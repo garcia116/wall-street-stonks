@@ -39,7 +39,7 @@ function Gainers() {
     const columns = useMemo(
         () => [
             {
-                Header: 'SYMBOL',
+                Header: 'TICKER',
                 accessor: 'symbol'
             }
             , {

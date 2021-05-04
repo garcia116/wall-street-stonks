@@ -41,7 +41,6 @@ class ResearchPageCompanyOverview extends Component {
         return (
             this.state.isLoaded ?
                 <div className="research-page-company-overview">
-                    <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
                     <div className="research-page-company-overview-row-container">
                         <CompanyNews name={this.state.keyStats.companyName} />
                         <CompanyOverview name={this.state.keyStats.companyName} />
