@@ -1,7 +1,7 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 
-const HomepageChart = (props) => {
+const PriceChart = (props) => {
 
     var chartxLabels = [{}]
     var data = [{}]
@@ -17,8 +17,7 @@ const HomepageChart = (props) => {
     }
 
     return (
-        <div className="chart">
-            <p>SPY S&P 500 ETF</p>
+        <div>
             <Line
                 data={{
                     labels: chartxLabels,
@@ -79,4 +78,4 @@ const HomepageChart = (props) => {
 }
 
 
-export default HomepageChart;
+export default PriceChart;

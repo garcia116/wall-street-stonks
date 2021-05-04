@@ -1,17 +1,38 @@
 .company-news {
-	background-color: #282828;
+	background-color: #000000;
 	color: #ffffff;
 	width: 25vw;
-	height: 10vh;
+	height: auto;
 	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 2.0rem 2.0rem 2.0rem 7.0rem;
+	padding: 2.0rem 2.0rem 2.0rem 2.0rem;
+	border: 0.1vh solid #2a2a2a;
+	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+}
+
+.company-news-img {
+	width: 20vw;
+	height: auto;
+	border: 0.1vh solid #2a2a2a;
 }
 
 .company-news-link {
 	color: #ffffff;
 	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0.0rem 0.0rem 1.0rem 0.0rem;
+	padding: 1.0rem 0.0rem 0.0rem 0.0rem;
 }
 
 	.company-news-link:hover {
 		color: #ffffff;
 		text-decoration: none;
+		box-shadow: 0.0em 0.0em 0.8em 0.0em rgb(255 255 255 / 0.61)
 	}

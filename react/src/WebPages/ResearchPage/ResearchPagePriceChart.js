@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import './ResearchPageCompanyOverview.css';
+import './ResearchPagePriceChart.css';
 import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
-import CompanyOverview from "../../Components/CompanyOverview/CompanyOverview.js";
-import CompanyNews from "../../Components/CompanyNews/CompanyNews.js";
+import PriceChartContainer from '../../Components/Charts/PriceChart/PriceChartContainer.js';
 
 
-class ResearchPageCompanyOverview extends Component {
+class ResearchPagePriceChart extends Component {
     constructor(props) {
         super(props)
         this.state = {
             tickerSymbol: 'TSLA',
-            logo: [{}],
             isloaded: false
         }
     }
 
     componentDidMount() {
-        var sandboxMode = true
+        var sandboxMode = false
         var baseURL
         var token
         const keyStats = `/stock/${this.state.tickerSymbol}/stats/companyname?&token=`
@@ -35,22 +33,22 @@ class ResearchPageCompanyOverview extends Component {
         fetch(keyStatsURL)
             .then(response => response.json())
             .then(data => this.setState({ keyStats: data, isLoaded: true }))
+
     }
 
     render() {
         return (
             this.state.isLoaded ?
-                <div className="research-page-company-overview">
+                <div className="research-page-price-chart">
                     <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
-                    <div className="research-page-company-overview-row-container">
-                        <CompanyNews name={this.state.keyStats.companyName} />
-                        <CompanyOverview name={this.state.keyStats.companyName} />
+                    <div className="research-page-price-chart-column-container">
+                        <PriceChartContainer name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol}/>
                     </div>
                 </div>
-                : <div></div>
+                : <div>Loading...</div>
         );
     }
 }
 
 
-export default ResearchPageCompanyOverview;
+export default ResearchPagePriceChart;

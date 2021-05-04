@@ -9,7 +9,7 @@
 }
 
 .account-banner {
-	background-image: linear-gradient(45deg, #0084ff 10%, #35d369 90%);
+	background-color: #0084ff;
 	height: 12em;
 	text-align: left;
 	color: white;

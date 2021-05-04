@@ -13,7 +13,7 @@ class CompanyOverview extends Component {
     }
 
     componentDidMount() {
-        var sandboxMode = true
+        var sandboxMode = false
         var baseURL
         var token
         const logo = `/stock/${this.state.tickerSymbol}/logo?&token=`
@@ -43,12 +43,28 @@ class CompanyOverview extends Component {
         return (
             this.state.isLoaded ?
                 <div className="company-overview">
-                    <div className="company-logo">
-                        <img src={this.state.logo.url}></img>
-                        <p className="company-description">{this.state.companyInfo.description}</p>
+                    <div>
+                        <div className="company-website">
+                            <img className="company-logo" src={this.state.logo.url} alt=""></img>
+                            <p className="company-info-title">Website</p>
+                            <a className="company-link" alt="" href={this.state.companyInfo.website}>
+                                <p className="company-info-data">{this.state.companyInfo.website.slice(8, this.state.companyInfo.website.length -1)}</p>
+                            </a>
+                        </div>
+                        <p className="company-info-data">{this.state.companyInfo.description}</p>
+                        <p className="company-info-title">CEO</p>
+                        <p className="company-info-data">{this.state.companyInfo.CEO}</p>
+                        <p className="company-info-title">Industry</p>
+                        <p className="company-info-data">{this.state.companyInfo.industry}</p>
+                        <p className="company-info-title">Address</p>
+                        <p className="company-info-data-plus">{this.state.companyInfo.address}</p>
+                        <p className="company-info-data-plus">{this.state.companyInfo.city}, {this.state.companyInfo.state}</p>
+                        <p className="company-info-data">{this.state.companyInfo.zip}</p>
+                        <p className="company-info-title">Employees</p>
+                        <p className="company-info-data">{this.state.companyInfo.employees}</p>
                     </div>
                 </div>
-                : <div></div>
+                : <div>Loading...</div>
         );
     }
 }

@@ -82,7 +82,7 @@ class ResearchHeader extends Component {
                             </a>
                     </div>
                     <div className="research-header-stock-chart">
-                        <a className="nav-bar-link" href="/ResearchPageStockChart">
+                        <a className="nav-bar-link" href="/ResearchPagePriceChart">
                             Price Chart
                             </a>
                     </div>

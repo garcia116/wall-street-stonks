@@ -1,7 +1,7 @@
 .research-graph-container {
 	background-color: #000000;
 	color: #ffffff;
-	margin: 5vh 15vw 2vh 20vw;
+	margin: 3vh 15vw 2vh 20vw;
 	padding: 0.5vh 0.5vw 0.5vh 0.5vw;
 	width: 62vw;
 	height: 70vh;
@@ -9,7 +9,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: .1vh solid #2a2a2a;
+	border: 0.1vh solid #2a2a2a;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
@@ -25,26 +25,3 @@
 	line-height: 50px;
 	margin: 10px;
 }
-
-.radio-buttons {
-	background-color: #000000;
-	color: white;
-	width: 15vw;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;	
-}
-
-input[type='radio'] {
-	box-sizing: border-box;
-	appearance: none;
-	background: white;
-	outline: none;
-	border: 3px solid white;
-	width: 16px;
-	height: 16px;
-	
-}
-	input[type='radio']:checked {
-		background: #000000;
-	}
