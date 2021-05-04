@@ -25,7 +25,6 @@ class EachStock extends Component {
                          </button>
                     </div>
                 )}
-
             </div>
             )
     }

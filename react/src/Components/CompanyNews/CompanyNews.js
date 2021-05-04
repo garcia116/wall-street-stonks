@@ -13,10 +13,10 @@ class CompanyNews extends Component {
     }
 
     componentDidMount() {
-        var sandboxMode = false
+        var sandboxMode = true
         var baseURL
         var token
-        const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=3&token=`
+        const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=2&token=`
 
         if (sandboxMode) {
             baseURL = 'https://sandbox.iexapis.com/v1'

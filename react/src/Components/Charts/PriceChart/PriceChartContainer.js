@@ -8,7 +8,8 @@ class PriceChartContainer extends Component {
         super(props)
         this.state = {
             tickerSymbol: props.tickerSymbol,
-            companyName: props.name,
+            keyStats: props.keyStats,
+            companyName: props.keyStats.companyName,
             prices: [{}],
             isLoaded: false
         }
@@ -37,11 +38,11 @@ class PriceChartContainer extends Component {
             .then(data => this.setState({ prices: data, isLoaded: true }))
     }
     render() {
+        
         return (
             this.state.isLoaded ?
                 <div className="price-chart-container">
                     <div className="price-chart">
-                        <p>{this.state.tickerSymbol}: {this.state.companyName}</p>
                         <PriceChart data={this.state.prices} />
                     </div>
                 </div>

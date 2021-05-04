@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ResearchPagePriceChart.css';
 import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
 import PriceChartContainer from '../../Components/Charts/PriceChart/PriceChartContainer.js';
+import PriceChartInfo from '../../Components/Charts/PriceChart/PriceChartInfo';
 
 
 class ResearchPagePriceChart extends Component {
@@ -9,6 +10,7 @@ class ResearchPagePriceChart extends Component {
         super(props)
         this.state = {
             tickerSymbol: 'TSLA',
+            keyStats: [{}],
             isloaded: false
         }
     }
@@ -33,7 +35,6 @@ class ResearchPagePriceChart extends Component {
         fetch(keyStatsURL)
             .then(response => response.json())
             .then(data => this.setState({ keyStats: data, isLoaded: true }))
-
     }
 
     render() {
@@ -42,7 +43,8 @@ class ResearchPagePriceChart extends Component {
                 <div className="research-page-price-chart">
                     <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
                     <div className="research-page-price-chart-column-container">
-                        <PriceChartContainer name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol}/>
+                        <PriceChartContainer tickerSymbol={this.state.tickerSymbol} keyStats={this.state.keyStats}/>
+                        <PriceChartInfo tickerSymbol={this.state.tickerSymbol} keyStats={this.state.keyStats}/>
                     </div>
                 </div>
                 : <div>Loading...</div>
