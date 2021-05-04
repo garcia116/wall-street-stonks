@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ResearchPageFinancials.css';
-import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
 import ResearchGraph from "../../Components/ResearchGraph/ResearchGraph.js";
 
 
@@ -21,13 +20,13 @@ class ResearchPageFinancials extends Component {
     }
 
     componentDidMount() {
-        var sandboxMode = true
+        var sandboxMode = false
         var baseURL
         var token
         const keyStats = `/stock/${this.state.tickerSymbol}/stats/companyname?&token=`
         const incomeStatement = `/stock/${this.state.tickerSymbol}/income?period=quarter&last=12&token=`
         const balanceSheet = `/stock/${this.state.tickerSymbol}/balance-sheet?period=quarter&last=12&token=`
-        
+
 
         if (sandboxMode) {
             baseURL = 'https://sandbox.iexapis.com/v1'
@@ -44,20 +43,20 @@ class ResearchPageFinancials extends Component {
 
         fetch(keyStatsURL)
             .then(response => response.json())
-            .then(data => this.setState({ keyStats: data, isLoaded1: true })) 
+            .then(data => this.setState({ keyStats: data, isLoaded1: true }))
+            .then(console.log(this.state.keyStats.companyName))
         fetch(balanceSheetURL)
             .then(response => response.json())
-            .then(data => this.setState({ balanceSheet: data, isLoaded2: true })) 
+            .then(data => this.setState({ balanceSheet: data, isLoaded2: true }))
         fetch(incomeStatementURL)
             .then(response => response.json())
-            .then(data => this.setState({ incomeStatement: data, isLoaded3: true}))
+            .then(data => this.setState({ incomeStatement: data, isLoaded3: true }))
     }
 
     render() {
         return (
-            this.state.isLoaded1 && this.state.isLoaded2 && this.state.isLoaded3?
+            this.state.isLoaded1 && this.state.isLoaded2 && this.state.isLoaded3 ?
                 <div className="research-page-financials">
-                    <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} ice={this.state.price} marketcap={this.state.keyStats.marketcap} />
                     <ResearchGraph data={this.state.incomeStatement} chartFlag={0} />
                     <ResearchGraph data={this.state.balanceSheet} chartFlag={1} />
                     <ResearchGraph data={this.state.incomeStatement} data2={this.state.keyStats.sharesOutstanding} chartFlag={2} />

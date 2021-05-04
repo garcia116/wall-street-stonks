@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ResearchPagePriceChart.css';
-import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
 import PriceChartContainer from '../../Components/Charts/PriceChart/PriceChartContainer.js';
 
 
@@ -40,7 +39,6 @@ class ResearchPagePriceChart extends Component {
         return (
             this.state.isLoaded ?
                 <div className="research-page-price-chart">
-                    <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} price={this.state.price} marketcap={this.state.keyStats.marketcap} />
                     <div className="research-page-price-chart-column-container">
                         <PriceChartContainer name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol}/>
                     </div>

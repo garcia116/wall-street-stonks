@@ -4,18 +4,13 @@
     "\\react",
     "\\react\\src",
     "\\react\\src\\Components",
-    "\\react\\src\\Components\\Charts",
-    "\\react\\src\\Components\\Charts\\PriceChart",
-    "\\react\\src\\Components\\CompanyNews",
-    "\\react\\src\\Components\\HomeGraph",
-    "\\react\\src\\Components\\ResearchGraph",
+    "\\react\\src\\Components\\Losers",
+    "\\react\\src\\Components\\News",
+    "\\react\\src\\Components\\ResearchHeader",
+    "\\react\\src\\Components\\SideNav",
     "\\react\\src\\WebPages",
     "\\react\\src\\WebPages\\ResearchPage"
   ],
-<<<<<<< HEAD
-  "SelectedNode": "\\react\\src\\Components\\Watchlist\\Stocks.js",
-=======
-  "SelectedNode": "\\react\\src\\Components\\CompanyNews\\CompanyNews.js",
->>>>>>> 82fdd90849754dbe10724689a825914727a9e745
+  "SelectedNode": "\\react\\src\\Components\\ResearchHeader\\ResearchHeader.js",
   "PreviewInSolutionExplorer": false
 }
