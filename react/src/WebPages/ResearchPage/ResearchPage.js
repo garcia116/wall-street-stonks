@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import ResearchHeader from '../../Components/ResearchHeader/ResearchHeader.js';
 import Financials from '../../WebPages/ResearchPage/ResearchPageFinancials';
+import Stats from '../../WebPages/ResearchPage/ResearchPageStats';
+import Dividends from '../../WebPages/ResearchPage/ResearchPageDividends';
 import PriceChart from '../../WebPages/ResearchPage/ResearchPagePriceChart';
 import CompanyOverview from '../../WebPages/ResearchPage/ResearchPageCompanyOverview';
 import './ResearchPage.css';
@@ -47,12 +49,17 @@ class ResearchPage extends Component {
                 <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} marketcap={this.state.keyStats.marketcap} />
                 <BrowserRouter>
                     <div className="research-links">
-                    <Link to="/ResearchPageFinancials">Financials</Link>
-                    <Link to="/ResearchPagePriceChart">Price Chart</Link>
-                    <Link to="/ResearchPageCompanyOverview">Company Overview</Link>
+                        <Link to="/ResearchPageFinancials">Financials</Link>
+                        <Link to="/ResearchPageStats">Stats</Link>
+                        <Link to="/ResearchPageDividends">Dividends</Link>
+                        <Link to="/ResearchPagePriceChart">Price Chart</Link>
+                        <Link to="/ResearchPageCompanyOverview">Company Overview</Link>
                     </div>
                     <Switch>
+                        <Route path="/ResearchPage" component={Financials} />
                         <Route path="/ResearchPageFinancials" component={Financials} />
+                        <Route path="/ResearchPageStats" component={Stats} />
+                        <Route path="/ResearchPageDividends" component={Dividends} />
                         <Route path="/ResearchPagePriceChart" component={PriceChart} />
                         <Route path="/ResearchPageCompanyOverview" component={CompanyOverview} />
                     </Switch>

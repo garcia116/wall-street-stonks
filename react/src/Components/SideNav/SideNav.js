@@ -3,7 +3,6 @@ import { slide as Menu } from 'react-burger-menu';
 import { Route, NavLink, BrowserRouter } from 'react-router-dom';
 import HomePage from '../../WebPages/HomePage/HomePage';
 import ResearchPage from '../../WebPages/ResearchPage/ResearchPage';
-import ResearchPageFinancials from '../../WebPages/ResearchPage/ResearchPageFinancials';
 import LearnPage from '../../WebPages/LearnPage/LearnPage';
 import './SideNav.css'
 import AccountPage from '../../WebPages/AccountPage/AccountPage';

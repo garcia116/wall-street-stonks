@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './ResearchPageFinancials.css';
-import ResearchGraph from "../../Components/ResearchGraph/ResearchGraph.js";
-
-
+import IncomeStatementChartContainer from "../../Components/Charts/IncomeStatementChart/IncomeStatementChartContainer.js";
+import BalanceSheetChartContainer from "../../Components/Charts/BalanceSheetChart/BalanceSheetChartContainer.js";
+import PERatioChartContainer from "../../Components/Charts/PERatioChart/PERatioChartContainer.js";
+import EPSChartContainer from "../../Components/Charts/EPSChart/EPSChartContainer.js";
 
 class ResearchPageFinancials extends Component {
     constructor(props) {
@@ -10,12 +11,8 @@ class ResearchPageFinancials extends Component {
         this.state = {
             tickerSymbol: 'TSLA',
             keyStats: [{}],
-            incomeStatement: [{}],
-            balanceSheet: [{}],
             isLoaded1: false,
             isLoaded2: false,
-            isLoaded3: false,
-
         }
     }
 
@@ -25,8 +22,6 @@ class ResearchPageFinancials extends Component {
         var token
         const keyStats = `/stock/${this.state.tickerSymbol}/stats/companyname?&token=`
         const incomeStatement = `/stock/${this.state.tickerSymbol}/income?period=quarter&last=12&token=`
-        const balanceSheet = `/stock/${this.state.tickerSymbol}/balance-sheet?period=quarter&last=12&token=`
-
 
         if (sandboxMode) {
             baseURL = 'https://sandbox.iexapis.com/v1'
@@ -39,29 +34,24 @@ class ResearchPageFinancials extends Component {
 
         const keyStatsURL = baseURL + keyStats + token
         const incomeStatementURL = baseURL + incomeStatement + token
-        const balanceSheetURL = baseURL + balanceSheet + token
 
         fetch(keyStatsURL)
             .then(response => response.json())
             .then(data => this.setState({ keyStats: data, isLoaded1: true }))
-            .then(console.log(this.state.keyStats.companyName))
-        fetch(balanceSheetURL)
-            .then(response => response.json())
-            .then(data => this.setState({ balanceSheet: data, isLoaded2: true }))
         fetch(incomeStatementURL)
             .then(response => response.json())
-            .then(data => this.setState({ incomeStatement: data, isLoaded3: true }))
+            .then(data => this.setState({ incomeStatement: data, isLoaded2: true }))
     }
 
     render() {
         return (
-            this.state.isLoaded1 && this.state.isLoaded2 && this.state.isLoaded3 ?
+            this.state.isLoaded1 && this.state.isLoaded2?
                 <div className="research-page-financials">
-                    <ResearchGraph data={this.state.incomeStatement} chartFlag={0} />
-                    <ResearchGraph data={this.state.balanceSheet} chartFlag={1} />
-                    <ResearchGraph data={this.state.incomeStatement} data2={this.state.keyStats.sharesOutstanding} chartFlag={2} />
+                    <IncomeStatementChartContainer incomeStatement={this.state.incomeStatement} />
+                    <BalanceSheetChartContainer tickerSymbol={this.state.tickerSymbol} />
                 </div>
-                : <div>Loadeding...</div>
+                :
+                <div>Loading...</div>
         );
     }
 }

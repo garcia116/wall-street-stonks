@@ -1,7 +1,7 @@
 .reseach-banner {
 	background-color: #0084ff;
-	height: 12em;
-	text-align: left;
+	height: 8em;
+	text-align: center;
 	color: white;
 	font-family: 'Roboto Slab', serif;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
@@ -14,8 +14,6 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding-left: 4em;
-	padding-right: 4em;
 }
 
 .research-lower-header-container {

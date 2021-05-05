@@ -40,12 +40,11 @@ class ResearchPagePriceChart extends Component {
         return (
             this.state.isLoaded ?
                 <div className="research-page-price-chart">
-                    <div className="research-page-price-chart-column-container">
-                        <PriceChartContainer tickerSymbol={this.state.tickerSymbol} keyStats={this.state.keyStats}/>
-                        <PriceChartInfo tickerSymbol={this.state.tickerSymbol} keyStats={this.state.keyStats}/>
-                    </div>
+                    <PriceChartContainer tickerSymbol={this.state.tickerSymbol} keyStats={this.state.keyStats} />
+                    <PriceChartInfo tickerSymbol={this.state.tickerSymbol} keyStats={this.state.keyStats} />
                 </div>
-                : <div>Loading...</div>
+                :
+                <div>Loading...</div>
         );
     }
 }

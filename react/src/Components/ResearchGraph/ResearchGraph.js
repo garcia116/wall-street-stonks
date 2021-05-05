@@ -1,8 +1,8 @@
 import React from "react";
 import './ResearchGraph.css';
-import IncomeStatementChart from "../Charts/IncomeStatementChart.js";
-import BalanceSheetChart from "../Charts/BalanceSheetChart.js";
-import PERatioChart from "../Charts/PERatioChart.js";
+import IncomeStatementChart from "../Charts/IncomeStatementChart/IncomeStatementChart.js";
+import BalanceSheetChart from "../Charts/BalanceSheetChart/BalanceSheetChart.js";
+import PERatioChart from "../Charts/PERatioChart/PERatioChart.js";
 
 
 const ResearchGraph = (props) => {

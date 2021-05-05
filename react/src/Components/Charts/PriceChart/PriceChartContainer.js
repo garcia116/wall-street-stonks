@@ -42,13 +42,16 @@ class PriceChartContainer extends Component {
         return (
             this.state.isLoaded ?
                 <div className="price-chart-container">
+                        <h2>+500%</h2>
                     <div className="price-chart">
                         <PriceChart data={this.state.prices} />
                     </div>
                 </div>
                 : <div>
                     <div className="price-chart-container">
-                        <h1>Loading...</h1>
+                        <div className="price-chart">
+                            <h1>Loading...</h1>
+                        </div>
                     </div>
                 </div>
         );

@@ -1,0 +1,21 @@
+.income-statement-chart-container {
+	background-color: #000000;
+	color: #ffffff;
+	margin: 3vh 0vw 2vh 0vw;
+	padding: 0vh 0vw 0vh 0vw;
+	width: 62vw;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 0.1vh solid #2a2a2a;
+	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+}
+
+.income-statement-chart {
+	position: relative;
+	width: 55vw;
+	height: auto;
+}

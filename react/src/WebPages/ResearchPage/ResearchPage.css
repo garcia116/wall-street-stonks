@@ -1,12 +1,19 @@
+.research-container {
+    background-color: #181818;
+}
+
 .research-links {
-    font-size: 2vw;
-    align-items: center;
+    color: #ffffff;
+    font-size: 2.5vh;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: red;
+    align-items: center;
+    padding: 0em 12em 0em 12em;
+    border-top: .1vh solid #282828;
 }
 
 .Link {
-    justify-content: space-between;
+    margin: 1em 1em 1em 1em;
 }
     
