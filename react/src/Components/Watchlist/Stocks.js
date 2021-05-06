@@ -41,8 +41,8 @@
 
 
 import React, { Component } from 'react';
-import EachStock from './EachStock.js'
-
+import EachStock from './EachStock.js';
+import './Watchlist.css';
 
 
 class Stocks extends Component {
@@ -62,7 +62,7 @@ class Stocks extends Component {
         return (
             <div className='mystocks_div'>
                 <br></br>
-                {this.props.stockList && <h4 className='yourList'></h4>}
+                {this.props.stockList && <p className='yourList'></p>}
                 <div className='mystocks'>
                     {this.props.stockList &&
                         this.props.stockList.map((stock, key) => (

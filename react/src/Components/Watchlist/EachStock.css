@@ -2,13 +2,15 @@
     background-color: #242424;
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 1em;
+    margin: .6em;
     align-items: center;
     /* height: 5.5em; */
     border: .1em solid;
-    border-radius: .3em;
+    border-radius: .1em;
     border-color: #424242;
     box-shadow: #242424;
+    font-size: medium;
+    font-family: 'Lato' !important;
 }
 
 .info {
@@ -25,7 +27,7 @@
 .info p {
     margin: 0;
     padding: .4em;
-    font-size: medium;
+    font-size: small;
 }
 
 .card-price {
@@ -39,6 +41,6 @@
 
 
 .card-title {
-    font-size: large;
+    font-size: medium;
     text-align: center;
 }

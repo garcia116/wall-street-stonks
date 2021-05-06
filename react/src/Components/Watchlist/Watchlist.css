@@ -18,6 +18,8 @@
 	border: .1em solid;
 	border-radius: .3em;
 	border-color: #424242;
+	font-family: 'Lato' !important;
+
 }
 
 /* h3 {
@@ -28,28 +30,37 @@
 form {
 	
 	display: grid;
-	grid-template-columns: 60% auto;
-
-	grid-column-gap: 1em;
+	grid-template-columns: 65% auto;
+	grid-column-gap: .6em;
 	
 }
 
 .add-to-watchlist {
-	padding: 1em;
+	padding: .6em 1.5em .6em 1.5em;
+	
+	padding-bottom: 0;
+	height: 2em;
 }
 
 .add-to-watchlist input {
 	margin: 0;
 	background-color: #fffffff5;
+	font-family: 'Lato' !important;
+	height: auto;
 }
 
 .form_buttons {
 	background-color: #24b866;
-	height: 2.5em;
+	height: auto;
 	margin: .5em 0 .5em 0;
 	border-radius: .3em;
 	border-style: solid;
 	border-width: 1px;
 	color:rgb(230, 230, 230);
 	font-size: medium;
+}
+
+.mystocks_div {
+	
+	margin-top: 0em;
 }
