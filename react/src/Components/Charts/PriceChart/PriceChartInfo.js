@@ -13,7 +13,7 @@ class PriceChartInfo extends Component {
     }
 
     componentDidMount() {
-        var sandboxMode = false
+        var sandboxMode = true
         var baseURL
         var token
         const advStats = `/stock/${this.state.tickerSymbol}/advanced-stats/companyname?&token=`

@@ -15,7 +15,7 @@ class ResearchPagePriceChart extends Component {
     }
 
     componentDidMount() {
-        var sandboxMode = false
+        var sandboxMode = true
         var baseURL
         var token
         const keyStats = `/stock/${this.state.tickerSymbol}/stats/companyname?&token=`
