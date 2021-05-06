@@ -17,6 +17,7 @@ class BalanceSheetChartContainer extends Component {
         var sandboxMode = true
         var baseURL
         var token
+
         const balanceSheet = `/stock/${this.state.tickerSymbol}/balance-sheet?period=quarter&last=12&token=`
 
         if (sandboxMode) {
@@ -33,7 +34,16 @@ class BalanceSheetChartContainer extends Component {
         fetch(balanceSheetURL)
             .then(response => response.json())
             .then(data => this.setState({ balanceSheet: data, isLoaded: true }))
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+        sleep(100)
     }
+
     render() {
         return (
             this.state.isLoaded ?

@@ -37,14 +37,14 @@ class PriceChartContainer extends Component {
             .then(response => response.json())
             .then(data => this.setState({ prices: data, isLoaded: true }))
     }
+
     render() {
         
         return (
             this.state.isLoaded ?
                 <div className="price-chart-container">
-                        <h2>+500%</h2>
                     <div className="price-chart">
-                        <PriceChart data={this.state.prices} />
+                        <PriceChart data={this.state.prices} keyStats={this.state.keyStats} />
                     </div>
                 </div>
                 : <div>

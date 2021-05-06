@@ -8,14 +8,14 @@ class ResearchPagePriceChart extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tickerSymbol: 'TSLA',
+            tickerSymbol: 'MSFT',
             keyStats: [{}],
             isloaded: false
         }
     }
 
     componentDidMount() {
-        var sandboxMode = false
+        var sandboxMode = true
         var baseURL
         var token
         const keyStats = `/stock/${this.state.tickerSymbol}/stats/companyname?&token=`

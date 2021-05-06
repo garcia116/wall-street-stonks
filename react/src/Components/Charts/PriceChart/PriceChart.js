@@ -5,19 +5,30 @@ const PriceChart = (props) => {
 
     var chartxLabels = [{}]
     var data = [{}]
-    var backgroundColor = [{}]
+    var backgroundColor
+    var percentChange
     const daysIn5Years = 5 * 365 + 2;
-    for (var i = 0; i < daysIn5Years; i++) {
+    var i
+    for (i = 0; i < daysIn5Years; i++) {
         if (typeof props.data[i] === 'undefined') {
             break;
         }
-        chartxLabels[i] = ' '//`Y${props.data[i].date}`
+        chartxLabels[i] = `Y${props.data[i].date}`
         data[i] = props.data[i].close
-        backgroundColor[i] = 'rgba(33, 109, 208, 1)'
     }
+
+    if (props.data[i - 1].close >= props.data[0].close) {
+        backgroundColor = 'rgba(33, 206, 153, 1)'
+        percentChange = <h1 className="green">+{Math.round(props.data[i - 1].close / props.data[0].close * 10000) / 100}%</h1>
+    } else {
+        backgroundColor = 'rgba(244, 84, 48, 1)'
+        percentChange = <h1 className="red">-{Math.round(props.data[0].close / props.data[i - 1].close * 10000) / 100}%</h1>
+    }
+    
 
     return (
         <div>
+            {percentChange}
             <Line
                 data={{
                     labels: chartxLabels,

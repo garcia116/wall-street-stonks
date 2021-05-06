@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './IncomeStatementChartContainer.css';
-import IncomeStatementChart from "../../Charts/IncomeStatementChart/IncomeStatementChart.js";
+import './CashFlowChartContainer.css';
+import CashFlowChart from "../../Charts/CashFlowChart/CashFlowChart.js";
 
 
-class IncomeStatementChartContainer extends Component {
+class CashFlowChartContainer extends Component {
     constructor(props) {
         super(props)
         this.state = {
             tickerSymbol: props.tickerSymbol,
-            incomeStatement: [{}],
+            cashFlow: [{}],
             isLoaded: false
         }
     }
@@ -18,7 +18,7 @@ class IncomeStatementChartContainer extends Component {
         var baseURL
         var token
 
-        const incomeStatement = `/stock/${this.state.tickerSymbol}/income?period=quarter&last=12&token=`
+        const cashFlow = `/stock/${this.state.tickerSymbol}/cash-flow?period=quarter&last=12&token=`
 
         if (sandboxMode) {
             baseURL = 'https://sandbox.iexapis.com/v1'
@@ -29,11 +29,12 @@ class IncomeStatementChartContainer extends Component {
             token = 'pk_2d87808402a3463ab504dac6eb52b540'
         }
 
-        const incomeStatementURL = baseURL + incomeStatement + token
+        const cashFlowURL = baseURL + cashFlow + token
 
-        fetch(incomeStatementURL)
+        fetch(cashFlowURL)
             .then(response => response.json())
-            .then(data => this.setState({ incomeStatement: data, isLoaded: true }))
+            .then(data => this.setState({ cashFlow: data, isLoaded: true }))
+
         function sleep(milliseconds) {
             const date = Date.now();
             let currentDate = null;
@@ -46,17 +47,17 @@ class IncomeStatementChartContainer extends Component {
 
     render() {
         return (
-            this.state.isLoaded?
-                <div className="income-statement-chart-container">
-                    <p>Revenue, Operating Expenses, & Income</p>
-                    <div className="income-statement-chart">
-                        <IncomeStatementChart data={this.state.incomeStatement} />
+            this.state.isLoaded ?
+                <div className="cash-flow-chart-container">
+                    <p>Cash Flow</p>
+                    <div className="cash-flow-chart">
+                        <CashFlowChart cashFlow={this.state.cashFlow} />
                     </div>
                 </div>
                 :
-                <div className="income-statement-chart-container">
+                <div className="cash-flow-chart-container">
                     <p>Cash Flow</p>
-                    <div className="income-statement-chart">
+                    <div className="cash-flow-chart">
                         <h1>Loading...</h1>
                     </div>
                 </div>
@@ -65,4 +66,4 @@ class IncomeStatementChartContainer extends Component {
 }
 
 
-export default IncomeStatementChartContainer;
+export default CashFlowChartContainer;
