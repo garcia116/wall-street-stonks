@@ -8,7 +8,9 @@ class PERatioChartContainer extends Component {
         super(props)
         this.state = {
             tickerSymbol: props.tickerSymbol,
-            incomeStatement: [{}],
+            incomeStatement: props.incomeStatement,
+            sharesOutstanding: props.sharesOutstanding,
+            prices: [{}],
             isLoaded: false
         }
     }
@@ -17,7 +19,8 @@ class PERatioChartContainer extends Component {
         var sandboxMode = true
         var baseURL
         var token
-        const incomeStatement = `/stock/${this.state.tickerSymbol}/income?period=quarter&last=12&token=`
+        var range = '5y'
+        const prices = `/stock/${this.state.tickerSymbol}/chart/${range}/?token=`
 
         if (sandboxMode) {
             baseURL = 'https://sandbox.iexapis.com/v1'
@@ -28,19 +31,22 @@ class PERatioChartContainer extends Component {
             token = 'pk_2d87808402a3463ab504dac6eb52b540'
         }
 
-        const incomeStatementURL = baseURL + incomeStatement + token
+        const pricesURL = baseURL + prices + token
 
-        fetch(incomeStatementURL)
+        fetch(pricesURL)
             .then(response => response.json())
-            .then(data => this.setState({ incomeStatement: data, isLoaded: true }))
+            .then(data => this.setState({ prices: data, isLoaded: true }))
+        
     }
+
     render() {
         return (
+            console.log(this.state.prices),
             this.state.isLoaded ?
                 <div className="pe-ratio-chart-container">
                     <p>PE Ratios</p>
                     <div className="pe-ratio-chart">
-                        <PERatioChart data={this.state.incomeStatement} />
+                        <PERatioChart incomeStatement={this.state.incomeStatement} sharesOutstanding={this.state.sharesOutstanding} prices={this.state.prices}/>
                     </div>
                 </div>
                 : <div>

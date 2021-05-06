@@ -37,6 +37,7 @@ class PriceChartContainer extends Component {
             .then(response => response.json())
             .then(data => this.setState({ prices: data, isLoaded: true }))
     }
+
     render() {
         
         return (

@@ -5,12 +5,10 @@
     "\\react\\src",
     "\\react\\src\\Components",
     "\\react\\src\\Components\\Charts",
-    "\\react\\src\\Components\\Charts\\EPSChart",
-    "\\react\\src\\Components\\Charts\\IncomeStatementChart",
-    "\\react\\src\\Components\\SideNav",
+    "\\react\\src\\Components\\NavBar",
     "\\react\\src\\WebPages",
     "\\react\\src\\WebPages\\ResearchPage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\Charts\\EPSChart\\EPSChartContainer.js",
+  "SelectedNode": "\\react\\src\\WebPages\\ResearchPage\\ResearchPage.css",
   "PreviewInSolutionExplorer": false
 }

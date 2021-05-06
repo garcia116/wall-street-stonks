@@ -1,4 +1,4 @@
-.research-graph-container {
+.cash-flow-chart-container {
 	background-color: #000000;
 	color: #ffffff;
 	margin: 3vh 0vw 2vh 0vw;
@@ -14,7 +14,7 @@
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
-.research-graph {
+.cash-flow-chart {
 	position: relative;
 	width: 55vw;
 	height: auto;

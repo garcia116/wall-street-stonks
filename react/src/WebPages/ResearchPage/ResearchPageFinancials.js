@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './ResearchPageFinancials.css';
 import IncomeStatementChartContainer from "../../Components/Charts/IncomeStatementChart/IncomeStatementChartContainer.js";
 import BalanceSheetChartContainer from "../../Components/Charts/BalanceSheetChart/BalanceSheetChartContainer.js";
-import PERatioChartContainer from "../../Components/Charts/PERatioChart/PERatioChartContainer.js";
-import EPSChartContainer from "../../Components/Charts/EPSChart/EPSChartContainer.js";
+import CashFlowChartContainer from "../../Components/Charts/CashFlowChart/CashFlowChartContainer.js";
 
 class ResearchPageFinancials extends Component {
     constructor(props) {
@@ -17,7 +16,7 @@ class ResearchPageFinancials extends Component {
     }
 
     componentDidMount() {
-        var sandboxMode = false
+        var sandboxMode = true
         var baseURL
         var token
         const keyStats = `/stock/${this.state.tickerSymbol}/stats/companyname?&token=`
@@ -49,6 +48,7 @@ class ResearchPageFinancials extends Component {
                 <div className="research-page-financials">
                     <IncomeStatementChartContainer incomeStatement={this.state.incomeStatement} />
                     <BalanceSheetChartContainer tickerSymbol={this.state.tickerSymbol} />
+                    <CashFlowChartContainer tickerSymbol={this.state.tickerSymbol} />
                 </div>
                 :
                 <div>Loading...</div>
