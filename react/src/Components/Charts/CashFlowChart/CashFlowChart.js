@@ -21,9 +21,6 @@ const CashFlowChart = (props) => {
     var cashFlowData = [{}]
     var cashFlowBackgroundColor = [{}]
 
-    var cashChangeData = [{}]
-    var cashChangeBackgroundColor = [{}]
-
     var dividendsPaidData = [{}]
     var dividendsPaidBackgroundColor = [{}]
 
@@ -39,11 +36,8 @@ const CashFlowChart = (props) => {
         cashFlowData[i] = props.cashFlow.cashflow[11 - i].cashFlow
         cashFlowBackgroundColor[i] = 'rgba(208, 208, 33, 1)'
 
-        cashChangeData[i] = props.cashFlow.cashflow[11 - i].cashChange
-        cashChangeBackgroundColor[i] = 'rgba(33, 206, 153, 1)'
-
         dividendsPaidData = props.cashFlow.cashflow[11 - i].dividendsPaid
-        dividendsPaidBackgroundColor[i] = 'rgba(125, 30, 210, 1)'
+        dividendsPaidBackgroundColor[i] =  'rgba(33, 206, 153, 1)'
     }
     return (
         <div className="chart">
@@ -65,11 +59,6 @@ const CashFlowChart = (props) => {
                             label: "Operating Cash Flow",
                             data: cashFlowData,
                             backgroundColor: cashFlowBackgroundColor
-                        },
-                        {
-                            label: "Cash Change",
-                            data: cashChangeData,
-                            backgroundColor: cashChangeBackgroundColor
                         },
                         {
                             label: "Dividends Paid",

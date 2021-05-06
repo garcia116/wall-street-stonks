@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ResearchPageFinancials.css';
-import PERatioChartContainer from "../../Components/Charts/PERatioChart/PERatioChartContainer.js";
 import EPSChartContainer from "../../Components/Charts/EPSChart/EPSChartContainer.js";
 
 class ResearchPageStats extends Component {
@@ -47,7 +46,6 @@ class ResearchPageStats extends Component {
             this.state.isLoaded1 && this.state.isLoaded2 ?
                 <div className="research-page-stats">
                     <EPSChartContainer incomeStatement={this.state.incomeStatement} sharesOutstanding={this.state.keyStats.sharesOutstanding} />
-                    <PERatioChartContainer tickerSymbol={this.state.tickerSymbol} incomeStatement={this.state.incomeStatement} sharesOutstanding={this.state.keyStats.sharesOutstanding} />
                 </div>
                 :
                 <div className="research-page-stats">

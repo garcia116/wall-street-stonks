@@ -17,6 +17,7 @@ class CashFlowChartContainer extends Component {
         var sandboxMode = true
         var baseURL
         var token
+
         const cashFlow = `/stock/${this.state.tickerSymbol}/cash-flow?period=quarter&last=12&token=`
 
         if (sandboxMode) {
@@ -33,7 +34,17 @@ class CashFlowChartContainer extends Component {
         fetch(cashFlowURL)
             .then(response => response.json())
             .then(data => this.setState({ cashFlow: data, isLoaded: true }))
+
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+        sleep(75)
     }
+
     render() {
         return (
             this.state.isLoaded ?

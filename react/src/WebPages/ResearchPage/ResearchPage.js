@@ -14,7 +14,7 @@ class ResearchPage extends Component {
         this.state = {
             tickerSymbol: 'TSLA',
             keyStats: [{}],
-            isLoaded1: false
+            isLoaded: false
             
         }
     }
@@ -38,34 +38,36 @@ class ResearchPage extends Component {
        
         fetch(keyStatsURL)
             .then(response => response.json())
-            .then(data => this.setState({ keyStats: data, isLoaded1: true }))
+            .then(data => this.setState({ keyStats: data, isLoaded: true }))
 
         }
        
     
     render() {
         return (
-            <div className="research-container">
-                <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} marketcap={this.state.keyStats.marketcap} />
-                <BrowserRouter>
-                    <div className="research-links">
-                        <Link to="/ResearchPageFinancials">Financials</Link>
-                        <Link to="/ResearchPageStats">Stats</Link>
-                        <Link to="/ResearchPageDividends">Dividends</Link>
-                        <Link to="/ResearchPagePriceChart">Price Chart</Link>
-                        <Link to="/ResearchPageCompanyOverview">Company Overview</Link>
-                    </div>
-                    <Switch>
-                        <Route path="/ResearchPage" component={Financials} />
-                        <Route path="/ResearchPageFinancials" component={Financials} />
-                        <Route path="/ResearchPageStats" component={Stats} />
-                        <Route path="/ResearchPageDividends" component={Dividends} />
-                        <Route path="/ResearchPagePriceChart" component={PriceChart} />
-                        <Route path="/ResearchPageCompanyOverview" component={CompanyOverview} />
+            this.state.isLoaded?
+                <div className="research-container">
+                    <ResearchHeader name={this.state.keyStats.companyName} tickerSymbol={this.state.tickerSymbol} marketcap={this.state.keyStats.marketcap} />
+                    <BrowserRouter>
+                        <div className="research-links">
+                            <Link to="/ResearchPageFinancials">Financials</Link>
+                            <Link to="/ResearchPageStats">Stats</Link>
+                            <Link to="/ResearchPageDividends">Dividends</Link>
+                            <Link to="/ResearchPagePriceChart">Price Chart</Link>
+                            <Link to="/ResearchPageCompanyOverview">Company Overview</Link>
+                        </div>
+                        <Switch>
+                            <Route path="/ResearchPage" component={Financials} />
+                            <Route path="/ResearchPageFinancials" component={Financials} />
+                            <Route path="/ResearchPageStats" component={Stats} />
+                            <Route path="/ResearchPageDividends" component={Dividends} />
+                            <Route path="/ResearchPagePriceChart" component={PriceChart} />
+                            <Route path="/ResearchPageCompanyOverview" component={CompanyOverview} />
                     </Switch>
-
-                </BrowserRouter>
-            </div>
+                    </BrowserRouter>
+                </div>
+                :
+                <div>Loading...</div>
             )
     }
 }

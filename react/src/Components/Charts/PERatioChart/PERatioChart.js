@@ -16,7 +16,7 @@ const PERatioChart = (props) => {
         netIncomeData[i] = props.incomeStatement.income[11 - i].netIncome
         sharesOutstandingData[i] = props.sharesOutstanding
         EPSData[i] = netIncomeData[i] / sharesOutstandingData[i]
-        PERatioData[i] = props.prices[i].close / EPSData[i]
+        PERatioData[i] = (props.prices[i].close / EPSData[i]) * 4
         PERatioDataBackroundColor[i] = 'rgba(33, 206, 153, 1)'
     }
 
