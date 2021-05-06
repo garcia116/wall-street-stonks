@@ -13,7 +13,7 @@ class ResearchPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tickerSymbol: '',
+            tickerSymbol: 'TSLA',
             price: 0,
             keyStats: [{}],
             isLoaded: false
@@ -92,7 +92,7 @@ class ResearchPage extends Component {
                         <Route path="/ResearchPageFinancials" component={() => <Financials tickerSymbol={this.state.tickerSymbol} />} />
                         <Route path="/ResearchPageStats" component={() => <Stats tickerSymbol={this.state.tickerSymbol} />} />
                         <Route path="/ResearchPageDividends" component={() => <Dividends tickerSymbol={this.state.tickerSymbol} />} />
-                            <Route path="/ResearchPagePriceChart" component={PriceChart} />
+                        <Route path="/ResearchPagePriceChart" component={() => <PriceChart tickerSymbol={this.state.tickerSymbol} />} />
                             <Route path="/ResearchPageCompanyOverview" component={CompanyOverview} />
                     </Switch>
                     </BrowserRouter>

@@ -3,8 +3,9 @@ import './ResearchPageStats.css';
 import EPSChartContainer from "../../Components/Charts/EPSChart/EPSChartContainer.js";
 import axios from 'axios';
 
-function ResearchPageStats({ tickerSymbol }) {
+const ResearchPageStats = React.memo(({ tickerSymbol }) => {
 
+    const [ticker] = useState(tickerSymbol);
     const [stats, setStats] = useState();
     console.log(stats)
     const [income, setIncome] = useState();
@@ -43,7 +44,7 @@ function ResearchPageStats({ tickerSymbol }) {
             }
             return () => mounted = false;
         })();
-    }, []);
+    }, [ticker]);
 
     return (
         isLoaded1 && isLoaded2 ?
@@ -55,6 +56,6 @@ function ResearchPageStats({ tickerSymbol }) {
                 <h1>Loading...</h1>
             </div>
     );
-}
+});
 
 export default ResearchPageStats;
