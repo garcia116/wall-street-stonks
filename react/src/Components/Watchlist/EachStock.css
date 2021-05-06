@@ -1,15 +1,44 @@
-.card-body {
-    color: black
+.card {
+    background-color: #242424;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 1em;
+    align-items: center;
+    /* height: 5.5em; */
+    border: .1em solid;
+    border-radius: .3em;
+    border-color: #424242;
+    box-shadow: #242424;
 }
 
-h4 {
-    font-size: 1.5vw
+.info {
+    display: grid;
+    /* background-color: purple; */
+    text-align: center;
+    /* width: 100%;
+    height: 100%; */
+    /* align-content: center; */
+    /* margin: 1em 0 1em 0; */
+
 }
 
-h5 {
-    font-size: 1.2vw
+.info p {
+    margin: 0;
+    padding: .4em;
+    font-size: medium;
 }
 
-h6 {
-    font-size: 1vw
+.card-price {
+    border-bottom: .1em solid;
+    border-color: #424242;
+}
+
+.card-change {
+    /* background-color: yellow; */
+}
+
+
+.card-title {
+    font-size: large;
+    text-align: center;
 }

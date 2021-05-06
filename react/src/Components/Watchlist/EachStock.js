@@ -14,17 +14,17 @@ class EachStock extends Component {
         return (
             <div className='eachStock'>
                 {this.props.stock && (
-                    <div className='card'>
-                        <div className='card-body'>
-                            <h5 className='card-title'>Ticker: {this.props.stock}</h5>
-                            <h6 className='card-price'>Price: {this.props.price}</h6>
-                            <h6 className='card-change'>Change: {this.props.change}</h6>
+                    <div className='card'>                        
+                        <p className='card-title'>{this.props.stock}</p>
+                        <div className="info">
+                            <p className='card-price'>${this.props.price}</p>
+                            <p className='card-change'>{this.props.change}</p>
                         </div>
-                        <button
+                        {/* <button
                             onClick={() => this.props.handleRemove(this.props.stock)}
                             className='card-link remove btn-danger'
                         > Remove
-                         </button>
+                         </button> */}
                     </div>
                 )}
             </div>

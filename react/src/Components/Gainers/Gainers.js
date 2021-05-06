@@ -18,20 +18,17 @@ const Styles = styled.div`
     }
     th,
     td {
-      font-size: 1vw;
+      font-size: .7em;
       margin: 0;
-      padding: 1rem;
+      padding: .5rem;
       border-bottom: 1px solid black;
-      border-right: 1px solid black;
+      text-align: right;
       :last-child {
         border-right: 0;
       }
     }
   }
 `
-
-
-
 
 function Gainers() {
 

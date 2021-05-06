@@ -5,38 +5,33 @@ import Table from './Table.js';
 import './Losers.css';
 
 const Styles = styled.div`
-  table {
-
-    width: 100%;
-    border-spacing: 0;
-    border: 1px solid black;
-    tr {
-      :last-child {
-        td {
-          border-bottom: 0;
-        }
-      }
-    }
-    th,
-    td {
-      font-size: 1vw;
-      margin: 0;
-      padding: 1rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-      :last-child {
-        border-right: 0;
+table {
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid black;
+  tr {
+    :last-child {
+      td {
+        border-bottom: 0;
       }
     }
   }
+  th,
+  td {
+    font-size: .7em;
+    margin: 0;
+    padding: .5rem;
+    border-bottom: 1px solid black;
+    text-align: right;
+    :last-child {
+      border-right: 0;
+    }
+  }
+}
 `
 
 
-
-
 function Losers() {
-
-
     const columns = useMemo(
         () => [
             {
