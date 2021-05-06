@@ -42,7 +42,7 @@ class CashFlowChartContainer extends Component {
                 currentDate = Date.now();
             } while (currentDate - date < milliseconds);
         }
-        sleep(75)
+        sleep(100)
     }
 
     render() {

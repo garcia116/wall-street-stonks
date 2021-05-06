@@ -9,9 +9,7 @@ import ResearchPage from '../../WebPages/ResearchPage/ResearchPage.js';
 class ResearchHeader extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            price: props.price
-        }
+        
     }
     
 
@@ -53,8 +51,8 @@ class ResearchHeader extends Component {
                     <div className="research-header-ticker-name">
                         {this.props.name}: {this.props.tickerSymbol}
                     </div>
-                    <div className="research-header-price">
-                        Price: ${this.state.price}
+                        <div className="research-header-price">
+                            Price: ${this.props.price}
                     </div>
                     <div className="research-header-market-cap">
                         {marketcapLabel}

@@ -4,24 +4,21 @@ import CashFlowChartContainer from "../../Components/Charts/CashFlowChart/CashFl
 import IncomeStatementChartContainer from "../../Components/Charts/IncomeStatementChart/IncomeStatementChartContainer.js";
 import './ResearchPageFinancials.css';
 
-class ResearchPageFinancials extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            tickerSymbol: 'TSLA'
-        }
+
+function ResearchPageFinancials(props) {
+    var data = props.tickerSymbol
+    console.log(data)
+    if(data === "") {
+        data = "MSFT"
     }
 
-    render() {
-        return (
-            <div className="research-page-financials">
-                <IncomeStatementChartContainer tickerSymbol={this.state.tickerSymbol} />
-                <BalanceSheetChartContainer tickerSymbol={this.state.tickerSymbol} />
-                <CashFlowChartContainer tickerSymbol={this.state.tickerSymbol} />
-            </div>
-        );
-    }
+    return (
+        <div className="research-page-financials">
+            <IncomeStatementChartContainer tickerSymbol={data} />
+            <BalanceSheetChartContainer tickerSymbol={data} />
+            <CashFlowChartContainer tickerSymbol={data} />
+        </div>
+    );
 }
-
 
 export default ResearchPageFinancials;
