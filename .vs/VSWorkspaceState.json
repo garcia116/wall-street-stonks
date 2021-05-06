@@ -5,11 +5,11 @@
     "\\react\\src",
     "\\react\\src\\Components",
     "\\react\\src\\Components\\Charts",
-    "\\react\\src\\Components\\Charts\\CashflowChart",
-    "\\react\\src\\Components\\Charts\\IncomeStatementChart",
+    "\\react\\src\\Components\\Charts\\PriceChart",
+    "\\react\\src\\Components\\ResearchHeader",
     "\\react\\src\\WebPages",
     "\\react\\src\\WebPages\\ResearchPage"
   ],
-  "SelectedNode": "\\react\\src\\WebPages\\ResearchPage\\ResearchPagePriceChart.js",
+  "SelectedNode": "\\react\\src\\Components\\Charts\\PriceChart\\PriceChart.js",
   "PreviewInSolutionExplorer": false
 }

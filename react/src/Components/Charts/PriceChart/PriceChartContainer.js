@@ -44,7 +44,7 @@ class PriceChartContainer extends Component {
             this.state.isLoaded ?
                 <div className="price-chart-container">
                     <div className="price-chart">
-                        <PriceChart data={this.state.prices} />
+                        <PriceChart data={this.state.prices} keyStats={this.state.keyStats} />
                     </div>
                 </div>
                 : <div>
