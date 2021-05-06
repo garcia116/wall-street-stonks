@@ -6,18 +6,28 @@ const PriceChart = (props) => {
     var chartxLabels = [{}]
     var data = [{}]
     var backgroundColor = [{}]
+    var gainOrLoss = 1;
     const daysIn5Years = 5 * 365 + 2;
+    
     for (var i = 0; i < daysIn5Years; i++) {
         if (typeof props.data[i] === 'undefined') {
             break;
         }
-        chartxLabels[i] = ' '//`Y${props.data[i].date}`
+        chartxLabels[i] = `Y${props.data[i].date}`
         data[i] = props.data[i].close
-        backgroundColor[i] = 'rgba(33, 109, 208, 1)'
+
+        if (props.data[0] >= props.data[daysIn5Years]) {
+            backgroundColor[i] = 'rgba(244, 84, 48, 1)'
+            gainOrLoss = 0
+        } else {
+            backgroundColor[i] = 'rgba(33, 206, 153, 1)'
+            gainOrLoss = 1
+        }
     }
 
     return (
         <div>
+            { gainOrLoss ? <h1 className="green" >+</h1> : <h1 className="red" >-</h1>}
             <Line
                 data={{
                     labels: chartxLabels,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ResearchPageFinancials.css';
+import './ResearchPageDividends.css';
 import DividendsChartContainer from "../../Components/Charts/DividendsChart/DividendsChartContainer.js";
 
 class ResearchPageDividends extends Component {
