@@ -22,9 +22,9 @@ class ResearchPage extends Component {
         }
     }
 
-    componentDidUpdate(prevState) {
+    componentDidUpdate(prevProps,prevState) {
         if (prevState.tickerSymbol !== this.state.tickerSymbol) {
-
+            console.log(this.state.tickerSymbol)
 
             var sandboxMode = true
             var baseURL
@@ -53,6 +53,14 @@ class ResearchPage extends Component {
             fetch(priceURL)
                 .then(response => response.json())
                 .then(data => this.setState({ price: data }))
+                .then(console.log(price))           
+        }
+    }
+    shouldComponentUpdate(nextState) {
+        if (this.state.tickerSymbol == nextState.tickerSymbol) {
+            return false;
+        } else {
+            return true;
         }
     }
 
@@ -81,8 +89,8 @@ class ResearchPage extends Component {
                             <Link to="/ResearchPagePriceChart">Price Chart</Link>
                             <Link to="/ResearchPageCompanyOverview">Company Overview</Link>
                         </div>
-                        <Switch>
-                            <Route path="/ResearchPageFinancials" component={Financials} />
+                    <Switch>
+                        <Route path="/ResearchPageFinancials" component={() => <Financials tickerSymbol={this.state.tickerSymbol} />} />
                             <Route path="/ResearchPageStats" component={Stats} />
                             <Route path="/ResearchPageDividends" component={Dividends} />
                             <Route path="/ResearchPagePriceChart" component={PriceChart} />
