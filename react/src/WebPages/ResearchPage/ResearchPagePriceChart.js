@@ -8,7 +8,7 @@ class ResearchPagePriceChart extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tickerSymbol: 'TSLA',
+            tickerSymbol: 'MSFT',
             keyStats: [{}],
             isloaded: false
         }

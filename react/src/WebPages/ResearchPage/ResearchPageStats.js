@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ResearchPageFinancials.css';
+import './ResearchPageStats.css';
 import EPSChartContainer from "../../Components/Charts/EPSChart/EPSChartContainer.js";
 
 class ResearchPageStats extends Component {

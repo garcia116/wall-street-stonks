@@ -42,7 +42,7 @@ class PriceChartInfo extends Component {
         var nextEarningsDate = this.state.keyStats.nextEarningsDate === "" ? "-" : this.state.keyStats.nextEarningsDate;
         var beta = this.state.keyStats.beta === "" ? "-" : Math.round(this.state.keyStats.beta * 100) / 100;
         var sharesOutstanding = this.state.keyStats.sharesOutstanding === "" ? "-" : Math.round(this.state.keyStats.sharesOutstanding / 1000000 * 100 ) / 100 + "M";
-        var dividendYeild = this.state.keyStats.dividendYield === "" ? "-" : this.state.keyStats.dividendYield + "%";
+        var dividendYeild = this.state.keyStats.dividendYield === "" ? "-" : Math.round(this.state.keyStats.dividendYield * 10000) / 100 + "%";
         var nextDividendDate = this.state.keyStats.nextDividendDate === "" ? "-" : this.state.keyStats.nextDividendDate;
 
 
