@@ -11,35 +11,42 @@ function IncomeStatementChartContainer({ tickerSymbol }) {
 
     useEffect(() => {
         (async () => {
-            var sandboxMode = true
-            var baseURL
-            var token
-            console.log(income)
-            const incomeStatement = `/stock/${tickerSymbol}/income?period=quarter&last=12&token=`
+            let mounted = true
+            if (mounted) {
 
-            if (sandboxMode) {
-                baseURL = 'https://sandbox.iexapis.com/v1'
-                token = 'Tpk_a909e54fc2ab44ac976155957da2a605'
-            }
-            else {
-                baseURL = 'https://cloud.iexapis.com/v1'
-                token = 'pk_2d87808402a3463ab504dac6eb52b540'
-            }
 
-            const incomeStatementURL = baseURL + incomeStatement + token
-            const result = await axios.get(incomeStatementURL);
-            setData(result.data)
-            setLoaded(true)
+                var sandboxMode = true
 
-            function sleep(milliseconds) {
-                const date = Date.now();
-                let currentDate = null;
-                do {
-                    currentDate = Date.now();
-                } while (currentDate - date < milliseconds);
+                var baseURL
+                var token
+                console.log(income)
+                const incomeStatement = `/stock/${tickerSymbol}/income?period=quarter&last=12&token=`
+
+                if (sandboxMode) {
+                    baseURL = 'https://sandbox.iexapis.com/v1'
+                    token = 'Tpk_a909e54fc2ab44ac976155957da2a605'
+                }
+                else {
+                    baseURL = 'https://cloud.iexapis.com/v1'
+                    token = 'pk_2d87808402a3463ab504dac6eb52b540'
+                }
+
+                const incomeStatementURL = baseURL + incomeStatement + token
+                const result = await axios.get(incomeStatementURL);
+                console.log(result)
+                setData(result.data)
+                setLoaded(true)
+
+                function sleep(milliseconds) {
+                    const date = Date.now();
+                    let currentDate = null;
+                    do {
+                        currentDate = Date.now();
+                    } while (currentDate - date < milliseconds);
+                }
+                sleep(75)
             }
-            sleep(75)
-           
+            return () => mounted = false;
         })();
     }, []);
 
