@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BalanceSheetChartContainer from "../../Components/Charts/BalanceSheetChart/BalanceSheetChartContainer.js";
 import CashFlowChartContainer from "../../Components/Charts/CashFlowChart/CashFlowChartContainer.js";
 import IncomeStatementChartContainer from "../../Components/Charts/IncomeStatementChart/IncomeStatementChartContainer.js";

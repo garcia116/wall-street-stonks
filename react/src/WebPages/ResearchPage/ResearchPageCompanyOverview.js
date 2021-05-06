@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ResearchPageCompanyOverview.css';
-import ResearchHeader from "../../Components/ResearchHeader/ResearchHeader.js";
 import CompanyOverview from "../../Components/CompanyOverview/CompanyOverview.js";
 import CompanyNews from "../../Components/CompanyNews/CompanyNews.js";
 

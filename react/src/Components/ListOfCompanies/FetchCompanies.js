@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
-import styled from 'styled-components';
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import iex from '../../config/iex.js'
 

@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import './ResearchHeader.css';
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-import Financials from '../../WebPages/ResearchPage/ResearchPageFinancials';
-import PriceChart from '../../WebPages/ResearchPage/ResearchPagePriceChart';
-import CompanyOverview from '../../WebPages/ResearchPage/ResearchPageCompanyOverview';
-import ResearchPage from '../../WebPages/ResearchPage/ResearchPage.js';
 
 class ResearchHeader extends Component {
     constructor(props) {
