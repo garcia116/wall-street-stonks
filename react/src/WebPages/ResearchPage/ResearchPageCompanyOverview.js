@@ -1,54 +1,54 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './ResearchPageCompanyOverview.css';
 import CompanyOverview from "../../Components/CompanyOverview/CompanyOverview.js";
 import CompanyNews from "../../Components/CompanyNews/CompanyNews.js";
 
+function ResearchPageCompanyOverview({ tickerSymbol }) {
 
-class ResearchPageCompanyOverview extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            tickerSymbol: 'TSLA',
-            logo: [{}],
-            isloaded: false
-        }
-    }
+    const [ticker] = useState(tickerSymbol)
+    const [stats, setStats] = useState()
+    const [isLoaded, setLoaded] = useState(false)
 
-    componentDidMount() {
-        var sandboxMode = true
-        var baseURL
-        var token
-        const keyStats = `/stock/${this.state.tickerSymbol}/stats/companyname?&token=`
+    useEffect(() => {
+        (async () => {
+            let mounted = true
+            if (mounted) {
+                var sandboxMode = true
+                var baseURL
+                var token
+                const keyStats = `/stock/${ticker}/stats/companyname?&token=`
 
-        if (sandboxMode) {
-            baseURL = 'https://sandbox.iexapis.com/v1'
-            token = 'Tpk_a909e54fc2ab44ac976155957da2a605'
-        }
-        else {
-            baseURL = 'https://cloud.iexapis.com/v1'
-            token = 'pk_2d87808402a3463ab504dac6eb52b540'
-        }
+                if (sandboxMode) {
+                    baseURL = 'https://sandbox.iexapis.com/v1'
+                    token = 'Tpk_a909e54fc2ab44ac976155957da2a605'
+                }
+                else {
+                    baseURL = 'https://cloud.iexapis.com/v1'
+                    token = 'pk_2d87808402a3463ab504dac6eb52b540'
+                }
 
-        const keyStatsURL = baseURL + keyStats + token
+                const keyStatsURL = baseURL + keyStats + token
+                const statsResult = await axios.get(keyStatsURL)
+                setStats(statsResult.data)
+                setLoaded(true)
 
-        fetch(keyStatsURL)
-            .then(response => response.json())
-            .then(data => this.setState({ keyStats: data, isLoaded: true }))
-    }
 
-    render() {
-        return (
-            this.state.isLoaded ?
-                <div className="research-page-company-overview">
-                    <div className="research-page-company-overview-row-container">
-                        <CompanyNews name={this.state.keyStats.companyName} />
-                        <CompanyOverview name={this.state.keyStats.companyName} />
-                    </div>
+            }
+            return () => mounted = false;
+        })();
+    }, [ticker]);
+
+    return (
+        isLoaded ?
+            <div className="research-page-company-overview">
+                <div className="research-page-company-overview-row-container">
+                    <CompanyNews companyName={stats.companyName} tickerSymbol={ticker} />
+                    <CompanyOverview companyName={stats.companyName} tickerSymbol={ticker} />
                 </div>
-                : <div></div>
-        );
-    }
+            </div>
+            : <div></div>
+    );
 }
-
 
 export default ResearchPageCompanyOverview;

@@ -4,7 +4,7 @@ import './ResearchPagePriceChart.css';
 import PriceChartContainer from '../../Components/Charts/PriceChart/PriceChartContainer.js';
 import PriceChartInfo from '../../Components/Charts/PriceChart/PriceChartInfo';
 
-function ResearchPagePriceChart({ tickerSymbol }) {
+const ResearchPagePriceChart = React.memo(({ tickerSymbol }) => {
     const [ticker] = useState(tickerSymbol)
     console.log(ticker)
     const [stats, setStats] = useState();
@@ -33,7 +33,7 @@ function ResearchPagePriceChart({ tickerSymbol }) {
                 const statsResult = await axios.get(keyStatsURL);
                 setStats(statsResult.data)
                 setLoaded(true)
-               
+
 
             }
             return () => mounted = false;
@@ -44,12 +44,12 @@ function ResearchPagePriceChart({ tickerSymbol }) {
         isLoaded ?
             <div className="research-page-price-chart">
                 <PriceChartContainer tickerSymbol={ticker} keyStats={stats} />
-                <PriceChartInfo tickerSymbol={ticker} keyStats={stats} />
+                <PriceChartInfo tickerSymbol={ticker} keyStat={stats} />
             </div>
             :
             <div>Loading...</div>
     );
 
-}
+});
 
 export default ResearchPagePriceChart;

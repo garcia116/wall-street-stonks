@@ -93,7 +93,7 @@ class ResearchPage extends Component {
                         <Route path="/ResearchPageStats" component={() => <Stats tickerSymbol={this.state.tickerSymbol} />} />
                         <Route path="/ResearchPageDividends" component={() => <Dividends tickerSymbol={this.state.tickerSymbol} />} />
                         <Route path="/ResearchPagePriceChart" component={() => <PriceChart tickerSymbol={this.state.tickerSymbol} />} />
-                            <Route path="/ResearchPageCompanyOverview" component={CompanyOverview} />
+                        <Route path="/ResearchPageCompanyOverview" component={() => <CompanyOverview tickerSymbol={this.state.tickerSymbol} />} />
                     </Switch>
                     </BrowserRouter>
                 </div>
