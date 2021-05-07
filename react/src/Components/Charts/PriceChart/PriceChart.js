@@ -22,13 +22,13 @@ const PriceChart = (props) => {
         backgroundColor = 'rgba(33, 206, 153, 1)'
         percentChange = <div className="green">
                             <h1>{props.keyStats.companyName}</h1>
-                            <h2>+{Math.round(props.data[i - 1].close / props.data[0].close * 10000) / 100 - 100}%</h2>
+                            <h2>+{(Math.round(props.data[i - 1].close / props.data[0].close * 10000) / 100 - 100).toFixed(2)}%</h2>
                         </div>
     } else {
         backgroundColor = 'rgba(244, 84, 48, 1)'
         percentChange = <div className="red">
                             <h1>{props.keyStats.companyName}</h1>
-                            <h2>-{Math.round(props.data[0].close / props.data[i - 1].close * 10000) / 100 - 100}%</h2>
+                            <h2>-{(Math.round(props.data[0].close / props.data[i - 1].close * 10000) / 100 - 100).toFixed(2)}%</h2>
                         </div>
     }
     
