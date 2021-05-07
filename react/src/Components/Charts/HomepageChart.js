@@ -19,13 +19,13 @@ const HomepageChart = (props) => {
     }
 
     if (props.data[i - 1].close >= props.data[0].close) {
-        backgroundColor = '#00c805'
+        backgroundColor = 'rgba(33, 206, 153, 1)'
         percentChange = <div className="green">
                             <h1>SPY S&P 500 ETF</h1>
                             <h2>+{Math.round(props.data[i - 1].close / props.data[0].close * 10000) / 100 - 100}%</h2>
                         </div>
     } else {
-        backgroundColor = '#ff5000'
+        backgroundColor = 'rgba(33, 206, 153, 1)'
         percentChange = <div className="red">
                             <h1>SPY S&P 500 ETF</h1>
                             <h2>-{Math.round(props.data[0].close / props.data[i - 1].close * 10000) / 100 - 100}%</h2>

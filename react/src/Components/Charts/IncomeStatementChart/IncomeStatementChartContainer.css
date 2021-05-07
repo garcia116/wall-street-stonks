@@ -21,9 +21,9 @@
 }
 
 .green {
-	color: #00c805;
+	color: rgba(33, 206, 153, 1);
 }
 
 .red {
-	color: #ff5000;
+	color: rgba(244, 84, 48, 1);
 }
