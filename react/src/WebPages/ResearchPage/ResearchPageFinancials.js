@@ -6,17 +6,14 @@ import './ResearchPageFinancials.css';
 
 
 function ResearchPageFinancials(props) {
-    var data = props.tickerSymbol
+    const [data] = props.tickerSymbol
     console.log(data)
-    if(data === "") {
-        data = "MSFT"
-    }
 
     return (
         <div className="research-page-financials">
-            <IncomeStatementChartContainer tickerSymbol={data} />
-            <BalanceSheetChartContainer tickerSymbol={data} />
-            <CashFlowChartContainer tickerSymbol={data} />
+            <IncomeStatementChartContainer tickerSymbol={data.tickerSymbol} />
+            <BalanceSheetChartContainer tickerSymbol={data.tickerSymbol} />
+            <CashFlowChartContainer tickerSymbol={data.tickerSymbol} />
         </div>
     );
 }

@@ -24,7 +24,7 @@ class ResearchPage extends Component {
 
     componentDidUpdate(prevProps,prevState) {
         if (prevState.tickerSymbol !== this.state.tickerSymbol) {
-            console.log(this.state.tickerSymbol)
+
 
             var sandboxMode = true
             var baseURL
@@ -44,8 +44,6 @@ class ResearchPage extends Component {
 
             const keyStatsURL = baseURL + keyStats + token
             const priceURL = baseURL + price + token
-
-
 
             fetch(keyStatsURL)
                 .then(response => response.json())
