@@ -7,14 +7,13 @@ import Dividends from '../../WebPages/ResearchPage/ResearchPageDividends';
 import PriceChart from '../../WebPages/ResearchPage/ResearchPagePriceChart';
 import CompanyOverview from '../../WebPages/ResearchPage/ResearchPageCompanyOverview';
 import Form from './Form.js'
-import iex from '../../config/iex.js'
 import './ResearchPage.css';
 
 class ResearchPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tickerSymbol: '',
+            tickerSymbol: 'TSLA',
             price: 0,
             keyStats: [{}],
             isLoaded: false
@@ -55,7 +54,7 @@ class ResearchPage extends Component {
         }
     }
     shouldComponentUpdate(nextState) {
-        if (this.state.tickerSymbol == nextState.tickerSymbol) {
+        if (this.state.tickerSymbol === nextState.tickerSymbol) {
             return false;
         } else {
             return true;
@@ -89,9 +88,9 @@ class ResearchPage extends Component {
                         </div>
                     <Switch>
                         <Route path="/ResearchPageFinancials" component={() => <Financials tickerSymbol={this.state.tickerSymbol} />} />
-                            <Route path="/ResearchPageStats" component={Stats} />
-                            <Route path="/ResearchPageDividends" component={Dividends} />
-                            <Route path="/ResearchPagePriceChart" component={PriceChart} />
+                        <Route path="/ResearchPageStats" component={() => <Stats tickerSymbol={this.state.tickerSymbol} />} />
+                        <Route path="/ResearchPageDividends" component={() => <Dividends tickerSymbol={this.state.tickerSymbol} />} />
+                        <Route path="/ResearchPagePriceChart" component={() => <PriceChart tickerSymbol={this.state.tickerSymbol} />} />
                             <Route path="/ResearchPageCompanyOverview" component={CompanyOverview} />
                     </Switch>
                     </BrowserRouter>
