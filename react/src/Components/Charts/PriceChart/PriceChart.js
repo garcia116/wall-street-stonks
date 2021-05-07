@@ -3,6 +3,7 @@ import { Line } from "react-chartjs-2";
 
 const PriceChart = (props) => {
 
+    var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     var chartxLabels = [{}]
     var data = [{}]
     var backgroundColor
@@ -13,19 +14,24 @@ const PriceChart = (props) => {
         if (typeof props.data[i] === 'undefined') {
             break;
         }
-        chartxLabels[i] = `Y${props.data[i].date}`
+        chartxLabels[i] = month[Number((props.data[i].date).slice(5, 7)) - 1] + " " + Number((props.data[i].date).slice(8, 10)) + ", " + (props.data[i].date).slice(0, 4)
         data[i] = props.data[i].close
     }
 
     if (props.data[i - 1].close >= props.data[0].close) {
-        backgroundColor = 'rgba(33, 206, 153, 1)'
-        percentChange = <h1 className="green">+{Math.round(props.data[i - 1].close / props.data[0].close * 10000) / 100}%</h1>
+        backgroundColor = '#00c805'
+        percentChange = <div className="green">
+                            <h1>{props.keyStats.companyName}</h1>
+                            <h2>+{Math.round(props.data[i - 1].close / props.data[0].close * 10000) / 100 - 100}%</h2>
+                        </div>
     } else {
-        backgroundColor = 'rgba(244, 84, 48, 1)'
-        percentChange = <h1 className="red">-{Math.round(props.data[0].close / props.data[i - 1].close * 10000) / 100}%</h1>
+        backgroundColor = '#ff5000'
+        percentChange = <div className="red">
+                            <h1>{props.keyStats.companyName}</h1>
+                            <h2>-{Math.round(props.data[0].close / props.data[i - 1].close * 10000) / 100 - 100}%</h2>
+                        </div>
     }
     
-
     return (
         <div>
             {percentChange}
@@ -66,6 +72,14 @@ const PriceChart = (props) => {
                         xAxes: [{
                             gridLines: {
                                 display: false
+                            },
+                            ticks: {
+                                display: true,
+                                autoSkip: true,
+                                maxTicksLimit: 16,
+                                callback: function (value) {
+                                    return value.slice(0, 4) + value.slice(7, 12)
+                                }
                             }
                         }],
                         yAxes: [{

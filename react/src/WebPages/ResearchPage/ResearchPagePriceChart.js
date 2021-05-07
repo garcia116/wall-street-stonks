@@ -47,7 +47,7 @@ function ResearchPagePriceChart({ tickerSymbol }) {
                 <PriceChartInfo tickerSymbol={ticker} keyStats={stats} />
             </div>
             :
-            <div>Loading...</div>
+            <div className="research-page-price-chart">Loading...</div>
     );
 
 }
