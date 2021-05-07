@@ -37,17 +37,18 @@ class HomeGraph extends Component {
     }
     render() {
         return (
-        this.state.isLoaded ?
-        <div className="home-graph-container">
-            <div className="home-graph">
-                <HomepageChart data={this.state.prices}/>
-            </div>
-        </div>
-        :<div>
-            <div className="home-graph-container">
-                <h1>Loading...</h1>
-            </div>
-        </div>
+            this.state.isLoaded ?
+                <div className="home-graph-container">
+                    <div className="home-graph">
+                        <HomepageChart data={this.state.prices}/>
+                    </div>
+                </div>
+                :
+                <div>
+                    <div className="home-graph-container">
+                        <h1>Loading...</h1>
+                    </div>
+                </div>
         );
     }
 }
