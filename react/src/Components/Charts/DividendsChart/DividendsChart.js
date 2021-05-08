@@ -4,20 +4,18 @@ import { Bar } from "react-chartjs-2";
 
 const DividendsChart = (props) => {
 
-    const thousand = 1000
-    const million = 1000000
-    const billion = 1000000000
-    const trillion = 1000000000000
-    const quadrillion = 1000000000000000
-
+    var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     var DividendData = [{}]
     var chartxLabels = [{}]
-
     var DividendDataBackgroundColor = [{}]
+    var maxValue = 0
 
     for (var i = 0; i < props.dividends.length; i++) {
-        chartxLabels[i] = props.dividends[props.dividends.length - 1 -  i].paymentDate
+        chartxLabels[i] = month[Number((props.dividends[props.dividends.length - 1 - i].paymentDate).slice(5, 7)) - 1] + " " + Number((props.dividends[props.dividends.length - 1 - i].paymentDate).slice(8, 10)) + ", " + (props.dividends[props.dividends.length - 1 - i].paymentDate).slice(0, 4)
         DividendData[i] = props.dividends[props.dividends.length - 1 - i].amount
+        if (DividendData[i] > maxValue) {
+            maxValue = DividendData[i]
+        }
         DividendDataBackgroundColor[i] = 'rgba(33, 206, 153, 1)'
     }
 
@@ -28,7 +26,7 @@ const DividendsChart = (props) => {
                     labels: chartxLabels,
                     datasets: [
                         {
-                            label: "Dividend Pay",
+                            label: "Dividend Paid",
                             data: DividendData,
                             backgroundColor: DividendDataBackgroundColor
                         }
@@ -43,32 +41,8 @@ const DividendsChart = (props) => {
                             label: function (tooltipItem, data) {
                                 var label = data.datasets[tooltipItem.datasetIndex].label || '';
                                 label += ': $';
-                                const absyLabel = Math.abs(tooltipItem.yLabel)
-
-                                if (absyLabel >= quadrillion) {
-                                    tooltipItem.yLabel = tooltipItem.yLabel / quadrillion
-                                    label += Math.round(tooltipItem.yLabel * 100) / 100
-                                    label = label + ' Q'
-                                } else if (absyLabel >= trillion) {
-                                    tooltipItem.yLabel = tooltipItem.yLabel / trillion
-                                    label += Math.round(tooltipItem.yLabel * 100) / 100
-                                    label = label + ' T'
-                                } else if (absyLabel >= billion) {
-                                    tooltipItem.yLabel = tooltipItem.yLabel / billion
-                                    label += Math.round(tooltipItem.yLabel * 100) / 100
-                                    label = label + ' B'
-                                } else if (absyLabel >= million) {
-                                    tooltipItem.yLabel = tooltipItem.yLabel / million
-                                    label += Math.round(tooltipItem.yLabel * 100) / 100
-                                    label = label + ' M'
-                                } else if (absyLabel >= thousand) {
-                                    tooltipItem.yLabel = tooltipItem.yLabel / thousand
-                                    label += Math.round(tooltipItem.yLabel * 100) / 100
-                                    label = label + ' K'
-                                } else if (absyLabel >= 0) {
-                                    tooltipItem.yLabel = tooltipItem.yLabel
-                                    label += Math.round(tooltipItem.yLabel * 100) / 100
-                                }
+                                tooltipItem.yLabel = tooltipItem.yLabel
+                                label += tooltipItem.yLabel
                                 return label;
                             }
                         }
@@ -87,21 +61,10 @@ const DividendsChart = (props) => {
                                 drawBorder: false,
                             },
                             ticks: {
+                                beginAtZero: true,
+                                suggestedMax: maxValue * 1.3,
                                 callback: function (value) {
-                                    const absValue = Math.abs(value)
-                                    if (absValue >= quadrillion) {
-                                        return '$ ' + value / quadrillion + ' Q'
-                                    } else if (absValue >= trillion) {
-                                        return '$ ' + value / trillion + ' T'
-                                    } else if (absValue >= billion) {
-                                        return '$ ' + value / billion + ' B'
-                                    } else if (absValue >= million) {
-                                        return '$ ' + value / million + ' M'
-                                    } else if (absValue >= thousand) {
-                                        return '$ ' + value / thousand + ' K'
-                                    } else {
                                         return '$ ' + value
-                                    }
                                 }
                             }
                         }]

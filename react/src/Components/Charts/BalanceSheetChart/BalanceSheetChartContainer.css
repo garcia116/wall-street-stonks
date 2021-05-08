@@ -1,21 +1,13 @@
-.balance-sheet-chart-container {
-	background-color: #000000;
-	color: #ffffff;
-	margin: 3vh 0vw 3vh 0vw;
-	padding: 0vh 0vw 0vh 0vw;
-	width: 62vw;
-	height: 70vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	border: 0.1vh solid #2a2a2a;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
-}
-
 .balance-sheet-chart {
-	position: relative;
-	width: 55vw;
-	height: auto;
+	background-color: #000000;
+	margin: 1.3em;
+	padding: 2em;
+	border: .1em solid;
+	border-radius: .3em;
+	border-color: #424242;
+	min-height: 44em;
+	max-height: 44em;
+	text-align: center;
+	min-width: 77em;
+	max-width: 77em;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './HomeGraph.css';
-import HomepageChart from './../Charts/HomepageChart.js';
+import './HomeChartContainer.css';
+import HomeChart from './HomeChart.js';
 
 
 class HomeGraph extends Component {
@@ -38,15 +38,17 @@ class HomeGraph extends Component {
     render() {
         return (
             this.state.isLoaded ?
-                <div className="home-graph-container">
-                    <div className="home-graph">
-                        <HomepageChart data={this.state.prices}/>
+                <div className="home-chart-container">
+                    <div className="home-chart">
+                        <HomeChart data={this.state.prices}/>
                     </div>
                 </div>
                 :
                 <div>
-                    <div className="home-graph-container">
-                        <h1>Loading...</h1>
+                    <div className="home-chart-container">
+                        <div className="home-chart">
+                            <h1>Loading...</h1>
+                        </div>
                     </div>
                 </div>
         );

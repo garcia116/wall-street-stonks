@@ -44,7 +44,7 @@ function IncomeStatementChartContainer({ tickerSymbol }) {
                         currentDate = Date.now();
                     } while (currentDate - date < milliseconds);
                 }
-                sleep(75)
+                sleep(70)
             }
             return () => mounted = false;
         })();
@@ -52,18 +52,14 @@ function IncomeStatementChartContainer({ tickerSymbol }) {
 
     return (
         isLoaded ?
-            <div className="income-statement-chart-container">
-                <p>Revenue, Operating Expenses, & Income</p>
-                <div className="income-statement-chart">
-                    <IncomeStatementChart data={income} />
-                </div>
+            <div className="income-statement-chart">
+                <h2>Revenue, Operating Expenses, & Income</h2>
+                  <IncomeStatementChart data={income} />
             </div>
             :
-            <div className="income-statement-chart-container">
-                <p>Cash Flow</p>
-                <div className="income-statement-chart">
-                    <h1>Loading...</h1>
-                </div>
+            <div className="income-statement-chart">
+                <h1>Income Statement</h1>
+                <p>Loading...</p>
             </div>
     );
 }

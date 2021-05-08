@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link, Redirect } from "react-router-dom";
 import ResearchHeader from '../../Components/ResearchHeader/ResearchHeader.js';
 import Financials from '../../WebPages/ResearchPage/ResearchPageFinancials';
 import Stats from '../../WebPages/ResearchPage/ResearchPageStats';
@@ -13,7 +13,7 @@ class ResearchPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tickerSymbol: 'TSLA',
+            tickerSymbol: '',
             price: 0,
             keyStats: [{}],
             isLoaded: false
@@ -67,7 +67,7 @@ class ResearchPage extends Component {
         e.preventDefault();
 
         this.setState({
-            tickerSymbol: stock
+            tickerSymbol: stock.toUpperCase()
         })
         console.log(this.state.tickerSymbol)
     }
@@ -81,12 +81,13 @@ class ResearchPage extends Component {
                     <BrowserRouter>
                         <div className="research-links">
                             <Link to="/ResearchPageFinancials">Financials</Link>
-                            <Link to="/ResearchPageStats">Stats</Link>
+                            <Link to="/ResearchPageStats">EPS</Link>
                             <Link to="/ResearchPageDividends">Dividends</Link>
                             <Link to="/ResearchPagePriceChart">Price Chart</Link>
                             <Link to="/ResearchPageCompanyOverview">Company Overview</Link>
                         </div>
                     <Switch>
+                        <Redirect from="/ResearchPage" to="/ResearchPageFinancials"/>
                         <Route path="/ResearchPageFinancials" component={() => <Financials tickerSymbol={this.state.tickerSymbol} />} />
                         <Route path="/ResearchPageStats" component={() => <Stats tickerSymbol={this.state.tickerSymbol} />} />
                         <Route path="/ResearchPageDividends" component={() => <Dividends tickerSymbol={this.state.tickerSymbol} />} />

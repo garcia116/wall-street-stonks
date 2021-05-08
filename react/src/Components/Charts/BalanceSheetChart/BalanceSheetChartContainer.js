@@ -39,25 +39,21 @@ function BalanceSheetChartContainer({ tickerSymbol }) {
                         currentDate = Date.now();
                     } while (currentDate - date < milliseconds);
                 }
-                sleep(100)
+                sleep(70)
             }
             return () => mounted = false;
         })();
     }, []);
     return (
         isLoaded ?
-            <div className="balance-sheet-chart-container">
-                <p>Assets & Liabilities</p>
-                <div className="balance-sheet-chart">
-                    <BalanceSheetChart data={balanceSheet} />
-                </div>
+            <div className="balance-sheet-chart">
+                <h2>Assets & Liabilities</h2>
+                <BalanceSheetChart data={balanceSheet} />
             </div>
             :
-            <div className="balance-sheet-chart-container">
-                <p>Assets & Liabilities</p>
-                <div className="balance-sheet-chart">
-                    <h1>Loading...</h1>
-                </div>
+            <div className="balance-sheet-chart">
+                <h1>Assets & Liabilities</h1>
+                <p>Loading...</p>
             </div>
     );
 }

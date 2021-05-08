@@ -1,6 +1,5 @@
-.home-graph-container {
-	
-	background-color: rgb(27, 27, 27);
+.home-chart-container {
+	background-color: #000000;
 	/* flex: 2; */
 	margin: .3em;
 	border: .1em solid;
@@ -8,24 +7,22 @@
 	border-color: #424242;
 	min-height: 31em;
 	max-height: 31em;
+	text-align: center;
 	/* min-width: 40em;
 	max-width: 40em; */
 }
 
-.home-graph {
-	
+.home-chart {
 	padding: 1em;
 	padding-top: 0em;
 	padding-right: .4em;
-	
 }
 
-.home-graph p {
-	font-size: large;
-	padding-bottom: 0;
-	margin-bottom: .3em;
-	
-}
+	.home-chart p {
+		font-size: large;
+		padding-bottom: 0;
+		margin-bottom: .3em;
+	}
 
 .chart {
 	height: 25em !important;
@@ -38,4 +35,12 @@
 
 .chart h6 {
 	font-size: small;
+}
+
+.green {
+	color: rgba(33, 206, 153, 1);
+}
+
+.red {
+	color: rgba(244, 84, 48, 1);
 }
