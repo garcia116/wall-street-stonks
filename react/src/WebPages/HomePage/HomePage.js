@@ -13,15 +13,16 @@ function HomePage() {
     console.log(window.location.pathname);
     return (
         <div className="home-page">
-            <div className="home-banner">
+
+            {/* <div className="home-banner">
                 <h1 className="stonk-smarter">Home</h1>
                 <h3 className="welcome">Wallstreet Stonks</h3>
-            </div>
+            </div> */}
             <div className="home-page-row-container">
                 <News />
                 <div className="home-page-column-container">
                     <HomeGraph />
-                    <div className="home-page-row-container">
+                    <div className="home-page-lower-middle">
                         <Gainers />
                         <Losers />
                     </div>
