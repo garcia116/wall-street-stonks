@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import ajax from '../ajax.js';
 import './Watchlist.css';
 import Form from "./Form.js";
 import iex from '../../config/iex.js'
-import axios from 'axios';
 import Stocks from './Stocks.js';
 
 class WatchList extends Component {

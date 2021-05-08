@@ -1,68 +1,67 @@
 import React, { Component } from 'react';
 import './BalanceSheetChartContainer.css';
 import BalanceSheetChart from "../../Charts/BalanceSheetChart/BalanceSheetChart.js";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
+function BalanceSheetChartContainer({ tickerSymbol }) {
+    const [balanceSheet, setBalance] = useState()
+    const [isLoaded, setLoaded] = useState()
 
-class BalanceSheetChartContainer extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            tickerSymbol: props.tickerSymbol,
-            balanceSheet: [{}],
-            isLoaded: false
-        }
-    }
+    useEffect(() => {
+        (async () => {
+            let mounted = true
+            if (mounted) {
+                var sandboxMode = true
+                var baseURL
+                var token
 
-    componentDidMount() {
-        var sandboxMode = true
-        var baseURL
-        var token
+                const balanceSheet = `/stock/${tickerSymbol}/balance-sheet?period=quarter&last=12&token=`
 
-        const balanceSheet = `/stock/${this.state.tickerSymbol}/balance-sheet?period=quarter&last=12&token=`
+                if (sandboxMode) {
+                    baseURL = 'https://sandbox.iexapis.com/v1'
+                    token = 'Tpk_a909e54fc2ab44ac976155957da2a605'
+                }
+                else {
+                    baseURL = 'https://cloud.iexapis.com/v1'
+                    token = 'pk_2d87808402a3463ab504dac6eb52b540'
+                }
 
-        if (sandboxMode) {
-            baseURL = 'https://sandbox.iexapis.com/v1'
-            token = 'Tpk_a909e54fc2ab44ac976155957da2a605'
-        }
-        else {
-            baseURL = 'https://cloud.iexapis.com/v1'
-            token = 'pk_2d87808402a3463ab504dac6eb52b540'
-        }
+                const balanceSheetURL = baseURL + balanceSheet + token
+                const result = await axios.get(balanceSheetURL)
+                setBalance(result.data)
+                setLoaded(true)
 
-        const balanceSheetURL = baseURL + balanceSheet + token
-
-        fetch(balanceSheetURL)
-            .then(response => response.json())
-            .then(data => this.setState({ balanceSheet: data, isLoaded: true }))
-        function sleep(milliseconds) {
-            const date = Date.now();
-            let currentDate = null;
-            do {
-                currentDate = Date.now();
-            } while (currentDate - date < milliseconds);
-        }
-        sleep(100)
-    }
-
-    render() {
-        return (
-            this.state.isLoaded ?
-                <div className="balance-sheet-chart-container">
-                    <p>Assets & Liabilities</p>
-                    <div className="balance-sheet-chart">
-                        <BalanceSheetChart data={this.state.balanceSheet} />
-                    </div>
+                function sleep(milliseconds) {
+                    const date = Date.now();
+                    let currentDate = null;
+                    do {
+                        currentDate = Date.now();
+                    } while (currentDate - date < milliseconds);
+                }
+                sleep(100)
+            }
+            return () => mounted = false;
+        })();
+    }, []);
+    return (
+        isLoaded ?
+            <div className="balance-sheet-chart-container">
+                <p>Assets & Liabilities</p>
+                <div className="balance-sheet-chart">
+                    <BalanceSheetChart data={balanceSheet} />
                 </div>
-                :
-                <div className="balance-sheet-chart-container">
-                    <p>Assets & Liabilities</p>
-                    <div className="balance-sheet-chart">
-                        <h1>Loading...</h1>
-                    </div>
+            </div>
+            :
+            <div className="balance-sheet-chart-container">
+                <p>Assets & Liabilities</p>
+                <div className="balance-sheet-chart">
+                    <h1>Loading...</h1>
                 </div>
-        );
-    }
+            </div>
+    );
 }
+
 
 
 export default BalanceSheetChartContainer;

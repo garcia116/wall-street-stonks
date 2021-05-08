@@ -12,7 +12,6 @@ import Watchlist from "../../Components/Watchlist/Watchlist.js";
 function HomePage() {
     console.log(window.location.pathname);
     return (
-
         <div className="home-page">
 
             {/* <div className="home-banner">
