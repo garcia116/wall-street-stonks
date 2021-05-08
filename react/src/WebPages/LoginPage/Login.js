@@ -38,7 +38,7 @@ function Login() {
         <div>
             <div className="banner">
                 <h1 className="stonk-smarter">Stonk smarter</h1>
-                <h3 className="welcome">Welcome to Wallstreet Stonks</h3>
+                <h2 className="welcome">Welcome to Wallstreet Stonks</h2>
             </div>
             <div className="login-window">
                 <h2 className="login">Login</h2>

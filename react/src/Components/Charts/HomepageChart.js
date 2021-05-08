@@ -60,7 +60,7 @@ const HomepageChart = (props) => {
         percentChange = numberWithCommas(((props.data[i - 1].close / props.data[0].close * 10000) / 100 - 100).toFixed(2))
         chartHeader = <div className="green">
             <h2>SPY S&P 500 ETF</h2>
-            <h5>${price}</h5>
+            <h6>${price}</h6>
             <h6>+${priceChange} (+{percentChange}%)</h6>
         </div>
     } else {
@@ -76,7 +76,7 @@ const HomepageChart = (props) => {
     }
 
     return (
-        <div>
+        <div className="chart">
             {chartHeader}
             <Line
                 data={{
@@ -92,7 +92,7 @@ const HomepageChart = (props) => {
                 options={{
                     responsive: true,
                     maintainAspectRatio: false,
-                    aspectRatio: 1,
+                    aspectRatio: 5,
                     elements: {
                         point: {
                             radius: 0

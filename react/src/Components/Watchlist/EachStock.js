@@ -10,6 +10,16 @@ class EachStock extends Component {
     }
 
 
+
+    getCol() {
+        if(this.props.change < 0){
+            return({color: "red"})
+        }else{
+            return({color: "green"})
+        }
+    }
+
+
     render() {
         return (
             <div className='eachStock'>
@@ -18,7 +28,9 @@ class EachStock extends Component {
                         <p className='card-title'>{this.props.stock}</p>
                         <div className="info">
                             <p className='card-price'>${this.props.price}</p>
-                            <p className='card-change'>{this.props.change}</p>
+                            <p className='card-change'
+                               style={(this.props.change > 0)? {color: "green"}: {color: "red"}}
+                            >{this.props.change} %</p>
                         </div>
                         {/* <button
                             onClick={() => this.props.handleRemove(this.props.stock)}

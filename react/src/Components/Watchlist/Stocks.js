@@ -61,7 +61,7 @@ class Stocks extends Component {
     render() {
         return (
             <div className='mystocks_div'>
-                <br></br>
+                
                 {this.props.stockList && <p className='yourList'></p>}
                 <div className='mystocks'>
                     {this.props.stockList &&
