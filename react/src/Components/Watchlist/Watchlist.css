@@ -1,22 +1,55 @@
 .watchlist-container {
-	background-image: linear-gradient(90deg, #28bf91 10%, #24b99b 90%);
-	color: #ffffff;
-	margin: 5vh 1vw 5vh 2vw;
-	padding: .5vh .5vw .5vh .5vw;
-	width: 15vw;
-	height: 84vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	border: .1vh solid #2a2a2a;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
-	font-size: 1.2vw
+	
+	background-color: rgb(27, 27, 27);
+	flex: 1;
+	margin: .3em;
+	border: .1em solid;
+	border-radius: .3em;
+	border-color: #424242;
+	font-family: 'Lato', Arial, Helvetica, sans-serif !important;
+
 }
 
-h3 {
-	font-size: 1.8vw;
-	justify-content: center;
+.watchlist-container form {
+	
+	display: grid;
+	grid-template-columns: 65% auto;
+	grid-column-gap: .6em;
+	
 }
 
+.add-to-watchlist {
+	padding: 0 1em .6em 1em;
+	padding-bottom: 0;
+	height: auto;
+}
 
+.add-to-watchlist input {
+	margin: 0;
+	background-color: #fffffff5;
+	font-family: 'Lato', Arial, Helvetica, sans-serif !important;
+	height: auto;
+	border-radius: .15em;
+	font-size: medium;
+}
+
+.form_buttons {
+	background-color: #24b866;
+	height: auto;
+	margin: .5em 0 .5em 0;
+	border-radius: .15em;
+	border-style: solid;
+	border-width: 1px;
+	color:rgb(230, 230, 230);
+	font-size: medium;
+}
+
+.mystocks_div {
+	margin-top: 0em;
+}
+
+.yourList {
+	margin: 0;
+	padding: 0;
+	height: 0;
+}
