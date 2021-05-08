@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import './BalanceSheetChartContainer.css';
-import BalanceSheetChart from "../../Charts/BalanceSheetChart/BalanceSheetChart.js";
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import './CashFlowChartContainer.css';
+import CashFlowChart from "../../Charts/CashFlowChart/CashFlowChart.js";
 import axios from 'axios';
 
-function BalanceSheetChartContainer({ tickerSymbol }) {
-    const [balanceSheet, setBalance] = useState()
+function CashFlowChartContainer({ tickerSymbol }) {
+
+    const [cashFlow, setCashFlow] = useState()
     const [isLoaded, setLoaded] = useState()
 
     useEffect(() => {
@@ -16,7 +16,7 @@ function BalanceSheetChartContainer({ tickerSymbol }) {
                 var baseURL
                 var token
 
-                const balanceSheet = `/stock/${tickerSymbol}/balance-sheet?period=quarter&last=12&token=`
+                const cashFlow = `/stock/${tickerSymbol}/cash-flow?period=quarter&last=12&token=`
 
                 if (sandboxMode) {
                     baseURL = 'https://sandbox.iexapis.com/v1'
@@ -27,9 +27,9 @@ function BalanceSheetChartContainer({ tickerSymbol }) {
                     token = 'pk_2d87808402a3463ab504dac6eb52b540'
                 }
 
-                const balanceSheetURL = baseURL + balanceSheet + token
-                const result = await axios.get(balanceSheetURL)
-                setBalance(result.data)
+                const cashFlowURL = baseURL + cashFlow + token
+                const result = await axios.get(cashFlowURL)
+                setCashFlow(result.data)
                 setLoaded(true)
 
                 function sleep(milliseconds) {
@@ -46,22 +46,19 @@ function BalanceSheetChartContainer({ tickerSymbol }) {
     }, []);
     return (
         isLoaded ?
-            <div className="balance-sheet-chart-container">
-                <p>Assets & Liabilities</p>
-                <div className="balance-sheet-chart">
-                    <BalanceSheetChart data={balanceSheet} />
+            <div className="cash-flow-chart-container">
+                <p>Cash Flow</p>
+                <div className="cash-flow-chart">
+                    <CashFlowChart cashFlow={cashFlow} />
                 </div>
             </div>
             :
-            <div className="balance-sheet-chart-container">
-                <p>Assets & Liabilities</p>
-                <div className="balance-sheet-chart">
+            <div className="cash-flow-chart-container">
+                <p>Cash Flow</p>
+                <div className="cash-flow-chart">
                     <h1>Loading...</h1>
                 </div>
             </div>
     );
 }
-
-
-
-export default BalanceSheetChartContainer;
+export default CashFlowChartContainer;

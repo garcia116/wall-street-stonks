@@ -1,23 +1,16 @@
-import React, { Component } from 'react';
-import './ResearchPageFinancials.css';
+import React, { useState } from 'react';
+import './ResearchPageDividends.css';
 import DividendsChartContainer from "../../Components/Charts/DividendsChart/DividendsChartContainer.js";
 
-class ResearchPageDividends extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            tickerSymbol: 'TSLA'
-        }
-    }
+function ResearchPageDividends({ tickerSymbol }) {
+    const [ticker] = useState(tickerSymbol)
 
-    render() {
-        return (
-            <div className="research-page-dividends">
-                <DividendsChartContainer tickerSymbol={this.state.tickerSymbol} />
-            </div>
-        );
-    }
+    return (
+        <div className="research-page-dividends">
+            <DividendsChartContainer tickerSymbol={ticker} />
+        </div>
+    );
+
 }
-
 
 export default ResearchPageDividends;

@@ -1,7 +1,7 @@
 .price-chart-container {
 	background-color: #000000;
 	color: #ffffff;
-	margin: 3vh 0vw 2vh 0vw;
+	margin: 3vh 0vw 3vh 0vw;
 	padding: 0vh 0vw 0vh 0vw;
 	width: 62vw;
 	height: 70vh;
@@ -18,4 +18,12 @@
 	position: relative;
 	width: 55vw;
 	height: auto;
+}
+
+.green {
+	color: rgba(33, 206, 153, 1);
+}
+
+.red {
+	color: rgba(244, 84, 48, 1);
 }

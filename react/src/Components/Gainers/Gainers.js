@@ -60,7 +60,7 @@ function Gainers() {
 
     useEffect(() => {
         (async () => {
-            const result = await axios.get("https://cloud.iexapis.com/stable/stock/market/list/gainers?token=pk_2d87808402a3463ab504dac6eb52b540");
+            const result = await axios.get("https://cloud.iexapis.com/stable/stock/market/list/gainers?token=pk_2d87808402a3463ab504dac6eb52b540&listLimit=5");
             setData(result.data);
         })();
     }, []);
