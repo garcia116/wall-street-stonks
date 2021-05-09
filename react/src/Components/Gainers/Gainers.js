@@ -41,7 +41,7 @@ function Gainers() {
             }
             , {
                 Header: 'PRICE',
-                accessor: 'iexRealtimePrice'
+                accessor: 'latestPrice'
             }
             , {
                 Header: 'CHANGE',

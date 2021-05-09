@@ -17,7 +17,7 @@ function FetchCompanies({ ticker }) {
         <tr>
             <td>{data.symbol}</td>
             <td>{data.marketCap}</td>
-            <td>${data.iexRealtimePrice}</td>
+            <td>${data.latestPrice}</td>
             <td>{data.change}</td>
 
         </tr>
