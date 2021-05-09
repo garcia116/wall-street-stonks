@@ -1,61 +1,123 @@
-import {React, useState} from 'react';
+import {React, Component} from 'react';
 import './Login.css';
 import { NavLink } from 'react-router-dom';
 import axios from "axios";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { loginUser } from "../../actions/authActions";
+import classnames from "classnames";
 
-function Login() {
-
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-
-    const handleSubmit = (evt) => {
-        evt.preventDefault();
-        console.log("handleSumit triggered!");
-
-        // create object with username and password
-        // send to axios? 
-        // authenticate?
-        const userData = {
-            user: username,
-            pass: password,
-        }
-
-        axios
-            .post("/api/users/login", userData)
-            .then(res => {
-                // save login to local storage
-                // set token to local storage
-                // setAuthToken(token);
-                console.log("User logged in")
-                console.log(userData);
-            })
-            
-
-
+class Login extends Component {
+    constructor() {
+        super();
+        this.state = {
+            email: "",
+            password: "",
+            errors: {}
+        };
     }
 
-    return (
-        <div>
-            <div className="banner">
-                <h1 className="stonk-smarter">Stonk smarter</h1>
-                <h2 className="welcome">Welcome to Wallstreet Stonks</h2>
-            </div>
-            <div className="login-window">
-                <h2 className="login">Login</h2>
-                <form className="sign-in-form" onSubmit={handleSubmit} noValidate>
-                    <input className="username" placeholder="Username" onChange={e => setUsername(e.target.value)}/>
-                    <input className="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
-                    <div className="linkButton">
-                      <NavLink className="linkTo" to="/">Create Account</NavLink>
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.isAuthenticated) {
+          this.props.history.push("/HomePage"); // push user to dashboard when they login
+        }
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+    }
+
+    onChange = e => {
+        this.setState({ [e.target.id]: e.target.value});
+    }
+
+    onSubmit = e => {
+        e.preventDefault();
+
+        const userData = {
+            email: this.state.email,
+            password: this.state.password
+        };
+
+        this.props.loginUser(userData);
+    }
+
+    render() {
+        const { errors } = this.state;
+        return (
+            <div>
+                <div className="banner">
+                    <h1 className="stonk-smarter">Stonk smarter</h1>
+                    <h2 className="welcome">Welcome to Wallstreet Stonks</h2>
+                </div>
+                <div className="login-window">
+                    <h2 className="login">Log In</h2>
+                    <form noValidate onSubmit={this.onSubmit}>
+                    <div className="input-field">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.email}
+                            error={errors.email}
+                            id="email"
+                            type="email"
+                            className={classnames("", {
+                                invalid: errors.email || errors.emailnotfound
+                            })}
+                        />
+                        <span className="red-text">
+                            {errors.email}
+                            {errors.emailnotfound}
+                        </span>
+                        
+                        
                     </div>
-                    <div className="linkButton">
-                      <NavLink className="linkTo" to="/">Forgot Password?</NavLink>
-                    </div>                
-                    <button className="submit-button"> Sign In </button>{' '}
-                </form>        
+                    <div className="input-field">
+                        
+                        <label htmlFor="password">Password</label>
+                        <input
+                        onChange={this.onChange}
+                        value={this.state.password}
+                        error={errors.password}
+                        id="password"
+                        type="password"
+                        className={classnames("", {
+                            invalid: errors.password || errors.passwordincorrect
+                        })}
+                        />
+                    </div>
+                    <div className="submit-button-div">
+                        <button                        
+                            type="submit"
+                            className="submit-button"
+                        >
+                        Submit
+                        </button>
+                    </div>
+                    </form>
+                    <p className="grey-text text-darken-1">
+                        Don't have an account? <Link to="/register">Register</Link>
+                    </p>
+                </div>
+                
             </div>
-        </div>
-    )
+        )}
 }
 
-export default Login;
+Login.propTypes = {
+    loginUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+  
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+
+export default connect(
+    mapStateToProps,
+    { loginUser }
+)(Login);

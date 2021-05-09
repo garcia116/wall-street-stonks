@@ -7,7 +7,7 @@ function NavBar() {
         <div className="nav-bar-container">
             <div className="nav-bar-container-item">
                     <a className="nav-bar-link" href="/HomePage">
-                        <img className="nav-bar-home-icon" alt="" src={logo} /> WallStreet Stonks
+                        <img className="nav-bar-home-icon" alt="" src={logo} />  WallStreet Stonks
                     </a>
             </div>
         </div>

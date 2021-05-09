@@ -18,7 +18,7 @@ const Styles = styled.div`
     }
     th,
     td {
-      font-size: .7em;
+      font-size: .8em;
       margin: 0;
       padding: .5rem;
       border-bottom: 1px solid black;

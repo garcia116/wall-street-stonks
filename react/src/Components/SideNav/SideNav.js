@@ -7,6 +7,9 @@ import LearnPage from '../../WebPages/LearnPage/LearnPage';
 import './SideNav.css'
 import AccountPage from '../../WebPages/AccountPage/AccountPage';
 import Login from '../../WebPages/LoginPage/Login';
+// import SignUp from '../../WebPages/SignUpPage/SignUp';
+import SignUp from '../../WebPages/SignUpPage/SignUp';
+
 
 class SideNav extends React.Component {
     showSettings(event) {
@@ -22,6 +25,7 @@ class SideNav extends React.Component {
                     <NavLink to="/LearnPage" className="menu-item">Learn</NavLink>
                     <NavLink to="/AccountPage" className="menu-item">Account</NavLink>
                     <NavLink to="/Login" className="menu-item">Login</NavLink>
+                    <NavLink to="/SignUp" className="menu-item">Sign Up</NavLink>
                 </Menu>
                 <div className="content">
                     <Route path="/HomePage" component={HomePage} />
@@ -29,6 +33,7 @@ class SideNav extends React.Component {
                     <Route path="/LearnPage" component={LearnPage} />
                     <Route path="/AccountPage" component={AccountPage} />
                     <Route path="/Login" component={Login} />
+                    <Route path="/SignUp" component={SignUp} />
                 </div>
             </BrowserRouter>
             )

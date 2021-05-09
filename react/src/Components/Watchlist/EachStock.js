@@ -9,17 +9,6 @@ class EachStock extends Component {
         };
     }
 
-
-
-    getCol() {
-        if(this.props.change < 0){
-            return({color: "red"})
-        }else{
-            return({color: "green"})
-        }
-    }
-
-
     render() {
         return (
             <div className='eachStock'>
