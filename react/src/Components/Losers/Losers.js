@@ -40,7 +40,7 @@ function Losers() {
             }
             , {
                 Header: 'PRICE',
-                accessor: 'iexRealtimePrice'
+                accessor: 'latestPrice'
             }
             , {
                 Header: 'CHANGE',
