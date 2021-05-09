@@ -1,7 +1,8 @@
-.dividends-chart-container {
+.dividends-chart {
 	background-color: #000000;
-	margin: 1.3em;
-	padding-top: 1em;
+	margin: .3em;
+	margin-bottom: 3em;
+	padding: 1em;
 	border: .1em solid;
 	border-radius: .3em;
 	border-color: #424242;
@@ -10,11 +11,6 @@
 	text-align: center;
 	min-width: 75em;
 	max-width: 75em;
-}
-
-.dividends-chart {
-	padding: 1em;
-	padding-top: 0em;
 }
 
 .not-stonks-guy {

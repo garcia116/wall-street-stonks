@@ -48,9 +48,8 @@ function CompanyOverview({ tickerSymbol, companyName }) {
                 <div>
                     <div className="company-website">
                         <img className="company-logo" src={logo.url} alt=""></img>
-                        <p className="company-info-title">Website</p>
                         <a className="company-link" alt="" href={companyInfo.website}>
-                            <p className="company-info-data">{companyInfo.website.slice(8, companyInfo.website.length - 1)}</p>
+                            <p className="company-info-data-website">{companyInfo.website.slice(8, companyInfo.website.length - 1)}</p>
                         </a>
                     </div>
                     <p className="company-info-data">{companyInfo.description}</p>
@@ -59,8 +58,8 @@ function CompanyOverview({ tickerSymbol, companyName }) {
                     <p className="company-info-title">Industry</p>
                     <p className="company-info-data">{companyInfo.industry}</p>
                     <p className="company-info-title">Address</p>
-                    <p className="company-info-data-plus">{companyInfo.address}</p>
-                    <p className="company-info-data-plus">{companyInfo.city}, {companyInfo.state}</p>
+                    <p className="company-info-data">{companyInfo.address}</p>
+                    <p className="company-info-data">{companyInfo.city}, {companyInfo.state}</p>
                     <p className="company-info-data">{companyInfo.zip}</p>
                     <p className="company-info-title">Employees</p>
                     <p className="company-info-data">{companyInfo.employees}</p>

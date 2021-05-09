@@ -1,13 +1,13 @@
 .balance-sheet-chart {
 	background-color: #000000;
-	margin: 1.3em;
-	padding: 2em;
+	margin: .3em;
+	padding: 1em;
 	border: .1em solid;
 	border-radius: .3em;
 	border-color: #424242;
-	min-height: 44em;
-	max-height: 44em;
+	min-height: 42em;
+	max-height: 42em;
 	text-align: center;
-	min-width: 77em;
-	max-width: 77em;
+	min-width: 75em;
+	max-width: 75em;
 }

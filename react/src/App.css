@@ -1,5 +1,11 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    background-color: #181818;
+    font-family: 'Lato';
+}
+
 .app {
-    font-family: 'Roboto Slab', serif;
     color: white;
 }
 

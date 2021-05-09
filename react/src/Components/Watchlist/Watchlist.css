@@ -1,7 +1,8 @@
 .watchlist-container {
-	background-color: rgb(27, 27, 27);
+	background-color: #000000;
 	flex: 1;
 	margin: .3em;
+	margin-bottom: 3em;
 	border: .1em solid;
 	border-radius: .3em;
 	border-color: #424242;
@@ -9,11 +10,9 @@
 }
 
 .watchlist-container form {
-	
 	display: grid;
 	grid-template-columns: 65% auto;
 	grid-column-gap: .6em;
-	
 }
 
 .add-to-watchlist {
@@ -32,13 +31,13 @@
 }
 
 .form_buttons {
-	background-color: #24b866;
+	background-color: #181818;
 	height: auto;
 	margin: .5em 0 .5em 0;
 	border-radius: .15em;
 	border-style: solid;
 	border-width: 1px;
-	color:rgb(230, 230, 230);
+	color: rgb(230, 230, 230);
 	font-size: medium;
 }
 

@@ -30,7 +30,6 @@ function ListOfCompanies() {
                         <FetchCompanies ticker="tsm" />
                         <FetchCompanies ticker="baba" />
                         <FetchCompanies ticker="brk.b" />
-
                     </tbody>
                 </table>
             </div>

@@ -2,11 +2,11 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 import './PriceChartContainer.css';
 
-const PriceChart = (props) => {
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+}
 
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-    }
+const PriceChart = (props) => {
 
     var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     var chartxLabels = [{}]
@@ -63,7 +63,7 @@ const PriceChart = (props) => {
                             backgroundColor: backgroundColor,
                             fill: false,
                             borderWidth: 2,
-                            pointHoverRadius: 3
+                            pointHoverRadius: 4
                         },
                     ]
                 }}

@@ -7,7 +7,6 @@ class ResearchHeader extends Component {
         
     }
     
-
     render() {
         const thousand = 1000
         const million = 1000000
@@ -19,44 +18,37 @@ class ResearchHeader extends Component {
 
         if (marketcap >= quadrillion) {
             marketcap = marketcap / quadrillion
-            marketcapLabel += Math.round(marketcap * 100) / 100
+            marketcapLabel += marketcap.toFixed(2)
             marketcapLabel = marketcapLabel + ' Q'
         } else if (marketcap >= trillion) {
             marketcap = marketcap / trillion
-            marketcapLabel += Math.round(marketcap * 100) / 100
+            marketcapLabel += marketcap.toFixed(2)
             marketcapLabel = marketcapLabel + ' T'
         } else if (marketcap >= billion) {
             marketcap = marketcap / billion
-            marketcapLabel += Math.round(marketcap * 100) / 100
+            marketcapLabel += marketcap.toFixed(2)
             marketcapLabel = marketcapLabel + ' B'
         } else if (marketcap >= million) {
             marketcap = marketcap / million
-            marketcapLabel += Math.round(marketcap * 100) / 100
+            marketcapLabel += marketcap.toFixed(2)
             marketcapLabel = marketcapLabel + ' M'
         } else if (marketcap > 0) {
             marketcap = marketcap / thousand
-            marketcapLabel += Math.round(marketcap * 100) / 100
+            marketcapLabel += marketcap.toFixed(2)
             marketcapLabel = marketcapLabel + ' K'
         }
 
         return (
-            <div className="research-header-container">
             <div className="reseach-banner">
-                <div className="research-upper-header-container">
-                    <div className="research-header-ticker-name">
+                    <div>
                         {this.props.name}: {this.props.tickerSymbol}
                     </div>
-                        <div className="research-header-price">
-                            Price: ${this.props.price}
+                    <div>
+                        Price: ${this.props.price}
                     </div>
-                    <div className="research-header-market-cap">
+                    <div>
                         {marketcapLabel}
                     </div>
-                </div>
-                <div className="links">
-                        
-                </div>
-            </div>
             </div>
         )
     }

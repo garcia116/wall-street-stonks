@@ -6,11 +6,12 @@
     margin-left: -1em;
 }
 
-.menu-item:hover {
-    color: black;
-    box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
-    width: 13em;
-}
+    .menu-item:hover {
+        color: black;
+        box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+        width: 13em;
+        text-decoration: none;
+    }
 
 .bm-burger-button {
     position: fixed;
@@ -53,7 +54,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-    background-color: #0084ff;
+    background-color: #383838;
     border: 1px solid #181818;
     box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
     font-size: 1.3em;

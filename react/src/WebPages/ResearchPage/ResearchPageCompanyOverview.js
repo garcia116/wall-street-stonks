@@ -42,10 +42,8 @@ function ResearchPageCompanyOverview({ tickerSymbol }) {
     return (
         isLoaded ?
             <div className="research-page-company-overview">
-                <div className="research-page-company-overview-row-container">
                     <CompanyNews companyName={stats.companyName} tickerSymbol={ticker} />
                     <CompanyOverview companyName={stats.companyName} tickerSymbol={ticker} />
-                </div>
             </div>
             : <div></div>
     );
