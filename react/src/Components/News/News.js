@@ -11,7 +11,7 @@ class News extends Component {
         }
     }
     componentDidMount() {
-        var sandboxMode = false
+        var sandboxMode = true
         var baseURL
         var token
         const keyStats = '/time-series/news/?range=last-week&limit=3&token='
