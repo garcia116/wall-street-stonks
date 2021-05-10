@@ -1,15 +1,12 @@
 .home-chart-container {
-	background-color: #000000;
-	/* flex: 2; */
+	background-color: #ffffff;
 	margin: .3em;
 	border: .1em solid;
 	border-radius: .3em;
-	border-color: #424242;
+	border-color: #eceff1;
 	min-height: 31em;
 	max-height: 31em;
 	text-align: center;
-	/* min-width: 40em;
-	max-width: 40em; */
 }
 
 .home-chart {

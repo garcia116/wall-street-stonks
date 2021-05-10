@@ -69,7 +69,7 @@ class Stocks extends Component {
                             <EachStock
                                 key={key}
                                 stock={stock['symbol']}
-                                price={stock['iexRealtimePrice']}
+                                price={stock['latestPrice']}
                                 change={stock['change']}
                                 handleRemove={this.handleRemove}
                             />

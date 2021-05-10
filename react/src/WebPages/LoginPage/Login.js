@@ -35,7 +35,7 @@ function Login() {
     }
 
     return (
-        <div>
+        <div className="login-page">
             <div className="banner">
                 <h1 className="stonk-smarter">Stonk smarter</h1>
                 <h2 className="welcome">Welcome to Wallstreet Stonks</h2>

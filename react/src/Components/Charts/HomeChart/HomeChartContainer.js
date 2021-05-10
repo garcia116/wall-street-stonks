@@ -34,6 +34,7 @@ class HomeGraph extends Component {
         fetch(pricesURL)
             .then(response => response.json())
             .then(data => this.setState({ prices: data, isLoaded: true }))
+
     }
     render() {
         return (

@@ -1,31 +1,23 @@
-html, body, #root {
-	height: 100%;
-	margin: 0;
-	background-color: #242424;
-	font-family: 'Lato';
-  }
-
 .home-page {
 	/* text-align: center; */
 	height: 100%;
 	display: flex;
 	flex-flow: column;
-	color:#d8d8d8;
+	color: #000000;
 	/* align-items: center; */
   }
 
 .home-page-row-container {
-	background-color: #242424;
 	flex: 1 1 auto;
 	display: grid;
 	grid-template-columns: 15em 40em 15em;
 	/* align-content: center; */
 	/* align-items: center; */
-	padding-top: 2em;
 	justify-content: center;
 	margin: auto;
-  
-  /* max-width: 200em; */
+	margin-top: 2em;
+	margin-bottom: 3em;
+	/* max-width: 200em; */
 }
 
 .home-page-lower-middle {
@@ -63,7 +55,6 @@ html, body, #root {
 	color: white;
 	padding-left: 15%;
 	font-family: 'Roboto Slab', serif;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .home-banner-title {

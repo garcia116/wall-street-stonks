@@ -1,13 +1,14 @@
 .income-statement-chart {
-	background-color: #000000;
-	margin: 1.3em;
-	padding: 2em;
+	background-color: #ffffff;
+	margin: .3em;
+	padding: 1em;
 	border: .1em solid;
 	border-radius: .3em;
-	border-color: #424242;
-	min-height: 44em;
-	max-height: 44em;
+	border-color: #eceff1;
+	min-height: 42em;
+	max-height: 42em;
 	text-align: center;
-	min-width: 77em;
-	max-width: 77em;
+	min-width: 75em;
+	max-width: 75em;
+	box-shadow: 0 0em .8em 0 rgba(0, 0, 0, 0.61);
 }

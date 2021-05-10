@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './PriceChartInfo.css';
 import axios from 'axios';
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function PriceChartInfo({ tickerSymbol, keyStat }) {
 
     const [ticker] = useState(tickerSymbol)
@@ -41,16 +45,29 @@ function PriceChartInfo({ tickerSymbol, keyStat }) {
     }, [ticker]);
 
     if (advStats) {
-        var forwardPERatio = advStats.forwardPERatio === "" ? "-" : Math.round(advStats.forwardPERatio * 100) / 100;
-        var peRatio = keyStats.peRatio === "" ? "-" : Math.round(keyStats.peRatio * 100) / 100;
-        var psRatio = keyStats.priceToSales === "" ? "-" : Math.round(keyStats.priceToSales * 100) / 100;
-        var profitMargin = advStats.profitMargin === "" ? "-" : Math.round(advStats.profitMargin * 100) + "%";
-        var nextEarningsDate = keyStats.nextEarningsDate === "" ? "-" : keyStats.nextEarningsDate;
-        var beta = keyStats.beta === "" ? "-" : Math.round(keyStats.beta * 100) / 100;
-        var sharesOutstanding = keyStats.sharesOutstanding === "" ? "-" : Math.round(keyStats.sharesOutstanding / 1000000 * 100) / 100 + "M";
+        var forwardPERatio = advStats.forwardPERatio === "" || advStats.forwardPERatio === null ? "-" : (advStats.forwardPERatio).toFixed(2);
+        var peRatio = keyStats.peRatio === "" || advStats.forwardPERatio == null ? "-" : (keyStats.peRatio).toFixed(2);
+        var profitMargin = advStats.profitMargin === "" ? "-" : (advStats.profitMargin * 100).toFixed(2) + "%";
+        var beta = keyStats.beta === "" ? "-" : (keyStats.beta).toFixed(2)
+        var sharesOutstanding = keyStats.sharesOutstanding === "" ? "-" : numberWithCommas((keyStats.sharesOutstanding / 1000000).toFixed(0)) + " M";
         var dividendYeild = keyStats.dividendYield === "" ? "-" : Math.round(keyStats.dividendYield * 10000) / 100 + "%";
-        var nextDividendDate = keyStats.nextDividendDate === "" ? "-" : keyStats.nextDividendDate;
+        var nextDividendDate = (keyStats.nextDividendDate === "" || keyStats.nextDividendDate === "0") ? "-" : keyStats.nextDividendDate;
+        var nextEarningsDate = (keyStats.nextEarningsDate === "" || keyStats.nextEarningsDate === "0") ? "-" : keyStats.nextEarningsDate;
+
+        var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        nextEarningsDate = month[Number((nextEarningsDate).slice(5, 7)) - 1] + " " + Number((nextEarningsDate).slice(8, 10)) + ", " + (nextEarningsDate).slice(0, 4)
+        if (nextDividendDate !== "-") {
+            nextDividendDate = month[Number((nextDividendDate).slice(5, 7)) - 1] + " " + Number((nextDividendDate).slice(8, 10)) + ", " + (nextDividendDate).slice(0, 4)
+        } else if (nextDividendDate === "undefined 0, -") {
+            nextDividendDate = nextDividendDate.slice(13, 14)
+        }
+        if (nextEarningsDate === "-") {
+            nextEarningsDate = month[Number((nextEarningsDate).slice(5, 7)) - 1] + " " + Number((nextEarningsDate).slice(8, 10)) + ", " + (nextEarningsDate).slice(0, 4)
+        } else if (nextEarningsDate === "undefined 0, -") {
+            nextEarningsDate = nextEarningsDate.slice(13, 14)
+        }
     }
+
 return (
     isLoaded ?
         <div className="price-chart-info-container">
@@ -63,10 +80,6 @@ return (
                     <div className="price-chart-info-item">
                         <p className="price-chart-info-title">P/E Ratio</p>
                         <p className="price-chart-info-data">{peRatio}</p>
-                    </div>
-                    <div className="price-chart-info-item">
-                        <p className="price-chart-info-title">P/S Ratio</p>
-                        <p className="price-chart-info-data">{psRatio}</p>
                     </div>
                     <div className="price-chart-info-item">
                         <p className="price-chart-info-title">Profit Margin</p>
@@ -99,7 +112,12 @@ return (
                 </div>
             </div>
         </div>
-        : <div>Loading...</div>
+        :
+        <div>
+            <h1>Income Statement</h1>
+            <h1>Loading...</h1>
+            <h1>Or Unavailable</h1>
+        </div>
 );
 
 }

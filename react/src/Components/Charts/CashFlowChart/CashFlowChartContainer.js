@@ -4,7 +4,6 @@ import CashFlowChart from "../../Charts/CashFlowChart/CashFlowChart.js";
 import axios from 'axios';
 
 function CashFlowChartContainer({ tickerSymbol }) {
-
     const [cashFlow, setCashFlow] = useState()
     const [isLoaded, setLoaded] = useState()
 
@@ -32,14 +31,16 @@ function CashFlowChartContainer({ tickerSymbol }) {
                 setCashFlow(result.data)
                 setLoaded(true)
 
-                function sleep(milliseconds) {
-                    const date = Date.now();
-                    let currentDate = null;
-                    do {
-                        currentDate = Date.now();
-                    } while (currentDate - date < milliseconds);
+                if (sandboxMode) {
+                    function sleep(milliseconds) {
+                        const date = Date.now();
+                        let currentDate = null;
+                        do {
+                            currentDate = Date.now();
+                        } while (currentDate - date < milliseconds);
+                    }
+                    sleep(100)
                 }
-                sleep(70)
             }
             return () => mounted = false;
         })();
@@ -52,8 +53,8 @@ function CashFlowChartContainer({ tickerSymbol }) {
             </div>
             :
             <div className="cash-flow-chart">
-                <h1>Cash Flow</h1>
-                <p>Loading...</p>
+                <h1>Loading...</h1>
+                <h1>Or Unavailable</h1>
             </div>
     );
 }

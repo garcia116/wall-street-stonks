@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const ResearchPageFinancials = React.memo(({ tickerSymbol }) => {
 
-    const [data, setData] = useState(tickerSymbol)    
+    const [data, setData] = useState(tickerSymbol)
 
     return (
         <div className="research-page-financials">

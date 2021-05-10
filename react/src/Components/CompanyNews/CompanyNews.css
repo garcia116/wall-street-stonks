@@ -1,38 +1,40 @@
 .company-news {
-	background-color: #000000;
-	color: #ffffff;
-	width: 25vw;
-	height: auto;
-	font-size: 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	background-color: #ffffff;
+	min-width: 30em;
+	max-width: 30em;
+	font-size: 1em;
 	align-items: center;
-	margin: 2.0rem 2.0rem 2.0rem 7.0rem;
-	padding: 2.0rem 2.0rem 2.0rem 2.0rem;
-	border: 0.1vh solid #2a2a2a;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+	margin: .3em;
+	margin: 1.3em;
+	margin-bottom: 3em;
+	padding: 1em;
+	border: .1em solid;
+	border-radius: .3em;
+	border-color: #eceff1;
+	text-align: center;
+	box-shadow: 0 0em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .company-news-img {
-	width: 20vw;
+	width: 25em;
 	height: auto;
-	border: 0.1vh solid #2a2a2a;
+	border: 0.1vh solid #eceff1;
 }
 
 .company-news-link {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	margin: 0.0rem 0.0rem 1.0rem 0.0rem;
-	padding: 1.0rem 0.0rem 0.0rem 0.0rem;
+	margin-bottom: 1em;
+	padding-top: 1em;
+	border-radius: .3em;
 }
 
 	.company-news-link:hover {
-		color: #ffffff;
+		background-color: #f2f2f2;
+		color: #000000;
 		text-decoration: none;
-		box-shadow: 0.0em 0.0em 0.8em 0.0em rgb(255 255 255 / 0.61)
 	}

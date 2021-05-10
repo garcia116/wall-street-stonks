@@ -12,6 +12,7 @@ const DividendsChart = (props) => {
 
     for (var i = 0; i < props.dividends.length; i++) {
         chartxLabels[i] = month[Number((props.dividends[props.dividends.length - 1 - i].paymentDate).slice(5, 7)) - 1] + " " + Number((props.dividends[props.dividends.length - 1 - i].paymentDate).slice(8, 10)) + ", " + (props.dividends[props.dividends.length - 1 - i].paymentDate).slice(0, 4)
+        console.log(props.dividends[props.dividends.length - 1 - i])
         DividendData[i] = props.dividends[props.dividends.length - 1 - i].amount
         if (DividendData[i] > maxValue) {
             maxValue = DividendData[i]

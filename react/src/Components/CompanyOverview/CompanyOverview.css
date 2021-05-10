@@ -1,56 +1,59 @@
 .company-logo {
-	width: 5vw;
+	width: 6em;
 	height: auto;
-	margin: 0.0rem 0.0rem 1.0rem 0.0rem;
-	border: 0.1vh solid #2a2a2a;
-	box-shadow: 0.0em 0.0em 0.8em 0.0em rgb(255 255 255 / 0.61);
+	margin: 1em;
+	border: .1em solid;
+	border-radius: .3em;
+	border-color: #000000;
 }
 
 .company-overview {
-	background-color: #000000;
-	width: 30vw;
-	height: auto;
-	margin: 2.0rem 2.0rem 2.0rem 2.0rem;
-	padding: 2.0rem 2.0rem 2.0rem 2.0rem;
-	border: 0.1vh solid #2a2a2a;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+	background-color: #ffffff;
+	min-width: 40em;
+	max-width: 40em;
+	margin: .3em;
+	margin: 1.3em;
+	margin-bottom: 3em;
+	padding: 1em;
+	border: .1em solid;
+	border-radius: .3em;
+	border-color: #eceff1;
+	box-shadow: 0 0em 2em 0 rgba(0, 0, 0, 0.61);
 }
 
 .company-website {
 	color: #8c8f91;
-	font-size: 13px;
-	margin: 0.0rem 0.0rem 0.0rem 0.0rem;
-	padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+	font-size: 1em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 1em;
 }
 
 .company-info-title {
 	color: #8c8f91;
-	font-size: 13px;
-	margin: 0.0rem 0.0rem 0.0rem 0.0rem;
-	padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+	font-size: .8em;
+	margin-bottom: 0em;
 }
 
 .company-info-data {
-	margin: 0.0rem 0.0rem 1.0rem 0.0rem;
-	padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+	margin: 0em;
+	margin-left: 1em;
+	padding: 0em;
 }
 
-.company-info-data-plus {
-	margin: 0.0rem 0.0rem 0.0rem 0.0rem;
-	padding: 0.0rem 0.0rem 0.0rem 0.0rem;
+.company-info-data-website {
+	margin: 0em;
+	padding: 0em;
 }
 
 .company-link {
-	color: #ffffff;
-	text-decoration: none;
+	color: #000000;
 }
 
 	.company-link:hover {
-		color: #ffffff;
+		color: #eceff1;
 		text-decoration: none;
 	}
 
