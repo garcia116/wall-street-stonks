@@ -51,6 +51,7 @@ class DividendsChartContainer extends Component {
                 :
                 <div className="dividends-chart">
                     <h1>Loading...</h1>
+                    <h1>Or Unavailable</h1>
                 </div>
         );
     }

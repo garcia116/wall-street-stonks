@@ -9,10 +9,10 @@ function EPSChartContainer({ incomeStatement, sharesOutstanding }) {
     const [shares, setShares] = useState(sharesOutstanding);
 
     return (
-        <div className="eps-chart">
-            <h2>Earnings Per Share</h2>
-            <EPSChart incomeStatement={income} sharesOutstanding={shares} />
-        </div>
+            <div className="eps-chart">
+                <h2>Earnings Per Share</h2>
+                <EPSChart incomeStatement={income} sharesOutstanding={shares} />
+            </div>
     );
 
 }

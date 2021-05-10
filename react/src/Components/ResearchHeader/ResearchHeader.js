@@ -39,7 +39,7 @@ class ResearchHeader extends Component {
         }
 
         return (
-            <div className="reseach-banner">
+            <div className="research-banner">
                     <div>
                         {this.props.name}: {this.props.tickerSymbol}
                     </div>

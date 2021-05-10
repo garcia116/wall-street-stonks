@@ -14,9 +14,7 @@ function IncomeStatementChartContainer({ tickerSymbol }) {
             let mounted = true
             if (mounted) {
 
-
                 var sandboxMode = true
-
                 var baseURL
                 var token
                 console.log(income)
@@ -37,19 +35,21 @@ function IncomeStatementChartContainer({ tickerSymbol }) {
                 setData(result.data)
                 setLoaded(true)
 
-                function sleep(milliseconds) {
-                    const date = Date.now();
-                    let currentDate = null;
-                    do {
-                        currentDate = Date.now();
-                    } while (currentDate - date < milliseconds);
+                if (sandboxMode) {
+                    function sleep(milliseconds) {
+                        const date = Date.now();
+                        let currentDate = null;
+                        do {
+                            currentDate = Date.now();
+                        } while (currentDate - date < milliseconds);
+                    }
+                    sleep(100)
                 }
-                sleep(70)
+
             }
             return () => mounted = false;
         })();
     }, []);
-
     return (
         isLoaded ?
             <div className="income-statement-chart">
@@ -59,7 +59,8 @@ function IncomeStatementChartContainer({ tickerSymbol }) {
             :
             <div className="income-statement-chart">
                 <h1>Income Statement</h1>
-                <p>Loading...</p>
+                <h1>Loading...</h1>
+                <h1>Or Unavailable</h1>
             </div>
     );
 }

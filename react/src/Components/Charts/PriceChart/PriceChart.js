@@ -33,9 +33,7 @@ const PriceChart = (props) => {
         priceChange = numberWithCommas((props.data[i - 1].close - props.data[0].close).toFixed(2))
         percentChange = numberWithCommas(((props.data[i - 1].close / props.data[0].close * 10000) / 100 - 100).toFixed(2))
         chartHeader = <div className="green">
-            <h2>{props.keyStats.companyName}</h2>
-            <h5>${price}</h5>
-            <h6>+${priceChange} (+{percentChange}%)</h6>
+            <h4>+${priceChange} (+{percentChange}%)</h4>
         </div>
     } else {
         backgroundColor = 'rgba(244, 84, 48, 1)'
@@ -43,9 +41,7 @@ const PriceChart = (props) => {
         priceChange = numberWithCommas((props.data[0].close - props.data[i - 1].close).toFixed(2))
         percentChange = numberWithCommas(((props.data[0].close / props.data[i - 1].close * 10000) / 100 - 100).toFixed(2))
         chartHeader = <div className="red">
-            <h2>{props.keyStats.companyName}</h2>
-            <h5>${price}</h5>
-            <h6>-${priceChange} (-{percentChange}%)</h6>
+            <h4>-${priceChange} (-{percentChange}%)</h4>
         </div>
     }
     

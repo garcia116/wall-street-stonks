@@ -1,11 +1,10 @@
 .watchlist-container {
-	background-color: #000000;
+	background-color: #ffffff;
 	flex: 1;
 	margin: .3em;
-	margin-bottom: 3em;
 	border: .1em solid;
 	border-radius: .3em;
-	border-color: #424242;
+	border-color: #eceff1;
 	font-family: 'Lato', Arial, Helvetica, sans-serif !important;
 }
 
@@ -31,7 +30,7 @@
 }
 
 .form_buttons {
-	background-color: #181818;
+	background-color: #1652f0;
 	height: auto;
 	margin: .5em 0 .5em 0;
 	border-radius: .15em;

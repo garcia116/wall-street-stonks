@@ -6,9 +6,8 @@
 }
 
 .nav-bar-container {
-	background-color: rgb(27, 27, 27);
-	height: 5em;
-	color: #ffffff;
+	background-color: #ffffff;
+	height: 6vh;
 	font-size: 14px;
 	font-weight: 600;
 	display: flex;
@@ -17,16 +16,16 @@
 	align-items: center;
 	text-align: center;
 	border-bottom: .1em solid;
-	border-color: #424242;
+	border-bottom-color: #eceff1;
 }
 
 .nav-bar-link {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
 }
 
 .nav-bar-link:hover {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
 }
 

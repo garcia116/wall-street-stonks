@@ -1,27 +1,28 @@
 .company-news {
-	background-color: #000000;
+	background-color: #ffffff;
 	min-width: 30em;
 	max-width: 30em;
 	font-size: 1em;
 	align-items: center;
 	margin: .3em;
+	margin: 1.3em;
 	margin-bottom: 3em;
 	padding: 1em;
 	border: .1em solid;
 	border-radius: .3em;
-	border-color: #424242;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+	border-color: #eceff1;
 	text-align: center;
+	box-shadow: 0 0em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .company-news-img {
 	width: 25em;
 	height: auto;
-	border: 0.1vh solid #424242;
+	border: 0.1vh solid #eceff1;
 }
 
 .company-news-link {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
 	display: flex;
 	flex-direction: column;
@@ -33,7 +34,7 @@
 }
 
 	.company-news-link:hover {
-		background-color: #1a1a1a;
-		color: #ffffff;
+		background-color: #f2f2f2;
+		color: #000000;
 		text-decoration: none;
 	}

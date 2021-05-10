@@ -44,7 +44,6 @@ class Login extends Component {
         this.props.loginUser(userData);
     }
 
-<<<<<<< HEAD
     render() {
         const { errors } = this.state;
         return (
@@ -74,21 +73,6 @@ class Login extends Component {
                         </span>
                         
                         
-=======
-    return (
-        <div className="login-page">
-            <div className="banner">
-                <h1 className="stonk-smarter">Stonk smarter</h1>
-                <h2 className="welcome">Welcome to Wallstreet Stonks</h2>
-            </div>
-            <div className="login-window">
-                <h2 className="login">Login</h2>
-                <form className="sign-in-form" onSubmit={handleSubmit} noValidate>
-                    <input className="username" placeholder="Username" onChange={e => setUsername(e.target.value)}/>
-                    <input className="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
-                    <div className="linkButton">
-                      <NavLink className="linkTo" to="/">Create Account</NavLink>
->>>>>>> 905bac52a26725e96b747e6f5fd1f672e9f1f144
                     </div>
                     <div className="input-field">
                         

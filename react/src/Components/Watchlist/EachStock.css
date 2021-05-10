@@ -1,5 +1,5 @@
 .card {
-    background-color: #181818;
+    background-color: #ffffff;
     display: grid;
     grid-template-columns: 50% 50%;
     margin: .6em;
@@ -7,10 +7,11 @@
     /* height: 5.5em; */
     border: .1em solid;
     border-radius: .1em;
-    border-color: #424242;
+    border-color: #ffffff;
     box-shadow: #242424;
     font-size: medium;
     font-family: 'Lato' !important;
+    color: #000000;
 }
 
 .info {
