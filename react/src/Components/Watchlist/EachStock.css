@@ -42,6 +42,28 @@
 
 
 .card-title {
-    font-size: medium;
+    font-size: large;
     text-align: center;
+    padding: 0;
+    padding-top: .2em;
+    margin: 0;
+    
+}
+
+
+.remove-button {
+    background-color: #ffffff;
+    border: none;
+
+}
+
+.ticker-div {
+    text-align: center;
+    
+}
+
+.ticker-div button {
+    font-size: small;
+    margin: 0;
+    color: #949494;
 }
