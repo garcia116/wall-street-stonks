@@ -14,7 +14,7 @@ class News extends Component {
         var sandboxMode = true
         var baseURL
         var token
-        const keyStats = '/time-series/news/?range=last-week&limit=3&token='
+        const keyStats = '/time-series/news/?range=last-week&limit=5&token='
 
         if (sandboxMode) {
             baseURL = 'https://sandbox.iexapis.com/v1'
@@ -50,8 +50,19 @@ class News extends Component {
                         <img className="news-img" src={this.state.newsArray[2].image}></img>
                         <p className="">{this.state.newsArray[2].headline}</p>
                     </a>
+                    <a className="news-link" alt="" href={this.state.newsArray[3].qmUrl}>
+                        <img className="news-img" src={this.state.newsArray[3].image}></img>
+                        <p className="">{this.state.newsArray[3].headline}</p>
+                    </a>
+                    <a className="news-link" alt="" href={this.state.newsArray[4].qmUrl}>
+                        <img className="news-img" src={this.state.newsArray[4].image}></img>
+                        <p className="">{this.state.newsArray[4].headline}</p>
+                    </a>
                 </div>
-                : <div></div>
+                :
+                <div className="news-container">
+                    <h4>Loading...</h4>
+                </div>
         );
     }
 
