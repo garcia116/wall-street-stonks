@@ -47,7 +47,8 @@ function PriceChartContainer({ tickerSymbol, keyStats }) {
                     <PriceChart data={prices} keyStats={stats} />
                 </div>
             </div>
-            : <div>
+            :
+            <div>
                 <div className="price-chart-container">
                     <div className="price-chart">
                         <h1>Loading...</h1>

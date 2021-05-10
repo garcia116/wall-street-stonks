@@ -39,26 +39,18 @@ class DividendsChartContainer extends Component {
         return (
             this.state.isLoaded ?
                 this.state.dividends.length !== 0 ? 
-                    <div className="dividends-chart-container">
+                    <div className="dividends-chart">
                         <h2>Dividends</h2>
-                        <div className="dividends-chart">
-                            <DividendsChart dividends={this.state.dividends} />
-                        </div>
+                        <DividendsChart dividends={this.state.dividends} />
                     </div>
                     : 
-                    <div className="dividends-chart-container">
-                        <div className="dividends-chart">
-                            <h1>Dividends Unavailable</h1>
-                            <img className="not-stonks-guy" alt="" src={NotStonksGuy} />
-                        </div>
+                    <div className="dividends-chart">
+                        <h1>Dividends Unavailable</h1>
+                        <img className="not-stonks-guy" alt="" src={NotStonksGuy} />
                     </div>
                 :
-                <div>
-                    <div className="dividends-chart-container">
-                        <div className="dividends-chart">
-                            <h1>Loading...</h1>
-                        </div>
-                    </div>
+                <div className="dividends-chart">
+                    <h1>Loading...</h1>
                 </div>
         );
     }

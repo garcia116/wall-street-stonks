@@ -3,10 +3,8 @@
     "",
     "\\react",
     "\\react\\src",
-    "\\react\\src\\Components",
-    "\\react\\src\\Components\\Charts",
-    "\\react\\src\\WebPages"
+    "\\react\\src\\Components"
   ],
-  "SelectedNode": "\\react\\src\\Components\\HomeGraph",
+  "SelectedNode": "\\react\\src\\Components\\Watchlist",
   "PreviewInSolutionExplorer": false
 }

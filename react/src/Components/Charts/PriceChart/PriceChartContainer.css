@@ -1,7 +1,6 @@
 .price-chart-container {
 	background-color: #000000;
-	/* flex: 2; */
-	margin: 1.3em;
+	margin: .3em;
 	padding-top: 1em;
 	border: .1em solid;
 	border-radius: .3em;
