@@ -12,6 +12,7 @@
 
 .research-link {
     color: #000000;
+    white-space: nowrap;
 }
 
     .research-link:hover {
