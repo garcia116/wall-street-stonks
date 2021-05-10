@@ -40,14 +40,17 @@ class ResearchHeader extends Component {
 
         return (
             <div className="research-banner">
-                    <div>
-                        {this.props.name}: {this.props.tickerSymbol}
-                    </div>
-                    <div>
-                        Price: ${this.props.price}
-                    </div>
-                    <div>
-                        {marketcapLabel}
+                    
+                    <div className="research-banner-items">
+                        <div>
+                            {this.props.name}: {this.props.tickerSymbol}
+                        </div>
+                        <div>
+                            Price: ${this.props.price}
+                        </div>
+                        <div>
+                            {marketcapLabel}
+                        </div>
                     </div>
             </div>
         )
