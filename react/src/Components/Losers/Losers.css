@@ -18,4 +18,5 @@
 	border: .1em solid;
 	border-radius: .3em;
 	border-color: #eceff1;
+	box-shadow: 0 0em .8em 0 rgba(0, 0, 0, 0.61);
 }

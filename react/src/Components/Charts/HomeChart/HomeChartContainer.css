@@ -7,6 +7,7 @@
 	min-height: 31em;
 	max-height: 31em;
 	text-align: center;
+	box-shadow: 0 0em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .home-chart {
