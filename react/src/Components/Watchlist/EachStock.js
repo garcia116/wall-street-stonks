@@ -25,18 +25,21 @@ class EachStock extends Component {
             <div className='eachStock'>
                 {this.props.stock && (
                     <div className='card'>                        
-                        <p className='card-title'>{this.props.stock}</p>
+                        <div className="ticker-div">
+                            <p className='card-title'>{this.props.stock}</p>
+                            <button
+                                onClick={() => this.props.handleRemove(this.props.stock)}
+                                className='remove-button'
+                            > remove
+                            </button>
+                        </div>
                         <div className="info">
                             <p className='card-price'>${this.props.price}</p>
                             <p className='card-change'
                                style={(this.props.change > 0)? {color: "green"}: {color: "red"}}
                             >{this.props.change} %</p>
                         </div>
-                        {/* <button
-                            onClick={() => this.props.handleRemove(this.props.stock)}
-                            className='card-link remove btn-danger'
-                        > Remove
-                         </button> */}
+                        
                     </div>
                 )}
             </div>
