@@ -1,7 +1,3 @@
-body {
-    background-color: #181818 !important;
-}
-
 .banner {
     /*background-image: linear-gradient(45deg, #66ee83 30%, #35d369 90%);*/
     background-color: #0084ff;
@@ -19,7 +15,6 @@ body {
     margin-bottom: .2em;
     font-size: 3em;
     font-weight: 300;
-    
 }
 
 .welcome {

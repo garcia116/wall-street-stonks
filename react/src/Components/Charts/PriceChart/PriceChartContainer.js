@@ -52,6 +52,7 @@ function PriceChartContainer({ tickerSymbol, keyStats }) {
                 <div className="price-chart-container">
                     <div className="price-chart">
                         <h1>Loading...</h1>
+                        <h1>Or Unavailable</h1>
                     </div>
                 </div>
             </div>

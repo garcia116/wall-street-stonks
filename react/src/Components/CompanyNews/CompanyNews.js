@@ -6,7 +6,7 @@ class CompanyNews extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tickerSymbol: "TSLA",
+            tickerSymbol: props.tickerSymbol,
             companyNews: [{}],
             isloaded: false
         }
@@ -36,7 +36,7 @@ class CompanyNews extends Component {
 
     render() {
         return (
-            this.state.isLoaded ?
+            this.state.isLoaded?
                 <div className="company-news">
                     <a className="company-news-link" alt="" href={this.state.companyNews[0].qmUrl}>
                         <img className="company-news-img" alt="" src={this.state.companyNews[0].image}></img>
@@ -47,7 +47,11 @@ class CompanyNews extends Component {
                         <p className="">{this.state.companyNews[1].headline}</p>
                     </a>
                 </div>
-                : <div></div>
+                :
+                <div className="company-news">
+                    <h1>Loading...</h1>
+                    <h1>Or Unavailable</h1>
+                </div>
         );
     }
 }

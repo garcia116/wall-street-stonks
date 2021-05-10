@@ -3,8 +3,10 @@
     "",
     "\\react",
     "\\react\\src",
-    "\\react\\src\\Components"
+    "\\react\\src\\Components",
+    "\\react\\src\\WebPages",
+    "\\react\\src\\WebPages\\ResearchPage"
   ],
-  "SelectedNode": "\\react\\src\\Components\\Watchlist",
+  "SelectedNode": "\\react\\src\\Components\\ResearchHeader",
   "PreviewInSolutionExplorer": false
 }

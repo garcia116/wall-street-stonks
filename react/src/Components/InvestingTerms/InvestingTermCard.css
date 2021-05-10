@@ -1,11 +1,11 @@
 .investing-term-card .toggle {
-	background: #0084ff;
-	color: #ffffff;
+	background: #ffffff;
 	height: 10rem;
 	width: 25rem;
 	font-size: 1.5rem;
-	border: unset;
-	border-radius: 5px;
+	border: .1em solid;
+	border-radius: .3em;
+	border-color: #eceff1;
 	margin: 1.0rem 2.0rem 1.0rem 2.0rem;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 }
@@ -18,10 +18,10 @@
 }
 
 .investing-term-card .content {
-	background: #202020;
+	background: #ececec;
+	color: #000000;
 	width: 25rem;
-	color: #ffffff;
-	border: 10px ridge #0084ff;
+	border: .1em solid #eceff1;
 	border-radius: 5px;
 	margin: 0.5rem;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);

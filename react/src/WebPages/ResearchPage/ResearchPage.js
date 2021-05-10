@@ -13,11 +13,10 @@ class ResearchPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tickerSymbol: '',
+            tickerSymbol: 'AAPL',
             price: 0,
             keyStats: [{}],
             isLoaded: false
-            
         }
     }
 
@@ -81,14 +80,14 @@ class ResearchPage extends Component {
                         <Form getStock={this.getStock} />
                     </div>
                 </div>
-                <ResearchHeader className="research-header"name={this.state.keyStats.companyName} price={this.state.price} tickerSymbol={this.state.tickerSymbol} marketcap={this.state.keyStats.marketcap} />
+                <ResearchHeader name={this.state.keyStats.companyName} price={this.state.price} tickerSymbol={this.state.tickerSymbol} marketcap={this.state.keyStats.marketcap} />
                     <BrowserRouter>
                         <div className="research-links">
-                        <Link to="/ResearchPageFinancials" className="research-link">Financials</Link>
-                        <Link to="/ResearchPageStats" className="research-link">EPS</Link>
-                        <Link to="/ResearchPageDividends" className="research-link">Dividends</Link>
-                        <Link to="/ResearchPagePriceChart" className="research-link">Price Chart</Link>
-                        <Link to="/ResearchPageCompanyOverview" className="research-link">Company Overview</Link>
+                            <Link to="/ResearchPageFinancials" className="research-link">Financials</Link>
+                            <Link to="/ResearchPageStats" className="research-link">EPS</Link>
+                            <Link to="/ResearchPageDividends" className="research-link">Dividends</Link>
+                            <Link to="/ResearchPagePriceChart" className="research-link">Price Chart</Link>
+                            <Link to="/ResearchPageCompanyOverview" className="research-link">Company Overview</Link>
                         </div>
                     <Switch>
                         <Redirect from="/ResearchPage" to="/ResearchPageFinancials"/>

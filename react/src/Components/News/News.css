@@ -14,13 +14,12 @@
 	border: .1vh solid #2a2a2a;
 	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
 	font-size: 1.2vw; */
-	background-color: #000000;
+	background-color: #ffffff;
 	flex: 1;
 	margin: .3em;
-	margin-bottom: 3em;
 	border: .1em solid;
 	border-radius: .3em;
-	border-color: #424242;
+	border-color: #eceff1;
 }
 
 .news-container p {

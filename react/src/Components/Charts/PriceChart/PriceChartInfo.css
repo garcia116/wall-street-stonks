@@ -1,20 +1,19 @@
 .price-chart-info-container {
-	background-color: #000000;
+	background-color: #ffffff;
 	margin: .3em;
 	margin-bottom: 3em;
-	padding: 1em;
+	padding: 0em;
 	border: .1em solid;
 	border-radius: .3em;
-	border-color: #424242;
+	border-color: #eceff1;
 	text-align: center;
 	min-width: 75em;
 	max-width: 75em;
+	box-shadow: 0 0em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .price-chart-info {
-	background-color: #000000;
 	position: relative;
-	color: #ffffff;
 	height: auto;
 	width: auto;
 	font-size: 1em;
@@ -41,6 +40,7 @@
 	color: #8c8f91;
 	font-size: .9em;
 	margin: 0em;
+	margin-bottom: -1.5em;
 	padding: 0em;
 }
 

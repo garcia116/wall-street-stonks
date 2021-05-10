@@ -1,5 +1,5 @@
 .research-links {
-    background-color: #000000;
+    background-color: #cfcfcf;
     font-size: 1.5em;
     display: flex;
     flex-direction: row;
@@ -7,11 +7,12 @@
     align-items: center;
     padding: 0em 12em 0em 12em;
     border-bottom: .01em solid;
-    border-color: #424242;
+    border-color: #eceff1;
+    margin-bottom: 2em;
 }
 
 .research-link {
-    color: #ffffff;
+    color: #000000;
 }
 
     .research-link:hover {
@@ -20,9 +21,8 @@
     }
 
 .ticker-search-background {
-    border-top: .1em solid;
-    border-color: #424242;
-    background-color: #000000;
+    border-color: #eceff1;
+    background-color: #f6f9fc;
 }
 .ticker-search {
     margin: auto;

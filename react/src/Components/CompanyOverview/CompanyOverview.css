@@ -8,16 +8,17 @@
 }
 
 .company-overview {
-	background-color: #000000;
+	background-color: #ffffff;
 	min-width: 40em;
 	max-width: 40em;
 	margin: .3em;
+	margin: 1.3em;
 	margin-bottom: 3em;
 	padding: 1em;
 	border: .1em solid;
 	border-radius: .3em;
-	border-color: #424242;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+	border-color: #eceff1;
+	box-shadow: 0 0em 2em 0 rgba(0, 0, 0, 0.61);
 }
 
 .company-website {
@@ -48,11 +49,11 @@
 }
 
 .company-link {
-	color: #ffffff;
+	color: #000000;
 }
 
 	.company-link:hover {
-		color: #888888;
+		color: #eceff1;
 		text-decoration: none;
 	}
 
