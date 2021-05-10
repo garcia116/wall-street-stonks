@@ -1,6 +1,6 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import { Route, NavLink, BrowserRouter } from 'react-router-dom';
+import { Route, NavLink, BrowserRouter, Redirect } from 'react-router-dom';
 import HomePage from '../../WebPages/HomePage/HomePage';
 import ResearchPage from '../../WebPages/ResearchPage/ResearchPage';
 import LearnPage from '../../WebPages/LearnPage/LearnPage';
@@ -28,6 +28,7 @@ class SideNav extends React.Component {
                     <NavLink to="/SignUp" className="menu-item">Sign Up</NavLink>
                 </Menu>
                 <div className="content">
+                    <Redirect from="/" to="/HomePage" />
                     <Route path="/HomePage" component={HomePage} />
                     <Route path="/ResearchPage" component={ResearchPage} />
                     <Route path="/LearnPage" component={LearnPage} />

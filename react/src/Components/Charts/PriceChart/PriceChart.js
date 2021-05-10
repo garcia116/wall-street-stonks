@@ -59,7 +59,11 @@ const PriceChart = (props) => {
                         {
                             label: "Price",
                             data: data,
-                            backgroundColor: backgroundColor
+                            borderColor: backgroundColor,
+                            backgroundColor: backgroundColor,
+                            fill: false,
+                            borderWidth: 2,
+                            pointHoverRadius: 3
                         },
                     ]
                 }}

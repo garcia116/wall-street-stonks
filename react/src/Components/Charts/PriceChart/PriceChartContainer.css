@@ -1,23 +1,21 @@
 .price-chart-container {
 	background-color: #000000;
-	color: #ffffff;
-	margin: 3vh 0vw 3vh 0vw;
-	padding: 0vh 0vw 0vh 0vw;
-	width: 62vw;
-	height: 70vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	/* flex: 2; */
+	margin: 1.3em;
+	padding-top: 1em;
+	border: .1em solid;
+	border-radius: .3em;
+	border-color: #424242;
+	min-height: 45em;
+	max-height: 45em;
 	text-align: center;
-	border: 0.1vh solid #2a2a2a;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+	min-width: 75em;
+	max-width: 75em;
 }
 
 .price-chart {
-	position: relative;
-	width: 55vw;
-	height: auto;
+	padding: 1em;
+	padding-top: 0em;
 }
 
 .green {

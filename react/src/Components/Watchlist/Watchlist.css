@@ -1,5 +1,4 @@
 .watchlist-container {
-	
 	background-color: rgb(27, 27, 27);
 	flex: 1;
 	margin: .3em;
@@ -7,7 +6,6 @@
 	border-radius: .3em;
 	border-color: #424242;
 	font-family: 'Lato', Arial, Helvetica, sans-serif !important;
-
 }
 
 .watchlist-container form {

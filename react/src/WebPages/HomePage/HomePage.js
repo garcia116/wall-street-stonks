@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css';
-import HomeGraph from "../../Components/HomeGraph/HomeGraph.js";
+import HomeChartContainer from "../../Components/Charts/HomeChart/HomeChartContainer.js";
 import Gainers from "../../Components/Gainers/Gainers.js";
 import Losers from "../../Components/Losers/Losers.js";
 import News from "../../Components/News/News.js";
@@ -21,7 +21,7 @@ function HomePage() {
             <div className="home-page-row-container">
                 <News />
                 <div className="home-page-column-container">
-                    <HomeGraph />
+                    <HomeChartContainer />
                     <div className="home-page-lower-middle">
                         <Gainers />
                         <Losers />

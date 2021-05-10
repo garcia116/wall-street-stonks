@@ -5,11 +5,8 @@
     "\\react\\src",
     "\\react\\src\\Components",
     "\\react\\src\\Components\\Charts",
-    "\\react\\src\\Components\\Charts\\CashFlowChart",
-    "\\react\\src\\Components\\Charts\\PriceChart",
-    "\\react\\src\\WebPages",
-    "\\react\\src\\WebPages\\ResearchPage"
+    "\\react\\src\\WebPages"
   ],
-  "SelectedNode": "\\react\\src\\Components\\Charts\\PriceChart\\PriceChart.js",
+  "SelectedNode": "\\react\\src\\Components\\HomeGraph",
   "PreviewInSolutionExplorer": false
 }

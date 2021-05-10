@@ -39,25 +39,21 @@ function CashFlowChartContainer({ tickerSymbol }) {
                         currentDate = Date.now();
                     } while (currentDate - date < milliseconds);
                 }
-                sleep(100)
+                sleep(70)
             }
             return () => mounted = false;
         })();
     }, []);
     return (
         isLoaded ?
-            <div className="cash-flow-chart-container">
-                <p>Cash Flow</p>
-                <div className="cash-flow-chart">
-                    <CashFlowChart cashFlow={cashFlow} />
-                </div>
+            <div className="cash-flow-chart">
+                <h2>Cash Flow</h2>
+                <CashFlowChart cashFlow={cashFlow} />
             </div>
             :
-            <div className="cash-flow-chart-container">
-                <p>Cash Flow</p>
-                <div className="cash-flow-chart">
-                    <h1>Loading...</h1>
-                </div>
+            <div className="cash-flow-chart">
+                <h1>Cash Flow</h1>
+                <p>Loading...</p>
             </div>
     );
 }

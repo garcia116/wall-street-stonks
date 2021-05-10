@@ -98,7 +98,7 @@ class Login extends Component {
                     </div>
                     </form>
                     <p className="grey-text text-darken-1">
-                        Don't have an account? <Link to="/register">Register</Link>
+                        Don't have an account? <Link to="/SignUp">Register</Link>
                     </p>
                 </div>
                 

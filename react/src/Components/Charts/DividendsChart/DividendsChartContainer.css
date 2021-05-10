@@ -1,27 +1,23 @@
 .dividends-chart-container {
 	background-color: #000000;
-	color: #ffffff;
-	margin: 3vh 0vw 3vh 0vw;
-	padding: 0vh 0vw 0vh 0vw;
-	width: 62vw;
-	height: 70vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	margin: 1.3em;
+	padding-top: 1em;
+	border: .1em solid;
+	border-radius: .3em;
+	border-color: #424242;
+	min-height: 42em;
+	max-height: 42em;
 	text-align: center;
-	border: 0.1vh solid #2a2a2a;
-	box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+	min-width: 75em;
+	max-width: 75em;
 }
 
 .dividends-chart {
-	position: relative;
-	width: 55vw;
-	height: auto;
+	padding: 1em;
+	padding-top: 0em;
 }
 
 .not-stonks-guy {
-	position: relative;
-	width: 20vw;
-	height: auto;
+	min-width: 25em;
+	max-width: 25em;
 }

@@ -85,7 +85,11 @@ const HomepageChart = (props) => {
                         {
                             label: "Price",
                             data: data,
-                            backgroundColor: backgroundColor
+                            borderColor: backgroundColor,
+                            backgroundColor: backgroundColor,
+                            fill: false,
+                            borderWidth: 1,
+                            pointHoverRadius: 2
                         },
                     ]
                 }}
@@ -97,6 +101,9 @@ const HomepageChart = (props) => {
                         point: {
                             radius: 0
                         }
+                    },
+                    legend: {
+                        display: false
                     },
                     tooltips: {
                         mode: 'x-axis',

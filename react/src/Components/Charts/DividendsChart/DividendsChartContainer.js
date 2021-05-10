@@ -40,7 +40,7 @@ class DividendsChartContainer extends Component {
             this.state.isLoaded ?
                 this.state.dividends.length !== 0 ? 
                     <div className="dividends-chart-container">
-                        <p>Dividends</p>
+                        <h2>Dividends</h2>
                         <div className="dividends-chart">
                             <DividendsChart dividends={this.state.dividends} />
                         </div>
