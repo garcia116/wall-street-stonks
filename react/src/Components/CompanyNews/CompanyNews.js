@@ -16,7 +16,7 @@ class CompanyNews extends Component {
         var sandboxMode = true
         var baseURL
         var token
-        const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=2&token=`
+        const companyNews = `/time-series/news/${this.state.tickerSymbol}/?range=last-week&limit=3&token=`
 
         if (sandboxMode) {
             baseURL = 'https://sandbox.iexapis.com/v1'
@@ -44,6 +44,10 @@ class CompanyNews extends Component {
                     </a>
                     <a className="company-news-link" alt="" href={this.state.companyNews[1].qmUrl}>
                         <img className="company-news-img" alt="" src={this.state.companyNews[1].image}></img>
+                        <p className="">{this.state.companyNews[1].headline}</p>
+                    </a>
+                    <a className="company-news-link" alt="" href={this.state.companyNews[2].qmUrl}>
+                        <img className="company-news-img" alt="" src={this.state.companyNews[2].image}></img>
                         <p className="">{this.state.companyNews[1].headline}</p>
                     </a>
                 </div>

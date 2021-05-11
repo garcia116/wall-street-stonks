@@ -2,9 +2,8 @@
 	width: 6em;
 	height: auto;
 	margin: 1em;
-	border: .1em solid;
 	border-radius: .3em;
-	border-color: #000000;
+	border-color: #eceff1;
 }
 
 .company-overview {
@@ -18,7 +17,7 @@
 	border: .1em solid;
 	border-radius: .3em;
 	border-color: #eceff1;
-	box-shadow: 0 0em 2em 0 rgba(0, 0, 0, 0.61);
+	box-shadow: 0 0em .8em 0 rgba(0, 0, 0, 0.61);
 }
 
 .company-website {
@@ -53,7 +52,7 @@
 }
 
 	.company-link:hover {
-		color: #eceff1;
+		color: #888888;
 		text-decoration: none;
 	}
 
