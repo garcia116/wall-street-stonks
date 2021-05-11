@@ -31,7 +31,10 @@ function PriceChartContainer({ tickerSymbol, keyStats }) {
 
                 const pricesURL = baseURL + prices + token
 
-                const pricesResult = await axios.get(pricesURL);
+                const pricesResult = await axios.get(pricesURL, {transformRequest: (data, headers) => {
+                    delete headers.common['Authorization'];
+                  }
+                });
                 setPrices(pricesResult.data)
                 setLoaded(true)
 

@@ -28,7 +28,10 @@ function BalanceSheetChartContainer({ tickerSymbol }) {
                 }
 
                 const balanceSheetURL = baseURL + balanceSheet + token
-                const result = await axios.get(balanceSheetURL)
+                const result = await axios.get(balanceSheetURL, {transformRequest: (data, headers) => {
+                    delete headers.common['Authorization'];
+                  }
+                });
                 setBalance(result.data)
                 setLoaded(true)
 

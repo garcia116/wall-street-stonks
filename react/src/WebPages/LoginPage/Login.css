@@ -6,7 +6,7 @@
     color: white;
     padding-left: 15%;
     font-family: 'Roboto Slab', serif;
-    box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+    /* box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61); */
 }
 
 .stonk-smarter {
@@ -43,7 +43,7 @@
     border: #b4b4b4;
     border-width: .1em;
     border-style: solid;
-    box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61);
+    /* box-shadow: 0 .2em .8em 0 rgba(0, 0, 0, 0.61); */
 }
 
 .login {
@@ -67,7 +67,7 @@
     border-radius: .3em;
     font-size: 1.2em;
     font-weight: 400;
-    box-shadow: 0 .1em .4em 0 rgba(151, 151, 151, 0.432);
+    /* box-shadow: 0 .1em .4em 0 rgba(151, 151, 151, 0.432); */
     font-family: 'Roboto Slab', serif;
     margin-top: 1.4em;
     /*border: #7ad899;*/

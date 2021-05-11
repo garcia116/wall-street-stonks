@@ -18,6 +18,7 @@ function HomePage() {
                 <h1 className="stonk-smarter">Home</h1>
                 <h3 className="welcome">Wallstreet Stonks</h3>
             </div> */}
+            
             <div className="home-page-row-container">
                 <News />
                 <div className="home-page-column-container">

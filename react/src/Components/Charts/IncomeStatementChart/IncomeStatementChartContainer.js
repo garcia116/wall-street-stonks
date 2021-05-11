@@ -30,7 +30,10 @@ function IncomeStatementChartContainer({ tickerSymbol }) {
                 }
 
                 const incomeStatementURL = baseURL + incomeStatement + token
-                const result = await axios.get(incomeStatementURL);
+                const result = await axios.get(incomeStatementURL, {transformRequest: (data, headers) => {
+                    delete headers.common['Authorization'];
+                  }
+                });
                 console.log(result)
                 setData(result.data)
                 setLoaded(true)

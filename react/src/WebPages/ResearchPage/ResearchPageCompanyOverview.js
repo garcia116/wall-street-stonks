@@ -29,7 +29,10 @@ function ResearchPageCompanyOverview({ tickerSymbol }) {
                 }
 
                 const keyStatsURL = baseURL + keyStats + token
-                const statsResult = await axios.get(keyStatsURL)
+                const statsResult = await axios.get(keyStatsURL, {transformRequest: (data, headers) => {
+                    delete headers.common['Authorization'];
+                  }
+                });
                 setStats(statsResult.data)
                 setLoaded(true)
 

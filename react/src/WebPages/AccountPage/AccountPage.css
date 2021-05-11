@@ -36,3 +36,12 @@
 	margin: 0px;
 	padding-bottom: 2em;
 }
+
+.logout-button {
+	background-color: #0084ff;
+}
+
+.contents {
+	margin: auto;
+	align-items: center;
+}

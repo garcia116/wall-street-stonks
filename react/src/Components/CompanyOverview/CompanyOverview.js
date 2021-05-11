@@ -35,7 +35,10 @@ function CompanyOverview({ tickerSymbol, companyName }) {
                 const companyInfoURL = baseURL + company + token
 
                 const logoResult = await axios.get(logoURL)
-                const companyInfoResult = await axios.get(companyInfoURL)
+                const companyInfoResult = await axios.get(companyInfoURL, {transformRequest: (data, headers) => {
+                    delete headers.common['Authorization'];
+                  }
+                });
                 setLogo(logoResult.data)
                 setCompanyInfo(companyInfoResult.data)
                 setLoaded(true)

@@ -33,7 +33,10 @@ function PriceChartInfo({ tickerSymbol, keyStat }) {
                 }
 
                 const advStatsURL = baseURL + advStats + token
-                const statsResult = await axios.get(advStatsURL)
+                const statsResult = await axios.get(advStatsURL, {transformRequest: (data, headers) => {
+                    delete headers.common['Authorization'];
+                  }
+                });
                 setStats(statsResult.data)
                 console.log(advStats)
                 setLoaded(true)

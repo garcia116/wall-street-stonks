@@ -8,7 +8,10 @@ function FetchCompanies({ ticker }) {
     useEffect(() => {
         (async () => {
             const url = `${iex.base_url}/stock/${ticker}/quote?token=${iex.api_token}`
-            const result = await axios.get(url);
+            const result = await axios.get(url , {transformRequest: (data, headers) => {
+                delete headers.common['Authorization'];
+              }
+            });
             setData(result.data);
         })();
     }, []);

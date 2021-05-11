@@ -56,7 +56,10 @@ function Losers() {
 
     useEffect(() => {
         (async () => {
-            const result = await axios("https://cloud.iexapis.com/stable/stock/market/list/losers?token=pk_2d87808402a3463ab504dac6eb52b540&listLimit=5");
+            const result = await axios("https://cloud.iexapis.com/stable/stock/market/list/losers?token=pk_2d87808402a3463ab504dac6eb52b540&listLimit=5" , {transformRequest: (data, headers) => {
+                delete headers.common['Authorization'];
+              }
+            });
             setData(result.data);
         })();
     }, []);

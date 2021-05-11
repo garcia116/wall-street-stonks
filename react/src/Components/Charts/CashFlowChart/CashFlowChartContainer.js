@@ -27,7 +27,10 @@ function CashFlowChartContainer({ tickerSymbol }) {
                 }
 
                 const cashFlowURL = baseURL + cashFlow + token
-                const result = await axios.get(cashFlowURL)
+                const result = await axios.get(cashFlowURL, {transformRequest: (data, headers) => {
+                    delete headers.common['Authorization'];
+                  }
+                });
                 setCashFlow(result.data)
                 setLoaded(true)
 
