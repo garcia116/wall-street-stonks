@@ -74,7 +74,7 @@ class Login extends Component {
                                 invalid: errors.email || errors.emailnotfound
                             })}
                         />
-                        <span className="red-text">
+                        <span className="red-text" style={{color: "red"}}>
                             {errors.email}
                             {errors.emailnotfound}
                         </span>
@@ -94,6 +94,10 @@ class Login extends Component {
                             invalid: errors.password || errors.passwordincorrect
                         })}
                         />
+                        <span className="red-text" style={{color: "red"}}>
+                            {errors.password}
+                            {errors.passwordincorrect}
+                        </span>
                     </div>
                     <div className="submit-button-div">
                         <button                        
